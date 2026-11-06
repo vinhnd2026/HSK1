@@ -201,7 +201,8 @@ img, svg { max-width: 100%; }
 .reveal { border: 1px solid #bfdbfe; border-left: none; }
 .reading-box { background: #eff6ff; border-left: none; }
 /* --- Chỗ trống điền từ hiển thị dạng "......" không gạch chân, bấm vào mới hiện danh sách từ (theo ý anh 06/11) --- */
-.cloze-select { border: none; border-radius: 0; background: transparent; padding: 3px 2px; min-width: 90px; text-align: center; }
+.cloze-select { border: none; border-radius: 0; background: transparent; padding: 3px 2px; min-width: 90px; text-align: center; appearance: none; -webkit-appearance: none; }
+.cloze-select::-ms-expand { display: none; }
 .read-para-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
 .read-para-text { font-size: 19px; line-height: 2.15; text-align: justify; text-indent: 2em; margin: 0; color: #1e293b; }
 .read-para-trans { margin: 10px 0; font-size: 14px; color: #475569; line-height: 1.65; }
@@ -213,6 +214,23 @@ img, svg { max-width: 100%; }
 
 .tts-voice-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0}
 .tts-voice-row select{flex:1;min-width:120px;max-width:100%;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
+
+.dlg-line{padding:8px 10px;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:8px;background:#fff}
+.dlg-sp{display:inline-block;padding:2px 9px;border-radius:12px;color:#fff;font-weight:700;font-size:13px;margin-right:8px;vertical-align:middle}
+.dlg-zh{font-size:17px;line-height:1.9}
+.dlg-zh ruby rt{font-size:.52em;color:#2563eb}
+.dlg-zh.hide-ruby rt{display:none}
+.dlg-vi{color:#64748b;font-size:14px;margin:2px 0 0 30px}
+.dlg-voice-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0}
+.dlg-voice-row select{flex:1;min-width:120px;max-width:100%;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
+/* --- Nút điều khiển Bài 8 gọn: chỉ icon, không chữ; tốc độ cùng hàng (theo ý anh 06/11) --- */
+.dlg-controls-row input[type=range]{flex:1;min-width:60px;vertical-align:middle}
+.dlg-controls-row input[type=number]{width:64px;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
+.dlg-play-btn{font-size:16px;padding:5px 12px;min-width:44px}
+.dlg-icon-btn.dlg-btn-on{background:#dbeafe;border-color:#93c5fd}
+.dlg-pinyin-btn{font-weight:700;border-radius:6px;padding:4px 10px;cursor:pointer}
+.dlg-pinyin-btn.on{background:#2563eb;color:#fff;border:1px solid #2563eb}
+.dlg-pinyin-btn.off{background:#e5e7eb;color:#6b7280;border:1px solid #d1d5db}
 </style>
 </head>
 <body>
@@ -850,7 +868,7 @@ img, svg { max-width: 100%; }
 <div class="sub" style="margin-bottom:8px;">Đọc kỹ đoạn văn rồi trả lời 5 câu hỏi bên dưới. Bấm 🔊 để nghe từng đoạn.</div>
 <div class="reading-box">
 <div class="tts-voice-row"><span class="hint"><b>Giọng đọc:</b></span> <select class="tts-voice-select" id="tts-voice-read" aria-label="Chọn giọng đọc tiếng Trung"></select> <button class="tts-btn" type="button" onclick="previewCommonVoice()">🔊 Nghe thử</button></div><div class="hint" id="tts-voice-note-read">Đang kiểm tra giọng đọc trên thiết bị…</div>
-<div class="reading-zh hide-ruby">
+<div class="reading-zh hide-ruby" id="chunk-zh-read">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 0)">🔊 Nghe đoạn này</button></div>
 <p class="read-para-text"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby><ruby>五<rt>wǔ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。 <ruby>早<rt>Zǎo</rt></ruby><ruby>上<rt>shang</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>妈<rt>mā</rt></ruby><ruby>妈<rt>ma</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>走<rt>zǒu</rt></ruby><ruby>路<rt>lù</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>近<rt>jìn</rt></ruby>。 <ruby>在<rt>Zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>英<rt>Yīng</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>她<rt>tā</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>英<rt>Yīng</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。</p>
@@ -869,13 +887,14 @@ img, svg { max-width: 100%; }
 </section>
 </div>
 <script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["今天是星期五，我去学校。早上，我和妈妈一起吃饭。我走路去学校，学校很近。在学校，我学习汉语和英语。我的老师很好，我很喜欢她。我的朋友也学习汉语和英语。", "我和朋友在饭店吃米饭。饭店的菜很好吃，也很便宜。我们也喝奶茶，奶茶很好喝。吃饭以后，我们去超市买东西。超市的东西很好，我很高兴。超市在学校附近，走路很近。", "下午，我去书店买东西，很高兴。书店很大，东西也很好，我很高兴。晚上，我在家看电视和电影。我的爸爸妈妈都喜欢看电影。我们看电影，也吃苹果，很高兴。电影很好看，我觉得很快乐。", "星期五晚上，我们去电影院。电影院很大，电影也很好看。看电影以后，我们坐地铁，很高兴。地铁很快，我们都很高兴。明天，我们一起去看电影。这个星期五很好，我很高兴。"];</script>
-<div class="reading-Controls">
-<button class="tts-btn" onclick="playChunked('read', 0.88)">▶️ Nghe đoạn văn</button>
-<button class="tts-btn" id="chunk-pause-read" onclick="toggleChunkPause('read')">⏸️ Tạm dừng</button>
-<button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
-<button class="tts-btn" onclick="playChunked('read', 0.6)">🐢 Nghe chậm</button>
-<button class="btn-sm" onclick="document.getElementById('read-help').classList.toggle('show')">👁️ Ẩn/Hiện Dịch nghĩa</button>
-<button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
+<div class="reading-Controls dlg-controls-row">
+<span class="hint">Tốc độ:</span>
+<input type="range" id="chunk-speed-range-read" min="0.5" max="1.5" step="0.01" value="0.88" oninput="setChunkRateNum('read', this.value)">
+<input type="number" id="chunk-speed-num-read" min="0.5" max="1.5" step="0.05" value="0.88" onchange="setChunkRateNum('read', this.value)">
+<button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
+<button class="tts-btn" onclick="restartChunked('read')" title="Nghe lại từ đầu">↺</button>
+<button class="btn-sm dlg-icon-btn" id="chunk-trans-btn-read" onclick="toggleChunkHelp('read-help', 'chunk-trans-btn-read')" title="Hiện/Ẩn Dịch nghĩa">👁️</button>
+<button class="btn-sm dlg-pinyin-btn off" id="chunk-pinyin-btn-read" onclick="toggleChunkRuby('chunk-zh-read', 'chunk-pinyin-btn-read')" title="Hiện/Ẩn Pinyin">Pinyin</button>
 </div>
 <div class="reading-help" id="read-help">
 <div class="read-para-trans"><p>Hôm nay là thứ Sáu, tôi đến trường. Buổi sáng, tôi và mẹ cùng ăn cơm. Tôi đi bộ đến trường, trường rất gần. Ở trường, tôi học tiếng Hán và tiếng Anh. Cô giáo của tôi rất tốt, tôi rất thích cô ấy. Bạn tôi cũng học tiếng Hán và tiếng Anh.</p></div>
@@ -988,20 +1007,19 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📖 Đoạn văn tổng kết — Câu chuyện <span class="badge">82 câu · dùng đủ toàn bộ từ vựng HSK 1</span></h2>
-<div class="sub" style="margin-bottom:8px;">Dịch nghĩa tiếng Việt nằm ngay dưới mỗi câu, mặc định đang ẩn — bấm nút "Ẩn/Hiện Dịch nghĩa" để hiện ra khi cần.</div>
+<div class="sub" style="margin-bottom:8px;">Dịch nghĩa tiếng Việt nằm ngay dưới mỗi câu, mặc định đang ẩn — bấm 👁️ để hiện ra khi cần.</div>
 <div class="reading-box">
 <div class="tts-voice-row"><span class="hint"><b>Giọng đọc:</b></span> <select class="tts-voice-select" id="tts-voice-story" aria-label="Chọn giọng đọc tiếng Trung"></select> <button class="tts-btn" type="button" onclick="previewCommonVoice()">🔊 Nghe thử</button></div><div class="hint" id="tts-voice-note-story">Đang kiểm tra giọng đọc trên thiết bị…</div>
-<div class="reading-Controls">
-<button class="btn-sm" onclick="document.getElementById('story-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
-<button class="btn-sm" onclick="document.getElementById('story-zh').classList.toggle('hide-trans')">👁️ Ẩn/Hiện Dịch nghĩa</button>
+<div class="reading-Controls dlg-controls-row">
+<span class="hint">Tốc độ:</span>
+<input type="range" id="chunk-speed-range-story" min="0.5" max="1.5" step="0.01" value="0.88" oninput="setChunkRateNum('story', this.value)">
+<input type="number" id="chunk-speed-num-story" min="0.5" max="1.5" step="0.05" value="0.88" onchange="setChunkRateNum('story', this.value)">
+<button class="tts-btn dlg-play-btn" id="chunk-play-story" onclick="toggleChunkPlay('story')" title="Nghe / Tạm dừng">▶️</button>
+<button class="tts-btn" onclick="restartChunked('story')" title="Nghe lại từ đầu">↺</button>
+<button class="btn-sm dlg-icon-btn" id="chunk-trans-btn-story" onclick="toggleChunkTrans('story-zh', 'chunk-trans-btn-story')" title="Hiện/Ẩn Dịch nghĩa">👁️</button>
+<button class="btn-sm dlg-pinyin-btn off" id="chunk-pinyin-btn-story" onclick="toggleChunkRuby('story-zh', 'chunk-pinyin-btn-story')" title="Hiện/Ẩn Pinyin">Pinyin</button>
 </div>
 <script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['story'] = ["我是小明，我是学生，我在大学学习汉语，也学习英语，我很喜欢汉语。今天是星期五，我很高兴，因为我要去学校见老师，也见我的朋友。我的老师很好，他教我们汉语，也教我们英语，我们都很喜欢他。你好，请问，你叫什么名字？你是哪国人？你是学生吗？你在大学学习吗？我叫小红，我是中国人，我是留学生，我在大学学习汉语，也学习英语。小红问我：“你贵姓？”我问小红：“你叫什么名字？你呢？你是学生吗？你学习汉语吗？”我们很高兴认识你们，你们是学生吗？我们也是学生，我们一起学习汉语。他是你的男朋友吗？不是，他是我的朋友，他也是学生，他学习汉语。她是你的女朋友吗？不是，她是我的朋友，她学习英语，也学习汉语。您好，老师！我们是学生，我们都很喜欢学校，也喜欢老师和朋友。他是男学生，她是女学生，他们都是我的朋友，我们一起去学校。", "对不起，我不是老师，我是学生，我学汉语，也学英语，我很喜欢汉语。没关系，我很好。我非常高兴认识你，你是学生吗？你在大学学习吗？这是我的名片。先生，您好，请问老师姓什么？你认识老师吗？你是学生吗？这很贵吗？不贵，很便宜。谢谢你，你很客气，我很高兴认识你。你有钱吗？我没有钱。对不起，我没有名片，我也没有钱，你呢？我爸爸在公司工作，他的公司很大，他很喜欢他的工作，我也很喜欢他。老师教汉语，也教英语。汉语老师很好，我们都很喜欢他，也喜欢汉语。你做什么工作？我的老师在大学工作，他教汉语，也教英语，我们都很喜欢他。他很快就来了，我们一起去学校学习汉语和英语，我们很高兴。我们在学校学习，也在家学习，我还想学习汉语，也想学习英语。我知道，大学在前面，学校很近，广场也很近，我走路去学校，很高兴。对，我是学生，我在大学学习，我的老师很好，我很喜欢我的老师。小红的男朋友是学生，他在中学学习英语，也学习汉语，他很喜欢英语。", "我们去饭店吃饭，我饿了，我想吃米饭，也想吃牛肉和青菜，我们都很高兴。这个菜很好吃，又便宜又好吃，你吃什么菜？我想吃牛肉，也想吃青菜。你喝茶还是喝咖啡？我喝奶茶，不喝咖啡，我想喝一杯茶，也想喝咖啡。这个碗很大，这个杯很小，一共多少钱？一共二十块钱，很便宜。你要几个苹果？我要两个苹果，苹果很好吃，也很便宜，我很喜欢苹果。服务员，请问，这个菜多少钱？这个菜很好吃，也很便宜，我很喜欢这个菜。我想吃一点儿米饭，我喝点儿水，这个饭店很有名，我们都喜欢这个饭店。小姐，你好！谢谢你，你很客气，我很高兴认识你，你是学生吗？你学习汉语吗？我们吃米饭，也喝奶茶，米饭很好吃，奶茶也很好喝，我们都很高兴。今天是星期五，我们去饭店吃饭，明天我们去学校学习汉语，也学习英语。", "我从大学去超市，超市在学校对面，学校附近有一个饭店，很近，很好。书店在银行前面，你往哪儿去？我往左拐，饭店在前面，你知道吗？你往右拐，银行在前面，我们去超市，然后去饭店，我们一起去，好吗？我家在那儿，饭店在对面，书店也在这里，你去哪儿？你去超市吗？我在这儿，我不在那里，广场很近，银行很远，你知道吗？你去哪儿？人民很好，广场也很好。小姐，你好，请问，超市在哪儿？你去超市吗？师傅，谢谢你。再见！不客气，没关系，你很客气，我很高兴认识你。我们到了，超市在前面，我再去超市，我们走吧，去超市买东西。你去哪儿？你去哪里？我去超市，也去书店和银行，你去吗？学校在前面，饭店在对面，超市在学校附近，很近，很好，我们都喜欢去超市。", "今天是星期五，明天我们去看电影吧，电影院在那儿，很近，我们一起去。你今天有空儿吗？我有一点儿空儿，我想去看电影，你去吗？你为什么不去看电影？你有什么事？我没有时间，但是我想去。今天是几月几号？今天是我的生日，我很快乐，你真漂亮，我很高兴。生日快乐！我们晚上吃晚饭，这个电影太好看了，我们都很快乐。我们明天见，你喜欢这个电影吗？我非常喜欢，也想再去看电影。请坐，我们看电影。那是电影院，很大，电影很好，我们都喜欢看电影。这个星期，我很忙，但是今天是星期五，我很快乐，我想去看电影。你今天有空儿吗？我们一起去看电影，好吗？电影很好看，我们都喜欢。电影很好看，我觉得很快乐，明天我们再去看电影，你去吗？", "我们怎么去学校？你坐地铁去吗？我坐公交车去学校，你呢？我们走路去学校吧，出租车很贵，地铁很便宜，我们都喜欢坐地铁。这个饭店很有名，也很便宜，我们都喜欢坐地铁，也喜欢这个饭店。师傅，去电影院，多少钱？十块钱，很便宜，谢谢师傅，你真好。谢谢师傅，不客气。我们到了，再见！你怎么样？我很好，你呢？我们又去看电影了，电影很好看，我们都很高兴，也想再去看电影。明天我们坐地铁去学校，也坐公交车去超市买东西，你去吗？这个饭店很有名，这个菜很好吃，我们都喜欢这个饭店。你怎么去学校？我走路去学校，学校很近，地铁也很近，你知道吗？我们都喜欢坐地铁，也喜欢坐公交车，出租车很贵，我们走路去学校。", "我家有五口人，爸爸，妈妈，哥哥，姐姐，弟弟，妹妹和我，我们都很好。我爸爸是律师，我妈妈是医生，我哥哥也是医生，我很喜欢我的家人。我有一个哥哥，他是医生，我有一个姐姐，她是老师，我很喜欢他们。你弟弟多大？他今年十岁。我妹妹很小，她今年三岁，她很可爱。我有一只狗，我的狗很可爱，我很喜欢我的狗，也喜欢我的家人。这是我的家人，这是我家的照片，他们是我的爸爸和妈妈，我很喜欢他们。他们是谁？他们是我的家人，我的家人都很好，我很喜欢他们。你们家有几个人？我们家有四个人，爸爸，妈妈，哥哥和我，我们都很好。我的家人都很好，今年我学习汉语，也学习英语，我很喜欢学习汉语。我和朋友一起去学校，我的朋友是留学生，她学习汉语，也学习英语。", "晚上，我们在家吃晚饭，晚饭很好吃，米饭也很好吃，我们都很高兴。我们吃晚饭，然后看电视，也听音乐，很高兴，我们都很快乐。我们看电影，也吃苹果，电影很好看，我觉得很快乐，我们都很高兴。明天我们去看电影，今天太好了，我们都很快乐，也想再去看电影。今天太好了，我们都很快乐，我又想去学校了，也想去看电影。我们睡觉吧，明天见。谢谢你们，再见！明天我们去学校，也去超市。你今天好吗？我很好，谢谢。我们明天去学校，也去超市，你去吗？我很喜欢我的家人，我的学校，和我的朋友，我们都很快乐，很高兴。"];</script>
-<div class="reading-Controls">
-<button class="tts-btn" onclick="playChunked('story', 0.88)">▶️ Nghe cả truyện</button>
-<button class="tts-btn" id="chunk-pause-story" onclick="toggleChunkPause('story')">⏸️ Tạm dừng</button>
-<button class="tts-btn" onclick="restartChunked('story')">↺ Nghe lại từ đầu</button>
-<button class="tts-btn" onclick="playChunked('story', 0.6)">🐢 Nghe chậm</button>
-</div>
 <div class="reading-zh hide-ruby hide-trans" id="story-zh">
 <h3 style="margin:14px 0 6px;">👋 Gặp bạn mới ở trường <button class="tts-btn" onclick="playChunked('story', 0.88, 0, 0)">🔊 Nghe cảnh này</button></h3>
 <div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>小<rt>Xiǎo</rt></ruby><ruby>明<rt>míng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>sheng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>英<rt>Yīng</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。</div>
@@ -2628,6 +2646,9 @@ function chunkPauseBtn(id) { return document.getElementById('chunk-pause-' + id)
 function updateChunkPauseBtn(id) {
   var b = chunkPauseBtn(id);
   if (b) b.textContent = (chunkCur && chunkCur.id === id && chunkCur.paused) ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+  // Nút play/pause dạng icon (file tổng kết): ▶️ khi chưa đọc/tạm dừng, ⏸️ khi đang đọc.
+  var pb = document.getElementById('chunk-play-' + id);
+  if (pb) pb.textContent = (chunkCur && chunkCur.id === id && chunkCur.playing && !chunkCur.paused) ? '⏸️' : '▶️';
 }
 function stopChunked(id) {
   var stoppedId = null;
@@ -2648,7 +2669,7 @@ function playChunked(id, rate, start, end) {
   if (!chunks.length) return;
   stopChunked();
   if (typeof stopDlg === 'function') { try { stopDlg(); } catch (e) {} }
-  rate = rate || 0.88;
+  rate = (typeof chunkRate !== 'undefined' && chunkRate[id]) || rate || 0.88;
   start = (typeof start === 'number') ? start : 0;
   end = (typeof end === 'number') ? end : chunks.length - 1;
   chunkCur = { id: id, chunks: chunks, idx: start, end: end, rate: rate, playing: true, paused: false, gen: 0 };
@@ -2680,15 +2701,79 @@ function speakChunk(p, gen) {
 function toggleChunkPause(id) {
   if (!('speechSynthesis' in window)) return;
   if (!chunkCur || chunkCur.id !== id) return;
-  var ss = window.speechSynthesis;
-  if (ss.paused) { ss.resume(); chunkCur.paused = false; }
-  else if (ss.speaking) { ss.pause(); chunkCur.paused = true; }
-  else return;
-  updateChunkPauseBtn(id);
+  if (chunkCur.paused) {
+    // Đọc tiếp: đọc lại từ đầu chunk đang dừng (KHÔNG dùng pause()/
+    // resume(): trên Chrome/Android resume() sau pause() thường không đọc
+    // tiếp, chuỗi đọc chết hẳn).
+    chunkCur.paused = false;
+    updateChunkPauseBtn(id);
+    speakChunk(chunkCur, chunkCur.gen);
+  } else {
+    // Tạm dừng: hủy utterance đang đọc, giữ nguyên idx (đọc tiếp sẽ đọc
+    // lại chunk này). Tăng gen TRƯỚC khi cancel để callback onerror/onend
+    // của utterance bị hủy không động vào chuỗi nữa.
+    chunkCur.paused = true;
+    chunkCur.gen++;
+    window.speechSynthesis.cancel();
+    updateChunkPauseBtn(id);
+  }
 }
 function restartChunked(id) {
   var rate = (chunkCur && chunkCur.id === id) ? chunkCur.rate : 0.88;
   playChunked(id, rate);
+}
+
+// Tốc độ riêng từng player chunked (file tổng kết): thanh trượt tốc độ
+// ghi vào đây, playChunked dùng nó thay cho tốc độ mặc định 0.88.
+var chunkRate = {};
+function setChunkRateNum(id, v) {
+  var val = parseFloat(v);
+  if (isNaN(val)) val = 0.88;
+  val = Math.min(1.5, Math.max(0.5, val));
+  chunkRate[id] = val;
+  var r = document.getElementById('chunk-speed-range-' + id);
+  var n = document.getElementById('chunk-speed-num-' + id);
+  if (r) r.value = val;
+  if (n) n.value = val;
+}
+// Nút play/pause 1 nút duy nhất (file tổng kết, theo format Bài 8 mới):
+// chưa đọc thì đọc từ đầu, đang đọc/tạm dừng thì đổi trạng thái.
+function toggleChunkPlay(id) {
+  if (!('speechSynthesis' in window)) return;
+  if (chunkCur && chunkCur.id === id) { toggleChunkPause(id); return; }
+  playChunked(id, chunkRate[id] || 0.88);
+}
+// Nút Pinyin (file tổng kết): ẩn/hiện pinyin trên chữ trong hộp của
+// chính player đó + trạng thái nút (bật = nền xanh dương).
+function toggleChunkRuby(zhId, btnId) {
+  var zh = document.getElementById(zhId);
+  if (!zh) return;
+  zh.classList.toggle('hide-ruby');
+  var btn = document.getElementById(btnId);
+  if (btn) {
+    var on = !zh.classList.contains('hide-ruby');
+    btn.classList.toggle('on', on);
+    btn.classList.toggle('off', !on);
+  }
+}
+// Nút 👁️ dịch nghĩa kiểu truyện (file tổng kết): dịch nghĩa nằm trong hộp
+// chữ, ẩn bằng hide-trans.
+function toggleChunkTrans(zhId, btnId) {
+  var zh = document.getElementById(zhId);
+  if (!zh) return;
+  var show = zh.classList.contains('hide-trans');
+  zh.classList.toggle('hide-trans', !show);
+  var btn = document.getElementById(btnId);
+  if (btn) btn.classList.toggle('dlg-btn-on', show);
+}
+// Nút 👁️ dịch nghĩa kiểu Bài 7 (file tổng kết): dịch nghĩa ở hộp riêng,
+// hiện bằng .show.
+function toggleChunkHelp(helpId, btnId) {
+  var help = document.getElementById(helpId);
+  if (!help) return;
+  var shown = help.classList.toggle('show');
+  var btn = document.getElementById(btnId);
+  if (btn) btn.classList.toggle('dlg-btn-on', shown);
 }
 
 // ----- Ghi đè speak()/speakRate() của file mẫu (giữ nguyên chữ ký) -----
@@ -2697,6 +2782,7 @@ function restartChunked(id) {
 function speakRate(text, rate) {
   if (!('speechSynthesis' in window)) return;
   stopChunked();
+  if (typeof stopDlg === 'function') { try { stopDlg(); } catch (e) {} }
   window.speechSynthesis.cancel();
   var u = new SpeechSynthesisUtterance(text);
   u.lang = 'zh-CN'; u.rate = rate || 0.88;
