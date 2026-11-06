@@ -1,0 +1,2591 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HSK 1 — Bài Tổng Kết (178 từ)</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f4f1ea; color: #22252b; line-height: 1.55; }
+.wrap { max-width: 740px; margin: 0 auto; padding: 12px 14px 50px; }
+h1 { font-size: 22px; margin: 10px 0 4px; }
+.sub { color: #6b7280; font-size: 14px; margin-bottom: 14px; }
+.progress-bar { position: sticky; top: 0; z-index: 30; background: rgba(244,241,234,0.96); backdrop-filter: blur(4px); padding: 8px 0; border-bottom: 1px solid #e2ddd2; display: flex; justify-content: space-between; align-items: center; font-size: 13px; gap: 6px; flex-wrap: wrap; }
+.progress-track { flex: 1; min-width: 80px; height: 8px; background: #e2ddd2; border-radius: 4px; margin: 0 6px; overflow: hidden; }
+.progress-fill { height: 100%; background: #16a34a; width: 0%; transition: width 0.3s ease; }
+.card { background: #fff; border-radius: 14px; padding: 18px 20px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.card h2 { font-size: 18px; margin: 0 0 12px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #f4f1ea; padding-bottom: 8px; }
+.badge { font-size: 12px; font-weight: 600; background: #eef2ff; color: #3730a3; padding: 3px 8px; border-radius: 6px; }
+.char-section { border-top: 1px dashed #e5e0d5; padding-top: 14px; margin-top: 14px; }
+.char-section:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.char-head { display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; }
+.char-info { flex: 1; }
+.char-head .big { font-size: 38px; line-height: 1.15; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.meta { color: #4b5563; font-size: 14.5px; margin-top: 4px; }
+.stroke-box { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: none; }
+.stroke { width: 150px; height: 150px; border-radius: 10px; border: 2px solid #d6d1c4; background-color: #fff;
+  background-image: linear-gradient(to right, transparent 49.5%, #e5e0d5 49.5%, #e5e0d5 50.5%, transparent 50.5%), linear-gradient(to bottom, transparent 49.5%, #e5e0d5 49.5%, #e5e0d5 50.5%, transparent 50.5%), linear-gradient(45deg, transparent 49.5%, #f3f0e8 49.5%, #f3f0e8 50.5%, transparent 50.5%), linear-gradient(-45deg, transparent 49.5%, #f3f0e8 49.5%, #f3f0e8 50.5%, transparent 50.5%);
+  touch-action: none; user-select: none; -webkit-user-select: none; cursor: crosshair; }
+.stroke.quiz-active { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
+.stroke-controls { display: flex; gap: 4px; }
+.btn-sm { font-size: 12px; padding: 5px 9px; border-radius: 6px; border: 1px solid #d1d5db; background: #f9fafb; cursor: pointer; color: #374151; font-weight: 600; }
+.btn-sm:hover { background: #f3f4f6; }
+.btn-sm.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.quiz-status { font-size: 12px; color: #2563eb; min-height: 18px; font-weight: 600; text-align: center; }
+.tts-btn { background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 6px; cursor: pointer; font-size: 14px; padding: 3px 8px; vertical-align: middle; }
+.tts-btn:hover { background: #e5e7eb; }
+.label { font-weight: 700; margin-top: 10px; font-size: 14px; color: #374151; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0; font-size: 13.5px; }
+td, th { border-bottom: 1px solid #ece7db; padding: 5px 6px; text-align: left; vertical-align: top; }
+th { color: #6b7280; font-weight: 600; }
+.mn { background: #fdf6e3; border-left: 3px solid #f59e0b; border-radius: 6px; padding: 8px 12px; font-size: 14px; margin-top: 4px; }
+.colloc { background: #f0fdf4; border-left: 3px solid #16a34a; border-radius: 6px; padding: 8px 12px; font-size: 14px; margin-top: 4px; }
+.sentence-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; margin-top: 6px; }
+.sentence-zh { font-size: 18px; font-weight: 600; }
+.sentence-sub { font-size: 14px; color: #475569; margin-top: 4px; transition: filter 0.2s; }
+.blur { filter: blur(5px); cursor: pointer; user-select: none; }
+.blur:hover { filter: blur(2px); }
+.q-item { margin: 10px 0; padding: 10px 12px; background: #faf8f5; border-radius: 8px; }
+.hint { color: #6b7280; font-size: 13px; }
+.input-check { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; flex-wrap: wrap; position: relative; }
+.input-check input { padding: 6px 28px 6px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 15px; width: 185px; }
+.input-check input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37,99,235,0.15); }
+.btn-primary { padding: 6px 12px; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; }
+.btn-primary:hover { background: #1d4ed8; }
+.feedback { font-size: 13px; font-weight: 600; margin-left: 4px; }
+.ok { color: #15803d; } .err { color: #b91c1c; }
+
+/* ====== Khung Gợi ý Bộ gõ Pinyin (Hỗ trợ Phân trang) ====== */
+.py-wrap { position: relative; display: inline-block; }
+.py-badge {
+  position: absolute; right: 7px; top: 50%; transform: translateY(-50%);
+  font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 4px;
+  background: #dbeafe; color: #1e40af; pointer-events: none;
+}
+.py-badge.off { background: #e5e7eb; color: #6b7280; }
+.py-popup {
+  display: none; position: absolute; top: calc(100% + 5px); left: 0; z-index: 60;
+  background: #ffffff; border: 1.5px solid #2563eb; border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.16); padding: 7px 9px; min-width: 300px; max-width: 94vw;
+  user-select: none; -webkit-user-select: none;
+}
+.py-popup.show { display: block; }
+.py-header {
+  display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 6px;
+}
+.py-code { font-size: 13px; color: #1d4ed8; font-weight: 700; letter-spacing: 0.3px; }
+.py-pager { display: inline-flex; align-items: center; gap: 4px; }
+.py-page-info { font-size: 11.5px; color: #475569; font-weight: 600; min-width: 36px; text-align: center; }
+.py-page-btn {
+  border: 1px solid #cbd5e1; background: #f8fafc; color: #1e293b;
+  border-radius: 5px; padding: 2px 7px; font-size: 11px; font-weight: 700;
+  cursor: pointer; line-height: 1.3; transition: all 0.1s;
+}
+.py-page-btn:hover:not(:disabled) { background: #2563eb; color: #fff; border-color: #2563eb; }
+.py-page-btn:disabled { opacity: 0.35; cursor: default; }
+.py-cand-list { display: flex; flex-wrap: wrap; gap: 5px; min-height: 32px; align-items: center; }
+.py-cand {
+  display: inline-flex; align-items: baseline; gap: 3px; padding: 4px 9px;
+  border-radius: 6px; border: 1px solid #e2e8f0; background: #f8fafc;
+  cursor: pointer; font-size: 16px; font-weight: 600; color: #1e293b; transition: all 0.1s;
+}
+.py-cand:hover, .py-cand.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.py-cand .py-idx { font-size: 11px; color: #64748b; font-weight: 700; margin-right: 1px; }
+.py-cand:hover .py-idx, .py-cand.active .py-idx { color: #dbeafe; }
+.py-footer {
+  margin-top: 5px; padding-top: 4px; border-top: 1px dashed #e2e8f0;
+  font-size: 10.5px; color: #64748b; display: flex; justify-content: space-between;
+}
+
+.mc-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+@media (max-width: 520px) { .mc-options { grid-template-columns: 1fr; } }
+.mc-btn { text-align: left; padding: 8px 12px; background: #fff; border: 1px solid #cbd5e1; border-radius: 8px; cursor: pointer; font-size: 14.5px; transition: all 0.15s; }
+.mc-btn:hover { background: #f1f5f9; }
+.mc-btn.correct { background: #dcfce7; border-color: #16a34a; color: #14532d; font-weight: 600; }
+.mc-btn.wrong { background: #fee2e2; border-color: #dc2626; color: #7f1d1d; }
+.reveal { display: none; margin-top: 8px; font-size: 16px; background: #eff6ff; border-left: 3px solid #2563eb; border-radius: 6px; padding: 6px 10px; }
+.match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+.match-col { display: flex; flex-direction: column; gap: 8px; }
+.match-card { padding: 10px 12px; background: #faf8f5; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; text-align: center; font-weight: 600; font-size: 15px; transition: all 0.15s; user-select: none; }
+.match-card.selected { border-color: #2563eb; background: #eff6ff; color: #1d4ed8; }
+.match-card.matched { border-color: #16a34a; background: #dcfce7; color: #15803d; cursor: default; opacity: 0.65; }
+.match-card.wrong-flash { border-color: #dc2626; background: #fee2e2; }
+.cloze-passage { font-size: 16.5px; line-height: 2.1; background: #faf8f5; padding: 14px; border-radius: 10px; }
+.cloze-select { font-size: 15px; padding: 3px 6px; border: 1px solid #94a3b8; border-radius: 6px; background: #fff; font-weight: 600; color: #1e293b; }
+
+/* ====== Bài đọc hiểu đoạn văn ====== */
+.reading-box {
+  background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #2563eb;
+  border-radius: 10px; padding: 14px 16px; margin-bottom: 14px;
+}
+.reading-zh { font-size: 17.5px; line-height: 1.95; font-weight: 500; color: #1e293b; }
+.reading-Controls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.reading-help {
+  display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #cbd5e1;
+  font-size: 14px; color: #475569; line-height: 1.65;
+}
+.reading-help.show { display: block; }
+
+.scramble-box { margin: 12px 0; padding: 12px; background: #faf8f5; border-radius: 10px; }
+.word-bank, .answer-zone { display: flex; flex-wrap: wrap; gap: 8px; min-height: 44px; padding: 8px; border-radius: 8px; margin-top: 6px; align-items: center; }
+.word-bank { background: #eef2f6; }
+.answer-zone { background: #fff; border: 1px dashed #94a3b8; }
+.tile { padding: 5px 12px; background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.05); user-select: none; }
+.tile:hover { background: #f1f5f9; }
+.summary-list { font-size: 14px; margin: 8px 0; padding-left: 18px; }
+.footer { color: #6b7280; font-size: 14px; text-align: center; margin-top: 24px; }
+
+/* ====== Tối ưu điện thoại (bổ sung 2026-11-04 theo phản hồi của anh) ====== */
+img, svg { max-width: 100%; }
+@media (max-width: 640px) {
+  .wrap { padding: 10px 10px 40px; }
+  h1 { font-size: 19px; }
+  .card { padding: 14px 13px; margin: 12px 0; border-radius: 12px; }
+  .card h2 { font-size: 16px; flex-wrap: wrap; gap: 6px; }
+  .char-head { flex-direction: column; }
+  .char-info { width: 100%; }
+  .stroke-box { align-self: center; }
+  .char-head .big { font-size: 34px; }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 13px; }
+  .input-check input { width: auto; flex: 1 1 130px; min-width: 0; }
+  .py-wrap { flex: 1 1 130px; min-width: 0; }
+  .py-wrap input { width: 100%; }
+  .py-popup { min-width: 0; width: min(320px, 92vw); }
+  .cloze-passage { font-size: 15.5px; line-height: 2.0; padding: 11px; }
+  .cloze-select { max-width: 40vw; }
+  .reading-zh { font-size: 16.5px; }
+  .sentence-zh { font-size: 17px; }
+  .progress-bar { font-size: 12px; }
+  .mc-btn { font-size: 14px; }
+}
+
+/* ====== Pinyin ruby trên đầu chữ Hán (phần đoạn văn) ====== */
+.reading-zh { line-height: 2.15; }
+.reading-zh ruby rt { font-size: 0.52em; color: #2563eb; font-weight: 400; }
+.reading-zh.hide-ruby { line-height: 1.95; }
+.reading-zh.hide-ruby rt { display: none; }
+
+
+  /* ====== Flashcard ôn tập ====== */
+  .flash-scene { perspective: 900px; margin: 10px 0; }
+  .flash-card { position: relative; width: 100%; height: 170px; cursor: pointer; transform-style: preserve-3d; transition: transform 0.55s; }
+  .flash-card.flipped { transform: rotateY(180deg); }
+  .flash-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border-radius: 14px; padding: 14px; text-align: center; }
+  .flash-front { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 2px solid #93c5fd; }
+  .flash-back { background: linear-gradient(135deg, #ecfdf5, #d1fae5); border: 2px solid #6ee7b7; transform: rotateY(180deg); }
+  .flash-hanzi { font-size: 2.6rem; font-weight: 800; color: #1e3a8a; line-height: 1.15; }
+  .flash-meaning { font-size: 1.45rem; font-weight: 700; color: #065f46; line-height: 1.3; }
+  .flash-sub { font-size: 1rem; color: #475569; }
+  .flash-tag { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; color: #64748b; text-transform: uppercase; }
+  .flash-Controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+  .flash-count { font-weight: 700; color: #334155; }
+
+/* --- Che bằng khối màu (thay blur) --- */
+.sentence-sub.cover { cursor: pointer; border-radius: 8px; padding: 6px 8px; }
+.sentence-sub.cover.covered { background: #e7dfcf; color: transparent; user-select: none; position: relative; }
+.sentence-sub.cover.covered::after { content: "👁 Bấm để xem pinyin + dịch nghĩa"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #6b7280; font-size: 13px; font-weight: 600; }
+/* --- Nghĩa tiếng Việt của từ mới (ngay dưới tiêu đề thẻ từ) --- */
+.word-meaning { font-size: 15px; color: #1e293b; margin: 2px 0 10px; }
+/* --- Dịch nghĩa ngay dưới mỗi câu trong truyện tổng kết (bấm nút để ẩn/hiện) --- */
+.story-trans { font-size: 14px; color: #475569; margin: 2px 0 8px; line-height: 1.6; }
+#story-zh.hide-trans .story-trans { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="progress-bar">
+    <span>🎯 Tiến độ:</span>
+    <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+    <b id="prog-text">0 / 62</b>
+    <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
+    <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
+  </div>
+
+  <h1>📚 HSK 1 — Bài Tổng Kết · Ôn tập toàn bộ 178 từ</h1>
+  <div class="sub">10 bài · 178 từ · 62 bài tập · Flashcard 178 thẻ — làm xong một bài là xong cả HSK 1</div>
+<div class="card">
+<h2>📚 Bài Tổng Kết HSK 1 — Ôn tập toàn bộ 178 từ <span class="badge">10 bài · 62 bài tập</span></h2>
+<div class="sub">Bài này gom toàn bộ từ vựng HSK 1 anh đã học: từ Bài 1 lên Bài 10.</div>
+<p><b>Số từ theo bài:</b> Bài 1: 5 từ · Bài 2: 10 từ · Bài 3: 19 từ · Bài 4: 19 từ · Bài 5: 21 từ · Bài 6: 22 từ · Bài 7: 17 từ · Bài 8: 24 từ · Bài 9: 20 từ · Bài 10: 21 từ.</p>
+<p><b>Cách dùng:</b> (1) Lật flashcard để ôn nhanh mặt chữ → nghĩa. (2) Tra bảng từ vựng theo từng bài khi cần. (3) Làm 8 bài tập từ nghe → ghép cặp → nghĩa → điền từ → xếp câu → pinyin → đọc hiểu → gõ pinyin. Mỗi bài làm xong sẽ tự tính điểm, câu sai gom vào phần Tổng kết để gửi em.</p>
+</div>
+<div class="card" id="flash-wrap">
+<h2>🃏 Flashcard toàn bộ 178 từ <span class="badge">178 thẻ · lật thẻ ngẫu nhiên</span></h2>
+<div class="sub">Mỗi thẻ ngẫu nhiên một chiều: khi thì mặt trước là chữ Hán, khi thì là nghĩa tiếng Việt. Chạm vào thẻ để lật mặt sau.</div>
+<div class="flash-scene"><div class="flash-card" id="flash-card" onclick="flashFlip()">
+<div class="flash-face flash-front" id="flash-front"></div>
+<div class="flash-face flash-back" id="flash-back"></div>
+</div></div>
+<div class="flash-Controls">
+<button class="btn-sm" onclick="flashPrev()">⬅ Trước</button>
+<button class="btn-primary" onclick="flashFlip()">🔄 Lật thẻ</button>
+<button class="btn-sm" onclick="flashNext()">Tiếp ➡</button>
+<button class="btn-sm" onclick="flashReshuffle()">🔀 Trộn lại</button>
+<span class="flash-count" id="flash-count"></span>
+</div></div>
+<div class="card">
+<h2>📖 Bảng từ vựng toàn bộ HSK 1 <span class="badge">178 từ · bấm từng bài để mở</span></h2>
+<div class="sub">Bấm vào từng bài để xem bảng từ của bài đó: chữ Hán · Pinyin · Hán Việt · Nghĩa.</div>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 1 — 5 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>好</b></td><td>hǎo</td><td>hảo</td><td>tốt; khỏe; hay</td></tr>
+<tr><td>2</td><td><b>老师</b></td><td>lǎoshī</td><td>lão sư</td><td>thầy giáo; cô giáo</td></tr>
+<tr><td>3</td><td><b>你</b></td><td>nǐ</td><td>nhĩ</td><td>bạn; anh; chị; em</td></tr>
+<tr><td>4</td><td><b>你们</b></td><td>nǐmen</td><td>nhĩ môn</td><td>các bạn</td></tr>
+<tr><td>5</td><td><b>您</b></td><td>nín</td><td>nâm</td><td>ngài; ông; bà (cách xưng hô kính trọng)</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 2 — 10 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>国</b></td><td>guó</td><td>quốc</td><td>nước; quốc gia</td></tr>
+<tr><td>2</td><td><b>叫</b></td><td>jiào</td><td>khiếu</td><td>gọi; tên là</td></tr>
+<tr><td>3</td><td><b>名字</b></td><td>míngzi</td><td>danh tự</td><td>tên (tên gọi)</td></tr>
+<tr><td>4</td><td><b>哪</b></td><td>nǎ</td><td>na</td><td>nào; đâu</td></tr>
+<tr><td>5</td><td><b>呢</b></td><td>ne</td><td>ni</td><td>trợ từ cuối câu (hỏi lại; nhấn mạnh)</td></tr>
+<tr><td>6</td><td><b>人</b></td><td>rén</td><td>nhân</td><td>người</td></tr>
+<tr><td>7</td><td><b>什么</b></td><td>shénme</td><td>thập ma</td><td>cái gì; gì</td></tr>
+<tr><td>8</td><td><b>是</b></td><td>shì</td><td>thị</td><td>là</td></tr>
+<tr><td>9</td><td><b>他</b></td><td>tā</td><td>tha</td><td>anh ấy; ông ấy</td></tr>
+<tr><td>10</td><td><b>我</b></td><td>wǒ</td><td>ngã</td><td>tôi; mình</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 3 — 19 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>不</b></td><td>bù</td><td>bất</td><td>không</td></tr>
+<tr><td>2</td><td><b>的</b></td><td>de</td><td>đích</td><td>của (trợ từ)</td></tr>
+<tr><td>3</td><td><b>对不起</b></td><td>duìbuqǐ</td><td>đối bất khởi</td><td>xin lỗi</td></tr>
+<tr><td>4</td><td><b>高兴</b></td><td>gāoxìng</td><td>cao hưng</td><td>vui vẻ; vui mừng</td></tr>
+<tr><td>5</td><td><b>贵</b></td><td>guì</td><td>quý</td><td>đắt; quý</td></tr>
+<tr><td>6</td><td><b>贵姓</b></td><td>guìxìng</td><td>quý tính</td><td>họ gì (cách hỏi lịch sự)</td></tr>
+<tr><td>7</td><td><b>很</b></td><td>hěn</td><td>ngận</td><td>rất</td></tr>
+<tr><td>8</td><td><b>吗</b></td><td>ma</td><td>ma</td><td>trợ từ hỏi có–không</td></tr>
+<tr><td>9</td><td><b>没关系</b></td><td>méiguānxi</td><td>một quan hệ</td><td>không sao; không có gì</td></tr>
+<tr><td>10</td><td><b>没有</b></td><td>méiyǒu</td><td>một hữu</td><td>không có; chưa có</td></tr>
+<tr><td>11</td><td><b>名片</b></td><td>míngpiàn</td><td>danh phiến</td><td>danh thiếp</td></tr>
+<tr><td>12</td><td><b>请问</b></td><td>qǐngwèn</td><td>thỉnh vấn</td><td>xin hỏi</td></tr>
+<tr><td>13</td><td><b>认识</b></td><td>rènshi</td><td>nhận thức</td><td>quen biết; nhận ra</td></tr>
+<tr><td>14</td><td><b>问</b></td><td>wèn</td><td>vấn</td><td>hỏi</td></tr>
+<tr><td>15</td><td><b>先生</b></td><td>xiānsheng</td><td>tiên sinh</td><td>ông; ngài; thầy</td></tr>
+<tr><td>16</td><td><b>姓</b></td><td>xìng</td><td>tính</td><td>họ; mang họ</td></tr>
+<tr><td>17</td><td><b>也</b></td><td>yě</td><td>dã</td><td>cũng; cũng vậy</td></tr>
+<tr><td>18</td><td><b>有</b></td><td>yǒu</td><td>hữu</td><td>có</td></tr>
+<tr><td>19</td><td><b>这</b></td><td>zhè</td><td>giá</td><td>này; đây</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 4 — 19 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>不客气</b></td><td>búkèqi</td><td>bất khách khí</td><td>không có gì; đừng khách sáo</td></tr>
+<tr><td>2</td><td><b>到</b></td><td>dào</td><td>đáo</td><td>đến; tới</td></tr>
+<tr><td>3</td><td><b>多少</b></td><td>duōshao</td><td>đa thiểu</td><td>bao nhiêu</td></tr>
+<tr><td>4</td><td><b>广场</b></td><td>guǎngchǎng</td><td>quảng trường</td><td>quảng trường</td></tr>
+<tr><td>5</td><td><b>近</b></td><td>jìn</td><td>cận</td><td>gần</td></tr>
+<tr><td>6</td><td><b>客气</b></td><td>kèqi</td><td>khách khí</td><td>khách sáo; lịch sự</td></tr>
+<tr><td>7</td><td><b>块</b></td><td>kuài</td><td>khối</td><td>đồng (tiền); miếng, cục (lượng từ)</td></tr>
+<tr><td>8</td><td><b>了</b></td><td>le</td><td>liễu</td><td>rồi; đã (trợ từ)</td></tr>
+<tr><td>9</td><td><b>哪儿 / 哪里</b></td><td>nǎr/nǎli</td><td>ná nhi / ná lý</td><td>đâu; ở đâu</td></tr>
+<tr><td>10</td><td><b>钱</b></td><td>qián</td><td>tiền</td><td>tiền</td></tr>
+<tr><td>11</td><td><b>去</b></td><td>qù</td><td>khứ</td><td>đi; đến</td></tr>
+<tr><td>12</td><td><b>人民</b></td><td>rénmín</td><td>nhân dân</td><td>nhân dân</td></tr>
+<tr><td>13</td><td><b>师傅</b></td><td>shīfu</td><td>sư phó</td><td>bác tài; thầy thợ (cách gọi tôn trọng người làm nghề)</td></tr>
+<tr><td>14</td><td><b>小姐</b></td><td>xiǎojiě</td><td>tiểu thư</td><td>cô; tiểu thư</td></tr>
+<tr><td>15</td><td><b>谢谢</b></td><td>xièxie</td><td>tạ tạ</td><td>cảm ơn</td></tr>
+<tr><td>16</td><td><b>远</b></td><td>yuǎn</td><td>viễn</td><td>xa</td></tr>
+<tr><td>17</td><td><b>再</b></td><td>zài</td><td>tái</td><td>lại; nữa</td></tr>
+<tr><td>18</td><td><b>再见</b></td><td>zàijiàn</td><td>tái kiến</td><td>tạm biệt</td></tr>
+<tr><td>19</td><td><b>知道</b></td><td>zhīdào</td><td>tri đạo</td><td>biết</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 5 — 21 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>杯</b></td><td>bēi</td><td>bôi</td><td>cốc; chén (lượng từ)</td></tr>
+<tr><td>2</td><td><b>茶</b></td><td>chá</td><td>trà</td><td>trà</td></tr>
+<tr><td>3</td><td><b>吃</b></td><td>chī</td><td>ngật</td><td>ăn</td></tr>
+<tr><td>4</td><td><b>大</b></td><td>dà</td><td>đại</td><td>to; lớn</td></tr>
+<tr><td>5</td><td><b>饿</b></td><td>è</td><td>ngạ</td><td>đói</td></tr>
+<tr><td>6</td><td><b>个</b></td><td>gè</td><td>cá</td><td>cái (lượng từ chung)</td></tr>
+<tr><td>7</td><td><b>还</b></td><td>hái</td><td>hoàn</td><td>còn; vẫn</td></tr>
+<tr><td>8</td><td><b>还是</b></td><td>háishi</td><td>hoàn thị</td><td>hay là; vẫn là</td></tr>
+<tr><td>9</td><td><b>喝</b></td><td>hē</td><td>hát</td><td>uống</td></tr>
+<tr><td>10</td><td><b>咖啡</b></td><td>kāfēi</td><td>già phi</td><td>cà phê</td></tr>
+<tr><td>11</td><td><b>快</b></td><td>kuài</td><td>khoái</td><td>nhanh</td></tr>
+<tr><td>12</td><td><b>两</b></td><td>liǎng</td><td>lưỡng</td><td>hai</td></tr>
+<tr><td>13</td><td><b>米饭</b></td><td>mǐfàn</td><td>mễ phạn</td><td>cơm</td></tr>
+<tr><td>14</td><td><b>奶茶</b></td><td>nǎichá</td><td>nãi trà</td><td>trà sữa</td></tr>
+<tr><td>15</td><td><b>牛肉</b></td><td>niúròu</td><td>ngưu nhục</td><td>thịt bò</td></tr>
+<tr><td>16</td><td><b>青菜</b></td><td>qīngcài</td><td>thanh thái</td><td>rau xanh</td></tr>
+<tr><td>17</td><td><b>碗</b></td><td>wǎn</td><td>oản</td><td>bát</td></tr>
+<tr><td>18</td><td><b>小</b></td><td>xiǎo</td><td>tiểu</td><td>nhỏ; bé</td></tr>
+<tr><td>19</td><td><b>要</b></td><td>yào</td><td>yếu</td><td>muốn; cần; phải</td></tr>
+<tr><td>20</td><td><b>一共</b></td><td>yígòng</td><td>nhất cộng</td><td>tổng cộng; tất cả</td></tr>
+<tr><td>21</td><td><b>（一）点儿</b></td><td>(yì)diǎnr</td><td>(nhất) điểm nhi</td><td>một chút; một ít</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 6 — 22 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>大学</b></td><td>dàxué</td><td>đại học</td><td>đại học; trường đại học</td></tr>
+<tr><td>2</td><td><b>对</b></td><td>duì</td><td>đối</td><td>đúng; đối với</td></tr>
+<tr><td>3</td><td><b>工作</b></td><td>gōngzuò</td><td>công tác</td><td>làm việc; công việc</td></tr>
+<tr><td>4</td><td><b>公司</b></td><td>gōngsī</td><td>công ty</td><td>công ty</td></tr>
+<tr><td>5</td><td><b>汉语</b></td><td>Hànyǔ</td><td>Hán ngữ</td><td>tiếng Hán; tiếng Trung</td></tr>
+<tr><td>6</td><td><b>教</b></td><td>jiāo</td><td>giáo</td><td>dạy</td></tr>
+<tr><td>7</td><td><b>留学生</b></td><td>liúxuéshēng</td><td>lưu học sinh</td><td>du học sinh; lưu học sinh</td></tr>
+<tr><td>8</td><td><b>男</b></td><td>nán</td><td>nam</td><td>nam; đàn ông; con trai</td></tr>
+<tr><td>9</td><td><b>男朋友</b></td><td>nánpéngyou</td><td>nam bằng hữu</td><td>bạn trai</td></tr>
+<tr><td>10</td><td><b>女</b></td><td>nǚ</td><td>nữ</td><td>nữ; đàn bà; con gái</td></tr>
+<tr><td>11</td><td><b>女朋友</b></td><td>nǚpéngyou</td><td>nữ bằng hữu</td><td>bạn gái</td></tr>
+<tr><td>12</td><td><b>朋友</b></td><td>péngyou</td><td>bằng hữu</td><td>bạn; bạn bè</td></tr>
+<tr><td>13</td><td><b>苹果</b></td><td>píngguǒ</td><td>bình quả</td><td>quả táo</td></tr>
+<tr><td>14</td><td><b>她</b></td><td>tā</td><td>tha</td><td>cô ấy; bà ấy; chị ấy</td></tr>
+<tr><td>15</td><td><b>学</b></td><td>xué</td><td>học</td><td>học</td></tr>
+<tr><td>16</td><td><b>学生</b></td><td>xuéshēng</td><td>học sinh</td><td>học sinh; sinh viên</td></tr>
+<tr><td>17</td><td><b>学习</b></td><td>xuéxí</td><td>học tập</td><td>học tập; học</td></tr>
+<tr><td>18</td><td><b>英语</b></td><td>Yīngyǔ</td><td>Anh ngữ</td><td>tiếng Anh</td></tr>
+<tr><td>19</td><td><b>在</b></td><td>zài</td><td>tại</td><td>ở; tại; đang</td></tr>
+<tr><td>20</td><td><b>这儿 / 这里</b></td><td>zhèr/zhèlǐ</td><td>giá nhi / giá lý</td><td>đây; chỗ này</td></tr>
+<tr><td>21</td><td><b>中学</b></td><td>zhōngxué</td><td>trung học</td><td>trường trung học</td></tr>
+<tr><td>22</td><td><b>做</b></td><td>zuò</td><td>tố</td><td>làm</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 7 — 17 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>超市</b></td><td>chāoshì</td><td>siêu thị</td><td>siêu thị</td></tr>
+<tr><td>2</td><td><b>从</b></td><td>cóng</td><td>tòng</td><td>từ</td></tr>
+<tr><td>3</td><td><b>对面</b></td><td>duìmiàn</td><td>đối diện</td><td>đối diện; phía đối diện</td></tr>
+<tr><td>4</td><td><b>饭店</b></td><td>fàndiàn</td><td>phạn điếm</td><td>nhà hàng; quán ăn</td></tr>
+<tr><td>5</td><td><b>附近</b></td><td>fùjìn</td><td>phụ cận</td><td>gần đây; vùng lân cận</td></tr>
+<tr><td>6</td><td><b>拐</b></td><td>guǎi</td><td>quải</td><td>rẽ; quặt; ngoặt</td></tr>
+<tr><td>7</td><td><b>家</b></td><td>jiā</td><td>gia</td><td>nhà; gia đình</td></tr>
+<tr><td>8</td><td><b>就</b></td><td>jiù</td><td>tựu</td><td>thì; liền; ngay; chính là</td></tr>
+<tr><td>9</td><td><b>面</b></td><td>miàn</td><td>diện</td><td>mặt; bề mặt; mì</td></tr>
+<tr><td>10</td><td><b>前</b></td><td>qián</td><td>tiền</td><td>trước; phía trước; trước đây</td></tr>
+<tr><td>11</td><td><b>然后</b></td><td>ránhòu</td><td>nhiên hậu</td><td>sau đó; rồi</td></tr>
+<tr><td>12</td><td><b>书店</b></td><td>shūdiàn</td><td>thư điếm</td><td>hiệu sách; cửa hàng sách</td></tr>
+<tr><td>13</td><td><b>往</b></td><td>wǎng</td><td>vãng</td><td>đi về phía; hướng về</td></tr>
+<tr><td>14</td><td><b>银行</b></td><td>yínháng</td><td>ngân hàng</td><td>ngân hàng</td></tr>
+<tr><td>15</td><td><b>右</b></td><td>yòu</td><td>hữu</td><td>bên phải; phía phải</td></tr>
+<tr><td>16</td><td><b>走</b></td><td>zǒu</td><td>tẩu</td><td>đi bộ; đi</td></tr>
+<tr><td>17</td><td><b>左</b></td><td>zuǒ</td><td>tả</td><td>bên trái; phía trái</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 8 — 24 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>电影</b></td><td>diànyǐng</td><td>điện ảnh</td><td>phim; điện ảnh</td></tr>
+<tr><td>2</td><td><b>号</b></td><td>hào</td><td>hào</td><td>số; ngày (trong tháng)</td></tr>
+<tr><td>3</td><td><b>几</b></td><td>jǐ</td><td>kỷ</td><td>mấy; bao nhiêu</td></tr>
+<tr><td>4</td><td><b>见</b></td><td>jiàn</td><td>kiến</td><td>thấy; gặp</td></tr>
+<tr><td>5</td><td><b>今天</b></td><td>jīntiān</td><td>kim thiên</td><td>hôm nay</td></tr>
+<tr><td>6</td><td><b>看</b></td><td>kàn</td><td>khán</td><td>nhìn; xem</td></tr>
+<tr><td>7</td><td><b>空儿</b></td><td>kòngr</td><td>không nhi</td><td>thời gian rảnh</td></tr>
+<tr><td>8</td><td><b>快乐</b></td><td>kuàilè</td><td>khoái lạc</td><td>vui vẻ; hạnh phúc</td></tr>
+<tr><td>9</td><td><b>那</b></td><td>nà</td><td>na</td><td>kia; đó</td></tr>
+<tr><td>10</td><td><b>漂亮</b></td><td>piàoliang</td><td>phiêu lượng</td><td>xinh đẹp</td></tr>
+<tr><td>11</td><td><b>请</b></td><td>qǐng</td><td>thỉnh</td><td>mời; xin; làm ơn</td></tr>
+<tr><td>12</td><td><b>生日</b></td><td>shēngrì</td><td>sinh nhật</td><td>sinh nhật</td></tr>
+<tr><td>13</td><td><b>事</b></td><td>shì</td><td>sự</td><td>việc; chuyện</td></tr>
+<tr><td>14</td><td><b>太……了</b></td><td>tài…le</td><td>thái……liễu</td><td>quá... (rồi)</td></tr>
+<tr><td>15</td><td><b>晚饭</b></td><td>wǎnfàn</td><td>vãn phạn</td><td>bữa tối; cơm tối</td></tr>
+<tr><td>16</td><td><b>晚上</b></td><td>wǎnshang</td><td>vãn thượng</td><td>buổi tối</td></tr>
+<tr><td>17</td><td><b>为什么</b></td><td>wèishénme</td><td>vị thập ma</td><td>tại sao</td></tr>
+<tr><td>18</td><td><b>想</b></td><td>xiǎng</td><td>tưởng</td><td>nghĩ; muốn</td></tr>
+<tr><td>19</td><td><b>星期</b></td><td>xīngqī</td><td>tinh kỳ</td><td>tuần; thứ (trong tuần)</td></tr>
+<tr><td>20</td><td><b>星期五</b></td><td>xīngqīwǔ</td><td>tinh kỳ ngũ</td><td>thứ Sáu</td></tr>
+<tr><td>21</td><td><b>学校</b></td><td>xuéxiào</td><td>học hiệu</td><td>trường học</td></tr>
+<tr><td>22</td><td><b>有空儿</b></td><td>yǒukòngr</td><td>hữu không nhi</td><td>có thời gian rảnh</td></tr>
+<tr><td>23</td><td><b>月</b></td><td>yuè</td><td>nguyệt</td><td>tháng; mặt trăng</td></tr>
+<tr><td>24</td><td><b>真</b></td><td>zhēn</td><td>chân</td><td>thật; thực sự</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 9 — 20 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>吧</b></td><td>ba</td><td>ba</td><td>(trợ từ) nhé; đi</td></tr>
+<tr><td>2</td><td><b>菜</b></td><td>cài</td><td>thái</td><td>món ăn; rau</td></tr>
+<tr><td>3</td><td><b>出租车</b></td><td>chūzūchē</td><td>xuất tô xa</td><td>xe taxi</td></tr>
+<tr><td>4</td><td><b>地铁</b></td><td>dìtiě</td><td>địa thiết</td><td>tàu điện ngầm</td></tr>
+<tr><td>5</td><td><b>电影院</b></td><td>diànyǐngyuàn</td><td>điện ảnh viện</td><td>rạp chiếu phim</td></tr>
+<tr><td>6</td><td><b>都</b></td><td>dōu</td><td>đô</td><td>đều; tất cả</td></tr>
+<tr><td>7</td><td><b>非常</b></td><td>fēicháng</td><td>phi thường</td><td>rất; vô cùng</td></tr>
+<tr><td>8</td><td><b>公交车</b></td><td>gōngjiāochē</td><td>công giao xa</td><td>xe buýt</td></tr>
+<tr><td>9</td><td><b>好吃</b></td><td>hǎochī</td><td>hảo ngật</td><td>ngon (món ăn)</td></tr>
+<tr><td>10</td><td><b>明天</b></td><td>míngtiān</td><td>minh thiên</td><td>ngày mai</td></tr>
+<tr><td>11</td><td><b>那儿 / 那里</b></td><td>nàr/nàli</td><td>na nhi / na lí</td><td>đằng kia; ở đó</td></tr>
+<tr><td>12</td><td><b>便宜</b></td><td>piányi</td><td>tiện nghi</td><td>rẻ</td></tr>
+<tr><td>13</td><td><b>喜欢</b></td><td>xǐhuan</td><td>hỉ hoan</td><td>thích</td></tr>
+<tr><td>14</td><td><b>有名</b></td><td>yǒumíng</td><td>hữu danh</td><td>nổi tiếng</td></tr>
+<tr><td>15</td><td><b>又</b></td><td>yòu</td><td>hựu</td><td>lại; cũng</td></tr>
+<tr><td>16</td><td><b>又……</b></td><td>yòu…yòu…</td><td>hựu……hựu……</td><td>vừa... vừa...</td></tr>
+<tr><td>17</td><td><b>怎么</b></td><td>zěnme</td><td>chẩm ma</td><td>thế nào; làm sao</td></tr>
+<tr><td>18</td><td><b>怎么样</b></td><td>zěnmeyàng</td><td>chẩm ma dạng</td><td>thế nào; ra sao</td></tr>
+<tr><td>19</td><td><b>走路</b></td><td>zǒulù</td><td>tẩu lộ</td><td>đi bộ</td></tr>
+<tr><td>20</td><td><b>坐</b></td><td>zuò</td><td>tọa</td><td>ngồi; đi (xe)</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">Bài 10 — 21 từ</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th><th>Hán Việt</th><th>Nghĩa</th></tr>
+<tr><td>1</td><td><b>爸爸</b></td><td>bàba</td><td>ba ba</td><td>bố; ba</td></tr>
+<tr><td>2</td><td><b>弟弟</b></td><td>dìdi</td><td>đệ đệ</td><td>em trai</td></tr>
+<tr><td>3</td><td><b>多大</b></td><td>duōdà</td><td>đa đại</td><td>bao nhiêu tuổi; lớn cỡ nào</td></tr>
+<tr><td>4</td><td><b>哥哥</b></td><td>gēge</td><td>ca ca</td><td>anh trai</td></tr>
+<tr><td>5</td><td><b>狗</b></td><td>gǒu</td><td>cẩu</td><td>chó</td></tr>
+<tr><td>6</td><td><b>和</b></td><td>hé</td><td>hòa</td><td>và; cùng</td></tr>
+<tr><td>7</td><td><b>家人</b></td><td>jiārén</td><td>gia nhân</td><td>người nhà; gia đình</td></tr>
+<tr><td>8</td><td><b>姐姐</b></td><td>jiějiě</td><td>tỉ tỉ</td><td>chị gái</td></tr>
+<tr><td>9</td><td><b>今年</b></td><td>jīnnián</td><td>kim niên</td><td>năm nay</td></tr>
+<tr><td>10</td><td><b>可爱</b></td><td>kě&#x27;ài</td><td>khả ái</td><td>đáng yêu</td></tr>
+<tr><td>11</td><td><b>口</b></td><td>kǒu</td><td>khẩu</td><td>(lượng từ chỉ người trong gia đình); miệng</td></tr>
+<tr><td>12</td><td><b>律师</b></td><td>lǜshī</td><td>luật sư</td><td>luật sư</td></tr>
+<tr><td>13</td><td><b>妈妈</b></td><td>māma</td><td>ma ma</td><td>mẹ; má</td></tr>
+<tr><td>14</td><td><b>妹妹</b></td><td>mèimei</td><td>muội muội</td><td>em gái</td></tr>
+<tr><td>15</td><td><b>们</b></td><td>men</td><td>môn</td><td>(hậu tố chỉ số nhiều)</td></tr>
+<tr><td>16</td><td><b>谁</b></td><td>shéi</td><td>thùy</td><td>ai</td></tr>
+<tr><td>17</td><td><b>岁</b></td><td>suì</td><td>tuế</td><td>tuổi</td></tr>
+<tr><td>18</td><td><b>他们</b></td><td>tāmen</td><td>tha môn</td><td>họ (nam hoặc hỗn hợp)</td></tr>
+<tr><td>19</td><td><b>医生</b></td><td>yīshēng</td><td>y sinh</td><td>bác sĩ</td></tr>
+<tr><td>20</td><td><b>照片</b></td><td>zhàopiàn</td><td>chiếu phiến</td><td>ảnh; bức ảnh</td></tr>
+<tr><td>21</td><td><b>只</b></td><td>zhī</td><td>chỉ</td><td>(lượng từ chỉ con vật); chỉ</td></tr>
+</table></details>
+<details style="margin:8px 0;"><summary style="cursor:pointer;font-weight:700;">专名 Tên riêng — 21 từ (không học trong bài hằng ngày)</summary>
+<table><tr><th>#</th><th>Từ</th><th>Pinyin</th></tr>
+<tr><td>1</td><td><b>北京</b></td><td>Běijīng</td></tr>
+<tr><td>2</td><td><b>北京银行</b></td><td>Běijīng Yínháng</td></tr>
+<tr><td>3</td><td><b>高小明</b></td><td>Gāo Xiǎomíng</td></tr>
+<tr><td>4</td><td><b>海伦</b></td><td>Hǎilún</td></tr>
+<tr><td>5</td><td><b>韩国</b></td><td>Hánguó</td></tr>
+<tr><td>6</td><td><b>黄文丽</b></td><td>Huáng Wénlì</td></tr>
+<tr><td>7</td><td><b>卡玛拉</b></td><td>Kǎmǎlā</td></tr>
+<tr><td>8</td><td><b>马</b></td><td>Mǎ</td></tr>
+<tr><td>9</td><td><b>马文</b></td><td>Mǎ Wén</td></tr>
+<tr><td>10</td><td><b>美国</b></td><td>Měiguó</td></tr>
+<tr><td>11</td><td><b>南非</b></td><td>Nánfēi</td></tr>
+<tr><td>12</td><td><b>欧文</b></td><td>Ōuwén</td></tr>
+<tr><td>13</td><td><b>苹果公司</b></td><td>Píngguǒ Gōngsī</td></tr>
+<tr><td>14</td><td><b>全家超市</b></td><td>Quánjiā Chāoshì</td></tr>
+<tr><td>15</td><td><b>人民广场</b></td><td>Rénmín Guǎngchǎng</td></tr>
+<tr><td>16</td><td><b>上海</b></td><td>Shànghǎi</td></tr>
+<tr><td>17</td><td><b>四川饭店</b></td><td>Sìchuān Fàndiàn</td></tr>
+<tr><td>18</td><td><b>王</b></td><td>Wáng</td></tr>
+<tr><td>19</td><td><b>英国</b></td><td>Yīngguó</td></tr>
+<tr><td>20</td><td><b>中国</b></td><td>Zhōngguó</td></tr>
+<tr><td>21</td><td><b>中国银行</b></td><td>Zhōngguó Yínháng</td></tr>
+</table></details>
+</div>
+<div class="card">
+<h2>🎧 Bài 1: Phản xạ Nghe — Chọn nghĩa đúng <span class="badge">10 câu · nhiều bài</span></h2>
+<div class="sub" style="margin-bottom:8px;">Bấm 🔊 để nghe (hoặc 🐢 nghe chậm) câu tiếng Trung và chọn nghĩa đúng. Trả lời đúng xong, chữ Hán của câu sẽ hiện ra để anh đối chiếu.</div>
+<div class="q-item" id="lis-1">
+<div><b>Câu 1:</b> <button class="tts-btn" onclick="speakRate('你是老师吗？', 0.88)">🔊 Nghe câu 1</button> <button class="tts-btn" onclick="speakRate('你是老师吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-1', '✗ Chưa đúng, nghe lại nhé!')">A. Tôi đi siêu thị.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-1', '✗ Chưa đúng, nghe lại nhé!')">B. Xe taxi ở phía trước.</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-1', '✓ Chính xác!', '你是老师吗？')">C. Bạn là thầy giáo phải không?</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-1', '✗ Chưa đúng, nghe lại nhé!')">D. Cảm ơn bạn, bạn rất tốt.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>你是老师吗？</b></div>
+</div>
+<div class="q-item" id="lis-2">
+<div><b>Câu 2:</b> <button class="tts-btn" onclick="speakRate('这是我的名字。', 0.88)">🔊 Nghe câu 2</button> <button class="tts-btn" onclick="speakRate('这是我的名字。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-2', '✓ Chính xác!', '这是我的名字。')">A. Đây là tên của tôi.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-2', '✗ Chưa đúng, nghe lại nhé!')">B. Cảm ơn bạn, bạn rất tốt.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-2', '✗ Chưa đúng, nghe lại nhé!')">C. Tôi đi siêu thị.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-2', '✗ Chưa đúng, nghe lại nhé!')">D. Xe taxi ở phía trước.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>这是我的名字。</b></div>
+</div>
+<div class="q-item" id="lis-3">
+<div><b>Câu 3:</b> <button class="tts-btn" onclick="speakRate('对不起，我不是老师。', 0.88)">🔊 Nghe câu 3</button> <button class="tts-btn" onclick="speakRate('对不起，我不是老师。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-3', '✓ Chính xác!', '对不起，我不是老师。')">A. Xin lỗi, tôi không phải là thầy giáo.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-3', '✗ Chưa đúng, nghe lại nhé!')">B. Tôi là du học sinh.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-3', '✗ Chưa đúng, nghe lại nhé!')">C. Bạn là thầy giáo phải không?</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-3', '✗ Chưa đúng, nghe lại nhé!')">D. Cà phê này rất ngon.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>对不起，我不是老师。</b></div>
+</div>
+<div class="q-item" id="lis-4">
+<div><b>Câu 4:</b> <button class="tts-btn" onclick="speakRate('谢谢你，你很好。', 0.88)">🔊 Nghe câu 4</button> <button class="tts-btn" onclick="speakRate('谢谢你，你很好。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-4', '✗ Chưa đúng, nghe lại nhé!')">A. Hôm nay là sinh nhật của tôi.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-4', '✗ Chưa đúng, nghe lại nhé!')">B. Đây là tên của tôi.</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-4', '✓ Chính xác!', '谢谢你，你很好。')">C. Cảm ơn bạn, bạn rất tốt.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-4', '✗ Chưa đúng, nghe lại nhé!')">D. Bố tôi là luật sư.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>谢谢你，你很好。</b></div>
+</div>
+<div class="q-item" id="lis-5">
+<div><b>Câu 5:</b> <button class="tts-btn" onclick="speakRate('这咖啡很好。', 0.88)">🔊 Nghe câu 5</button> <button class="tts-btn" onclick="speakRate('这咖啡很好。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-5', '✗ Chưa đúng, nghe lại nhé!')">A. Xe taxi ở phía trước.</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-5', '✓ Chính xác!', '这咖啡很好。')">B. Cà phê này rất ngon.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-5', '✗ Chưa đúng, nghe lại nhé!')">C. Tôi đi siêu thị.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-5', '✗ Chưa đúng, nghe lại nhé!')">D. Cảm ơn bạn, bạn rất tốt.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>这咖啡很好。</b></div>
+</div>
+<div class="q-item" id="lis-6">
+<div><b>Câu 6:</b> <button class="tts-btn" onclick="speakRate('我是留学生。', 0.88)">🔊 Nghe câu 6</button> <button class="tts-btn" onclick="speakRate('我是留学生。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-6', '✗ Chưa đúng, nghe lại nhé!')">A. Xin lỗi, tôi không phải là thầy giáo.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-6', '✗ Chưa đúng, nghe lại nhé!')">B. Bạn là thầy giáo phải không?</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-6', '✗ Chưa đúng, nghe lại nhé!')">C. Cảm ơn bạn, bạn rất tốt.</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-6', '✓ Chính xác!', '我是留学生。')">D. Tôi là du học sinh.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>我是留学生。</b></div>
+</div>
+<div class="q-item" id="lis-7">
+<div><b>Câu 7:</b> <button class="tts-btn" onclick="speakRate('我去超市。', 0.88)">🔊 Nghe câu 7</button> <button class="tts-btn" onclick="speakRate('我去超市。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-7', '✗ Chưa đúng, nghe lại nhé!')">A. Tôi là du học sinh.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-7', '✗ Chưa đúng, nghe lại nhé!')">B. Xin lỗi, tôi không phải là thầy giáo.</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-7', '✓ Chính xác!', '我去超市。')">C. Tôi đi siêu thị.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-7', '✗ Chưa đúng, nghe lại nhé!')">D. Cà phê này rất ngon.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>我去超市。</b></div>
+</div>
+<div class="q-item" id="lis-8">
+<div><b>Câu 8:</b> <button class="tts-btn" onclick="speakRate('今天是我的生日。', 0.88)">🔊 Nghe câu 8</button> <button class="tts-btn" onclick="speakRate('今天是我的生日。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-8', '✗ Chưa đúng, nghe lại nhé!')">A. Cà phê này rất ngon.</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-8', '✓ Chính xác!', '今天是我的生日。')">B. Hôm nay là sinh nhật của tôi.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-8', '✗ Chưa đúng, nghe lại nhé!')">C. Đây là tên của tôi.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-8', '✗ Chưa đúng, nghe lại nhé!')">D. Cảm ơn bạn, bạn rất tốt.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>今天是我的生日。</b></div>
+</div>
+<div class="q-item" id="lis-9">
+<div><b>Câu 9:</b> <button class="tts-btn" onclick="speakRate('出租车在前面。', 0.88)">🔊 Nghe câu 9</button> <button class="tts-btn" onclick="speakRate('出租车在前面。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-9', '✗ Chưa đúng, nghe lại nhé!')">A. Đây là tên của tôi.</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-9', '✓ Chính xác!', '出租车在前面。')">B. Xe taxi ở phía trước.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-9', '✗ Chưa đúng, nghe lại nhé!')">C. Tôi đi siêu thị.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-9', '✗ Chưa đúng, nghe lại nhé!')">D. Cà phê này rất ngon.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>出租车在前面。</b></div>
+</div>
+<div class="q-item" id="lis-10">
+<div><b>Câu 10:</b> <button class="tts-btn" onclick="speakRate('我爸爸是律师。', 0.88)">🔊 Nghe câu 10</button> <button class="tts-btn" onclick="speakRate('我爸爸是律师。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-10', '✗ Chưa đúng, nghe lại nhé!')">A. Bạn là thầy giáo phải không?</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-10', '✗ Chưa đúng, nghe lại nhé!')">B. Tôi là du học sinh.</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'lis-10', '✗ Chưa đúng, nghe lại nhé!')">C. Xin lỗi, tôi không phải là thầy giáo.</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'lis-10', '✓ Chính xác!', '我爸爸是律师。')">D. Bố tôi là luật sư.</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div>
+<div class="reveal">Câu vừa nghe: <b>我爸爸是律师。</b></div>
+</div>
+</div>
+<div class="card">
+<h2>🔗 Bài 2: Ghép cặp từ vựng (连连看) <span class="badge">10 cặp · nhiều bài</span></h2>
+<div class="sub" style="margin-bottom:8px;">Chạm 1 ô chữ Hán bên trái rồi chạm 1 ô Pinyin + Nghĩa tương ứng bên phải.</div>
+<div class="match-grid" id="match-board">
+<div class="match-col" id="match-left"></div>
+<div class="match-col" id="match-right"></div>
+</div>
+<div class="feedback" id="match-feedback" style="margin-top:10px;"></div>
+</div>
+<div class="card">
+<h2>🧠 Bài 3: Chọn nghĩa đúng <span class="badge">10 câu</span></h2>
+<div class="sub" style="margin-bottom:8px;">Chọn nghĩa tiếng Việt đúng của từ cho trước.</div>
+<div class="q-item" id="mean-1">
+<div><b>Câu 1.</b> Từ <b>你们</b> (nǐmen · nhĩ môn) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-1', '✗ Chưa đúng: 你们 nghĩa là “các bạn”.')">A. cái gì; gì</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-1', '✗ Chưa đúng: 你们 nghĩa là “các bạn”.')">B. biết</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-1', '✗ Chưa đúng: 你们 nghĩa là “các bạn”.')">C. rẻ</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-1', '✓ Đúng! 你们 nghĩa là “các bạn”.')">D. các bạn</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-2">
+<div><b>Câu 2.</b> Từ <b>什么</b> (shénme · thập ma) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-2', '✗ Chưa đúng: 什么 nghĩa là “cái gì; gì”.')">A. biết</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-2', '✗ Chưa đúng: 什么 nghĩa là “cái gì; gì”.')">B. xinh đẹp</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-2', '✓ Đúng! 什么 nghĩa là “cái gì; gì”.')">C. cái gì; gì</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-2', '✗ Chưa đúng: 什么 nghĩa là “cái gì; gì”.')">D. rẻ</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-3">
+<div><b>Câu 3.</b> Từ <b>认识</b> (rènshi · nhận thức) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-3', '✓ Đúng! 认识 nghĩa là “quen biết; nhận ra”.')">A. quen biết; nhận ra</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-3', '✗ Chưa đúng: 认识 nghĩa là “quen biết; nhận ra”.')">B. rẻ</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-3', '✗ Chưa đúng: 认识 nghĩa là “quen biết; nhận ra”.')">C. xinh đẹp</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-3', '✗ Chưa đúng: 认识 nghĩa là “quen biết; nhận ra”.')">D. gần đây; vùng lân cận</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-4">
+<div><b>Câu 4.</b> Từ <b>知道</b> (zhīdào · tri đạo) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-4', '✗ Chưa đúng: 知道 nghĩa là “biết”.')">A. xinh đẹp</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-4', '✗ Chưa đúng: 知道 nghĩa là “biết”.')">B. làm việc; công việc</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-4', '✓ Đúng! 知道 nghĩa là “biết”.')">C. biết</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-4', '✗ Chưa đúng: 知道 nghĩa là “biết”.')">D. đáng yêu</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-5">
+<div><b>Câu 5.</b> Từ <b>饿</b> (è · ngạ) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-5', '✗ Chưa đúng: 饿 nghĩa là “đói”.')">A. cái gì; gì</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-5', '✗ Chưa đúng: 饿 nghĩa là “đói”.')">B. làm việc; công việc</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-5', '✓ Đúng! 饿 nghĩa là “đói”.')">C. đói</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-5', '✗ Chưa đúng: 饿 nghĩa là “đói”.')">D. biết</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-6">
+<div><b>Câu 6.</b> Từ <b>工作</b> (gōngzuò · công tác) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-6', '✗ Chưa đúng: 工作 nghĩa là “làm việc; công việc”.')">A. gần đây; vùng lân cận</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-6', '✗ Chưa đúng: 工作 nghĩa là “làm việc; công việc”.')">B. các bạn</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-6', '✓ Đúng! 工作 nghĩa là “làm việc; công việc”.')">C. làm việc; công việc</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-6', '✗ Chưa đúng: 工作 nghĩa là “làm việc; công việc”.')">D. quen biết; nhận ra</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-7">
+<div><b>Câu 7.</b> Từ <b>附近</b> (fùjìn · phụ cận) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-7', '✗ Chưa đúng: 附近 nghĩa là “gần đây; vùng lân cận”.')">A. các bạn</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-7', '✗ Chưa đúng: 附近 nghĩa là “gần đây; vùng lân cận”.')">B. biết</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-7', '✗ Chưa đúng: 附近 nghĩa là “gần đây; vùng lân cận”.')">C. cái gì; gì</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-7', '✓ Đúng! 附近 nghĩa là “gần đây; vùng lân cận”.')">D. gần đây; vùng lân cận</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-8">
+<div><b>Câu 8.</b> Từ <b>漂亮</b> (piàoliang · phiêu lượng) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-8', '✗ Chưa đúng: 漂亮 nghĩa là “xinh đẹp”.')">A. gần đây; vùng lân cận</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-8', '✓ Đúng! 漂亮 nghĩa là “xinh đẹp”.')">B. xinh đẹp</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-8', '✗ Chưa đúng: 漂亮 nghĩa là “xinh đẹp”.')">C. biết</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-8', '✗ Chưa đúng: 漂亮 nghĩa là “xinh đẹp”.')">D. rẻ</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-9">
+<div><b>Câu 9.</b> Từ <b>便宜</b> (piányi · tiện nghi) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-9', '✗ Chưa đúng: 便宜 nghĩa là “rẻ”.')">A. quen biết; nhận ra</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-9', '✓ Đúng! 便宜 nghĩa là “rẻ”.')">B. rẻ</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-9', '✗ Chưa đúng: 便宜 nghĩa là “rẻ”.')">C. cái gì; gì</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-9', '✗ Chưa đúng: 便宜 nghĩa là “rẻ”.')">D. gần đây; vùng lân cận</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="mean-10">
+<div><b>Câu 10.</b> Từ <b>可爱</b> (kě&#x27;ài · khả ái) có nghĩa là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'mean-10', '✓ Đúng! 可爱 nghĩa là “đáng yêu”.')">A. đáng yêu</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-10', '✗ Chưa đúng: 可爱 nghĩa là “đáng yêu”.')">B. làm việc; công việc</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-10', '✗ Chưa đúng: 可爱 nghĩa là “đáng yêu”.')">C. đói</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'mean-10', '✗ Chưa đúng: 可爱 nghĩa là “đáng yêu”.')">D. cái gì; gì</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+</div>
+<div class="card">
+<h2>📖 Bài 4: Hoàn thành đoạn văn <span class="badge">2 đoạn · 10 chỗ trống</span></h2>
+<div class="sub" style="margin-bottom:8px;">Chọn từ thích hợp điền vào đoạn văn.</div>
+<h3 style="margin:6px 0;">Đoạn 1: Đi ăn ở nhà hàng</h3>
+<div class="cloze-passage" id="cloze-box">
+你<select class="cloze-select" data-ans="吃"><option value="">-- chọn --</option><option>吃</option><option>喝</option><option>牛肉</option><option>奶茶</option><option>青菜</option></select>什么？
+你<select class="cloze-select" data-ans="喝"><option value="">-- chọn --</option><option>吃</option><option>喝</option><option>牛肉</option><option>奶茶</option><option>青菜</option></select>什么？
+我吃<select class="cloze-select" data-ans="牛肉"><option value="">-- chọn --</option><option>吃</option><option>喝</option><option>牛肉</option><option>奶茶</option><option>青菜</option></select>。
+我喝<select class="cloze-select" data-ans="奶茶"><option value="">-- chọn --</option><option>吃</option><option>喝</option><option>牛肉</option><option>奶茶</option><option>青菜</option></select>。
+我吃<select class="cloze-select" data-ans="青菜"><option value="">-- chọn --</option><option>吃</option><option>喝</option><option>牛肉</option><option>奶茶</option><option>青菜</option></select>。
+</div>
+<div class="input-check" style="margin-top:10px;">
+<button class="btn-primary" onclick="checkClozeBox('cloze-box', 'cloze-fb-1', 'cloze-1', 5)">Kiểm tra đoạn 1</button>
+<button class="btn-sm" onclick="speak('你吃什么？你喝什么？我吃牛肉。我喝奶茶。我吃青菜。')">🔊 Nghe đoạn 1</button>
+<span class="feedback" id="cloze-fb-1"></span></div>
+<h3 style="margin:14px 0 6px;">Đoạn 2: Gia đình tôi</h3>
+<div class="cloze-passage" id="cloze-box-2">
+我<select class="cloze-select" data-ans="爸爸"><option value="">-- chọn --</option><option>爸爸</option><option>妈妈</option><option>哥哥</option><option>姐姐</option><option>弟弟</option></select>是老师。
+我<select class="cloze-select" data-ans="妈妈"><option value="">-- chọn --</option><option>爸爸</option><option>妈妈</option><option>哥哥</option><option>姐姐</option><option>弟弟</option></select>是老师。
+我<select class="cloze-select" data-ans="哥哥"><option value="">-- chọn --</option><option>爸爸</option><option>妈妈</option><option>哥哥</option><option>姐姐</option><option>弟弟</option></select>是老师。
+我<select class="cloze-select" data-ans="姐姐"><option value="">-- chọn --</option><option>爸爸</option><option>妈妈</option><option>哥哥</option><option>姐姐</option><option>弟弟</option></select>是老师。
+我<select class="cloze-select" data-ans="弟弟"><option value="">-- chọn --</option><option>爸爸</option><option>妈妈</option><option>哥哥</option><option>姐姐</option><option>弟弟</option></select>是学生。
+</div>
+<div class="input-check" style="margin-top:10px;">
+<button class="btn-primary" onclick="checkClozeBox('cloze-box-2', 'cloze-fb-2', 'cloze-2', 5)">Kiểm tra đoạn 2</button>
+<button class="btn-sm" onclick="speak('我爸爸是老师。我妈妈是老师。我哥哥是老师。我姐姐是老师。我弟弟是学生。')">🔊 Nghe đoạn 2</button>
+<span class="feedback" id="cloze-fb-2"></span></div></div>
+<div class="card">
+<h2>🧩 Bài 5: Sắp xếp câu (连词成句) <span class="badge">5 câu</span></h2>
+<div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
+<div class="scramble-box" id="scr-1" data-target="我学习汉语。">
+<div><b>Câu 1:</b> Tôi học tiếng Hán.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="学习|我|汉语|。"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+<div class="scramble-box" id="scr-2" data-target="我想去看电影。">
+<div><b>Câu 2:</b> Tôi muốn đi xem phim.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="我|。|看电影|去|想"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+<div class="scramble-box" id="scr-3" data-target="我喜欢吃米饭。">
+<div><b>Câu 3:</b> Tôi thích ăn cơm.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="米饭|我|。|吃|喜欢"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+<div class="scramble-box" id="scr-4" data-target="我走路去学校。">
+<div><b>Câu 4:</b> Tôi đi bộ đến trường.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="。|学校|去|走路|我"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+<div class="scramble-box" id="scr-5" data-target="明天我去学校。">
+<div><b>Câu 5:</b> Ngày mai tôi đi học.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="我|去|学校|明天|。"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+</div>
+<div class="card">
+<h2>🔤 Bài 6: Chọn pinyin đúng <span class="badge">10 câu · chữ dễ nhầm âm</span></h2>
+<div class="sub" style="margin-bottom:8px;">Chạm vào đáp án đúng — không cần gõ dấu thanh đâu anh.</div>
+<div class="q-item" id="py-1">
+<div><b>Câu 1.</b> Từ <b>是</b> (là) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'py-1', '✗ Chưa đúng: 是 đọc shì, không phải shī.')">A. shī</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-1', '✗ Chưa đúng: 是 đọc shì, không phải sì.')">B. sì</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'py-1', '✓ Đúng! 是 đọc shì.')">C. shì</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-2">
+<div><b>Câu 2.</b> Từ <b>事</b> (việc; chuyện) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'py-2', '✗ Chưa đúng: 事 đọc shì, không phải shī.')">A. shī</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-2', '✗ Chưa đúng: 事 đọc shì, không phải sì.')">B. sì</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'py-2', '✓ Đúng! 事 đọc shì.')">C. shì</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-3">
+<div><b>Câu 3.</b> Từ <b>哪</b> (nào; đâu) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'py-3', '✗ Chưa đúng: 哪 đọc nǎ, không phải nà.')">A. nà</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'py-3', '✓ Đúng! 哪 đọc nǎ.')">B. nǎ</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-3', '✗ Chưa đúng: 哪 đọc nǎ, không phải lǎ.')">C. lǎ</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-4">
+<div><b>Câu 4.</b> Từ <b>那</b> (kia; đó) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'py-4', '✗ Chưa đúng: 那 đọc nà, không phải nā.')">A. nā</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-4', '✗ Chưa đúng: 那 đọc nà, không phải là.')">B. là</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'py-4', '✓ Đúng! 那 đọc nà.')">C. nà</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-5">
+<div><b>Câu 5.</b> Từ <b>你</b> (bạn; anh; chị; em) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'py-5', '✓ Đúng! 你 đọc nǐ.')">A. nǐ</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-5', '✗ Chưa đúng: 你 đọc nǐ, không phải lǐ.')">B. lǐ</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-5', '✗ Chưa đúng: 你 đọc nǐ, không phải nì.')">C. nì</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-6">
+<div><b>Câu 6.</b> Từ <b>左</b> (bên trái; phía trái) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'py-6', '✓ Đúng! 左 đọc zuǒ.')">A. zuǒ</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-6', '✗ Chưa đúng: 左 đọc zuǒ, không phải zhuǒ.')">B. zhuǒ</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-6', '✗ Chưa đúng: 左 đọc zuǒ, không phải zuò.')">C. zuò</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-7">
+<div><b>Câu 7.</b> Từ <b>前</b> (trước; phía trước; trước đây) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'py-7', '✗ Chưa đúng: 前 đọc qián, không phải qiǎn.')">A. qiǎn</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'py-7', '✓ Đúng! 前 đọc qián.')">B. qián</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-7', '✗ Chưa đúng: 前 đọc qián, không phải jián.')">C. jián</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-8">
+<div><b>Câu 8.</b> Từ <b>钱</b> (tiền) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'py-8', '✗ Chưa đúng: 钱 đọc qián, không phải jián.')">A. jián</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-8', '✗ Chưa đúng: 钱 đọc qián, không phải qiǎn.')">B. qiǎn</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'py-8', '✓ Đúng! 钱 đọc qián.')">C. qián</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-9">
+<div><b>Câu 9.</b> Từ <b>做</b> (làm) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'py-9', '✗ Chưa đúng: 做 đọc zuò, không phải zuō.')">A. zuō</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-9', '✗ Chưa đúng: 做 đọc zuò, không phải zhuò.')">B. zhuò</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'py-9', '✓ Đúng! 做 đọc zuò.')">C. zuò</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="py-10">
+<div><b>Câu 10.</b> Từ <b>坐</b> (ngồi; đi (xe)) đọc đúng là:</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'py-10', '✗ Chưa đúng: 坐 đọc zuò, không phải zuō.')">A. zuō</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'py-10', '✗ Chưa đúng: 坐 đọc zuò, không phải zhuò.')">B. zhuò</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'py-10', '✓ Đúng! 坐 đọc zuò.')">C. zuò</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+</div>
+<div class="card">
+<h2>📚 Bài 7: Đọc hiểu <span class="badge">Đoạn văn tổng kết 14 câu</span></h2>
+<div class="sub" style="margin-bottom:8px;">Đọc kỹ đoạn văn rồi trả lời 5 câu hỏi bên dưới.</div>
+<div class="reading-box">
+<div class="reading-zh hide-ruby">
+<div class="reading-line"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby><ruby>五<rt>wǔ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。 <button class="tts-btn" onclick="speak('今天是星期五，我去学校。')">🔊</button></div>
+<div class="reading-line"><ruby>早<rt>Zǎo</rt></ruby><ruby>上<rt>shang</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>妈<rt>mā</rt></ruby><ruby>妈<rt>ma</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <button class="tts-btn" onclick="speak('早上，我和妈妈一起吃饭。')">🔊</button></div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>走<rt>zǒu</rt></ruby><ruby>路<rt>lù</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>近<rt>jìn</rt></ruby>。 <button class="tts-btn" onclick="speak('我走路去学校，学校很近。')">🔊</button></div>
+<div class="reading-line"><ruby>在<rt>Zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>英<rt>Yīng</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('在学校，我学习汉语和英语。')">🔊</button></div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>她<rt>tā</rt></ruby>。 <button class="tts-btn" onclick="speak('我的老师很好，我很喜欢她。')">🔊</button></div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>米<rt>mǐ</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我和朋友在饭店吃米饭。')">🔊</button></div>
+<div class="reading-line"><ruby>饭<rt>Fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>菜<rt>cài</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>便<rt>pián</rt></ruby><ruby>宜<rt>yi</rt></ruby>。 <button class="tts-btn" onclick="speak('饭店的菜很好吃，也很便宜。')">🔊</button></div>
+<div class="reading-line"><ruby>下<rt>Xià</rt></ruby><ruby>午<rt>wǔ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>书<rt>shū</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。 <button class="tts-btn" onclick="speak('下午，我去书店买东西，很高兴。')">🔊</button></div>
+<div class="reading-line"><ruby>书<rt>Shū</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>附<rt>fù</rt></ruby><ruby>近<rt>jìn</rt></ruby>，<ruby>走<rt>zǒu</rt></ruby><ruby>路<rt>lù</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>近<rt>jìn</rt></ruby>。 <button class="tts-btn" onclick="speak('书店在学校附近，走路很近。')">🔊</button></div>
+<div class="reading-line"><ruby>晚<rt>Wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。 <button class="tts-btn" onclick="speak('晚上，我在家看电视和电影。')">🔊</button></div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>妈<rt>mā</rt></ruby><ruby>妈<rt>ma</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。 <button class="tts-btn" onclick="speak('我的爸爸妈妈都喜欢看电影。')">🔊</button></div>
+<div class="reading-line"><ruby>星<rt>Xīng</rt></ruby><ruby>期<rt>qī</rt></ruby><ruby>五<rt>wǔ</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>院<rt>yuàn</rt></ruby>。 <button class="tts-btn" onclick="speak('星期五晚上，我们去电影院。')">🔊</button></div>
+<div class="reading-line"><ruby>电<rt>Diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>快<rt>kuài</rt></ruby><ruby>乐<rt>lè</rt></ruby>。 <button class="tts-btn" onclick="speak('电影很好看，我觉得很快乐。')">🔊</button></div>
+<div class="reading-line"><ruby>看<rt>Kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>后<rt>hòu</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>坐<rt>zuò</rt></ruby><ruby>地<rt>dì</rt></ruby><ruby>铁<rt>tiě</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。 <button class="tts-btn" onclick="speak('看电影以后，我们坐地铁，很高兴。')">🔊</button></div>
+</div>
+<div class="reading-Controls">
+<button class="tts-btn" onclick="speakRate('今天是星期五，我去学校。早上，我和妈妈一起吃饭。我走路去学校，学校很近。在学校，我学习汉语和英语。我的老师很好，我很喜欢她。我和朋友在饭店吃米饭。饭店的菜很好吃，也很便宜。下午，我去书店买东西，很高兴。书店在学校附近，走路很近。晚上，我在家看电视和电影。我的爸爸妈妈都喜欢看电影。星期五晚上，我们去电影院。电影很好看，我觉得很快乐。看电影以后，我们坐地铁，很高兴。', 0.88)">🔊 Nghe đoạn văn</button>
+<button class="tts-btn" onclick="speakRate('今天是星期五，我去学校。早上，我和妈妈一起吃饭。我走路去学校，学校很近。在学校，我学习汉语和英语。我的老师很好，我很喜欢她。我和朋友在饭店吃米饭。饭店的菜很好吃，也很便宜。下午，我去书店买东西，很高兴。书店在学校附近，走路很近。晚上，我在家看电视和电影。我的爸爸妈妈都喜欢看电影。星期五晚上，我们去电影院。电影很好看，我觉得很快乐。看电影以后，我们坐地铁，很高兴。', 0.62)">🐢 Nghe chậm</button>
+<button class="btn-sm" onclick="document.getElementById('read-help').classList.toggle('show')">👁️ Ẩn/Hiện Dịch nghĩa</button>
+<button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
+</div>
+<div class="reading-help" id="read-help">
+<p><b>今天是星期五，我去学校。</b><br>Hôm nay là thứ Sáu, tôi đến trường.</p>
+<p><b>早上，我和妈妈一起吃饭。</b><br>Buổi sáng, tôi và mẹ cùng ăn cơm.</p>
+<p><b>我走路去学校，学校很近。</b><br>Tôi đi bộ đến trường, trường rất gần.</p>
+<p><b>在学校，我学习汉语和英语。</b><br>Ở trường, tôi học tiếng Hán và tiếng Anh.</p>
+<p><b>我的老师很好，我很喜欢她。</b><br>Cô giáo của tôi rất tốt, tôi rất thích cô ấy.</p>
+<p><b>我和朋友在饭店吃米饭。</b><br>Tôi và bạn ăn cơm ở nhà hàng.</p>
+<p><b>饭店的菜很好吃，也很便宜。</b><br>Món ăn của nhà hàng rất ngon, mà cũng rất rẻ.</p>
+<p><b>下午，我去书店买东西，很高兴。</b><br>Buổi chiều, tôi đi hiệu sách mua đồ, rất vui.</p>
+<p><b>书店在学校附近，走路很近。</b><br>Hiệu sách ở gần trường, đi bộ rất gần.</p>
+<p><b>晚上，我在家看电视和电影。</b><br>Buổi tối, tôi ở nhà xem ti vi và phim.</p>
+<p><b>我的爸爸妈妈都喜欢看电影。</b><br>Bố mẹ tôi đều thích xem phim.</p>
+<p><b>星期五晚上，我们去电影院。</b><br>Tối thứ Sáu, chúng tôi đi rạp chiếu phim.</p>
+<p><b>电影很好看，我觉得很快乐。</b><br>Phim rất hay, tôi thấy rất vui.</p>
+<p><b>看电影以后，我们坐地铁，很高兴。</b><br>Sau khi xem phim, chúng tôi đi tàu điện ngầm, rất vui.</p>
+</div>
+</div>
+<div class="q-item" id="read-1">
+<div><b>Câu 1.</b> 今天是星期几？</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng. Câu 1 trong đoạn văn: “今天是星期五，我去学校。” — hôm nay là thứ Sáu.')">A. 星期一</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng. Câu 1 trong đoạn văn: “今天是星期五，我去学校。” — hôm nay là thứ Sáu.')">B. 星期六</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng. Câu 1 trong đoạn văn: “今天是星期五，我去学校。” — hôm nay là thứ Sáu.')">C. 星期天</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Đúng!')">D. 星期五</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="read-2">
+<div><b>Câu 2.</b> 他和谁在饭店吃米饭？</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng. Câu 6: “我和朋友在饭店吃米饭。” — anh ấy ăn cơm ở nhà hàng cùng với bạn.')">A. 一个人</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng. Câu 6: “我和朋友在饭店吃米饭。” — anh ấy ăn cơm ở nhà hàng cùng với bạn.')">B. 和老师</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng. Câu 6: “我和朋友在饭店吃米饭。” — anh ấy ăn cơm ở nhà hàng cùng với bạn.')">C. 和妈妈</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Đúng!')">D. 和朋友</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="read-3">
+<div><b>Câu 3.</b> 下午他去哪儿买东西？</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Đúng!')">A. 去书店</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng. Câu 8: “下午，我去书店买东西，很高兴。” — buổi chiều anh ấy đi hiệu sách mua đồ.')">B. 去银行</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng. Câu 8: “下午，我去书店买东西，很高兴。” — buổi chiều anh ấy đi hiệu sách mua đồ.')">C. 去超市</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng. Câu 8: “下午，我去书店买东西，很高兴。” — buổi chiều anh ấy đi hiệu sách mua đồ.')">D. 去学校</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="read-4">
+<div><b>Câu 4.</b> 晚上他在家做什么？</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'read-4', '✗ Chưa đúng. Câu 10: “晚上，我在家看电视和电影。” — buổi tối anh ấy ở nhà xem ti vi và phim.')">A. 学习汉语</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-4', '✗ Chưa đúng. Câu 10: “晚上，我在家看电视和电影。” — buổi tối anh ấy ở nhà xem ti vi và phim.')">B. 去超市</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-4', '✗ Chưa đúng. Câu 10: “晚上，我在家看电视和电影。” — buổi tối anh ấy ở nhà xem ti vi và phim.')">C. 去饭店</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-4', '✓ Đúng!')">D. 看电视和电影</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="read-5">
+<div><b>Câu 5.</b> 星期五晚上他们去哪儿？</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'read-5', '✗ Chưa đúng. Câu 12: “星期五晚上，我们去电影院。” — tối thứ Sáu họ đi rạp chiếu phim.')">A. 去饭店</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-5', '✗ Chưa đúng. Câu 12: “星期五晚上，我们去电影院。” — tối thứ Sáu họ đi rạp chiếu phim.')">B. 去学校</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-5', '✗ Chưa đúng. Câu 12: “星期五晚上，我们去电影院。” — tối thứ Sáu họ đi rạp chiếu phim.')">C. 去超市</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-5', '✓ Đúng!')">D. 去电影院</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+</div>
+<div class="card">
+<h2>⌨️ Bài 8: Gõ pinyin theo câu <span class="badge">10 câu · nhớ mặt chữ</span></h2>
+<div class="sub" style="margin-bottom:8px;">Điền pinyin của từ còn thiếu trong câu (gõ không dấu, hệ thống tự nhận diện thanh điệu).</div>
+<div class="q-item" id="type-1" data-ans="您">
+<div><b>Câu 1.</b> ＿＿好。 <span class="hint">(nín — ngài; ông; bà (cách xưng hô kính trọng))</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: nin..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-2" data-ans="我">
+<div><b>Câu 2.</b> ＿＿是老师。 <span class="hint">(wǒ — tôi; mình)</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: wo..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-3" data-ans="有">
+<div><b>Câu 3.</b> 你＿＿名片吗？ <span class="hint">(yǒu — có)</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: you..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-4" data-ans="去">
+<div><b>Câu 4.</b> 你＿＿哪儿？ <span class="hint">(qù — đi; đến)</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: qu..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-5" data-ans="茶">
+<div><b>Câu 5.</b> 这＿＿很好。 <span class="hint">(chá — trà)</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: cha..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-6" data-ans="学">
+<div><b>Câu 6.</b> 我＿＿汉语。 <span class="hint">(xué — học)</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: xue..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-7" data-ans="银行">
+<div><b>Câu 7.</b> ＿＿在前面。 <span class="hint">(yínháng — ngân hàng)</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: yinhang..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-8" data-ans="看">
+<div><b>Câu 8.</b> 我＿＿电影。 <span class="hint">(kàn — nhìn; xem)</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: kan..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-9" data-ans="好吃">
+<div><b>Câu 9.</b> 这个菜很＿＿。 <span class="hint">(hǎochī — ngon (món ăn))</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: haochi..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+<div class="q-item" id="type-10" data-ans="医生">
+<div><b>Câu 10.</b> 我哥哥是＿＿。 <span class="hint">(yīshēng — bác sĩ)</span></div>
+<div class="input-check"><input type="text" placeholder="Gõ pinyin: yisheng..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
+</div>
+<div class="card">
+<h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
+<div>Đúng <b id="sum-score">0 / 62</b> mục.</div>
+<ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
+<div class="input-check">
+<button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
+<button class="btn-sm" onclick="resetAll()">↺ Làm lại từ đầu</button>
+<span class="feedback" id="copy-fb"></span>
+</div>
+<div class="hint" style="margin-top:6px;">Chép xong, anh dán kết quả gửi em qua WhatsApp — em sẽ đưa các từ anh sai vào danh sách “Cần ôn thêm”. Tiến độ của anh được lưu ngay trong máy, mở lại trang vẫn còn nguyên.</div>
+</div>
+<div class="card">
+<h2>🔑 Đáp án</h2>
+<p><b>Bài 1 (Nghe):</b> 1. C — 你是老师吗？ &nbsp;|&nbsp; 2. A — 这是我的名字。 &nbsp;|&nbsp; 3. A — 对不起，我不是老师。 &nbsp;|&nbsp; 4. C — 谢谢你，你很好。 &nbsp;|&nbsp; 5. B — 这咖啡很好。 &nbsp;|&nbsp; 6. D — 我是留学生。 &nbsp;|&nbsp; 7. C — 我去超市。 &nbsp;|&nbsp; 8. B — 今天是我的生日。 &nbsp;|&nbsp; 9. B — 出租车在前面。 &nbsp;|&nbsp; 10. D — 我爸爸是律师。</p>
+<p><b>Bài 2 (Ghép cặp):</b> 好 = hǎo · 国 = guó · 高兴 = gāoxìng · 远 = yuǎn · 杯 = bēi · 苹果 = píngguǒ · 家 = jiā · 电影 = diànyǐng · 地铁 = dìtiě · 狗 = gǒu</p>
+<p><b>Bài 3 (Nghĩa):</b> 1. D — các bạn &nbsp;|&nbsp; 2. C — cái gì; gì &nbsp;|&nbsp; 3. A — quen biết; nhận ra &nbsp;|&nbsp; 4. C — biết &nbsp;|&nbsp; 5. C — đói &nbsp;|&nbsp; 6. C — làm việc; công việc &nbsp;|&nbsp; 7. D — gần đây; vùng lân cận &nbsp;|&nbsp; 8. B — xinh đẹp &nbsp;|&nbsp; 9. B — rẻ &nbsp;|&nbsp; 10. A — đáng yêu</p>
+<p><b>Bài 4 (Điền từ):</b> Đoạn 1: 吃 → 喝 → 牛肉 → 奶茶 → 青菜 &nbsp;|&nbsp; Đoạn 2: 爸爸 → 妈妈 → 哥哥 → 姐姐 → 弟弟</p>
+<p><b>Bài 5 (Xếp câu):</b> 1. 我学习汉语。 &nbsp;|&nbsp; 2. 我想去看电影。 &nbsp;|&nbsp; 3. 我喜欢吃米饭。 &nbsp;|&nbsp; 4. 我走路去学校。 &nbsp;|&nbsp; 5. 明天我去学校。</p>
+<p><b>Bài 6 (Pinyin):</b> 1. C — shì &nbsp;|&nbsp; 2. C — shì &nbsp;|&nbsp; 3. B — nǎ &nbsp;|&nbsp; 4. C — nà &nbsp;|&nbsp; 5. A — nǐ &nbsp;|&nbsp; 6. A — zuǒ &nbsp;|&nbsp; 7. B — qián &nbsp;|&nbsp; 8. C — qián &nbsp;|&nbsp; 9. C — zuò &nbsp;|&nbsp; 10. C — zuò</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. D — 星期五 &nbsp;|&nbsp; 2. D — 和朋友 &nbsp;|&nbsp; 3. A — 去书店 &nbsp;|&nbsp; 4. D — 看电视和电影 &nbsp;|&nbsp; 5. D — 去电影院</p>
+<p><b>Bài 8 (Gõ pinyin):</b> 1. 您 &nbsp; 2. 我 &nbsp; 3. 有 &nbsp; 4. 去 &nbsp; 5. 茶 &nbsp; 6. 学 &nbsp; 7. 银行 &nbsp; 8. 看 &nbsp; 9. 好吃 &nbsp; 10. 医生</p>
+</div>
+<div class="card">
+<h2>📖 Đoạn văn tổng kết — Câu chuyện <span class="badge">122 câu · dùng đủ toàn bộ từ vựng HSK 1</span></h2>
+<div class="sub" style="margin-bottom:8px;">Dịch nghĩa tiếng Việt nằm ngay dưới mỗi câu, mặc định đang ẩn — bấm nút "Ẩn/Hiện Dịch nghĩa" để hiện ra khi cần.</div>
+<div class="reading-box">
+<div class="reading-Controls">
+<button class="btn-sm" onclick="document.getElementById('story-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
+<button class="btn-sm" onclick="document.getElementById('story-zh').classList.toggle('hide-trans')">👁️ Ẩn/Hiện Dịch nghĩa</button>
+</div>
+<div class="reading-Controls">
+<button class="tts-btn" onclick="speakRate('我是学生，我在大学学习汉语。我的老师很好，他教我们汉语。今天是星期五，我很高兴。你好，请问，你叫什么名字？我叫小月，你呢？老师问我：“你贵姓？”我叫小月，老师。我们不知道老师姓什么。小月是我的朋友，她是留学生。她学习英语，也学习汉语。对，我是学生，我在中学学习。他是你的男朋友吗？不是，他是我的朋友。她是你的女朋友吗？不是，她是我的朋友。你们是学生吗？我们是学生。您好，老师。他是哪国人？我不知道。我的老师是好人，我们都很喜欢他。他是男学生，她是女学生。很高兴认识你。对不起，我不是老师，我是学生。没关系，我很好。这是我的名片。这很贵吗？不贵，很便宜。你有钱吗？我没有钱。我非常高兴。老师教汉语，也教英语。你做什么工作？我在公司工作。我还想学习汉语。他很快就来了。我们在学校学习，也在家学习。先生，您好，请问您是老师吗？我学汉语，也学英语。我们去饭店吃饭。我饿了，我想吃米饭。你吃什么菜？我想吃牛肉和青菜。这个菜很好吃，又便宜又好吃。你喝茶还是喝咖啡？我喝奶茶，不喝咖啡。我想喝一杯茶。这个碗很大，这个杯很小。一共多少钱？一共二十块钱。你要几个苹果？我要两个苹果。服务员，请问，这个菜多少钱？我想吃一点儿米饭。我喝点儿水。这个饭店很有名。我从大学去超市。超市在学校对面。学校附近有一个饭店。书店在银行前面。你往哪儿去？我往左拐。你往右拐，饭店在前面。我们去超市，然后去饭店。我家在那儿，饭店在对面。饭店在那里，超市也在这里。你去哪儿？你去哪里？我在这儿，我不在那里。广场很近，银行很远。人民很好，广场也很好。小姐，你好，请问，超市在哪儿？师傅，谢谢你。再见！不客气，没关系。你很客气，谢谢你。我们到了，超市在前面。我再去超市。我们走吧，去超市。今天是星期五。明天我们去看电影吧。电影院在那儿，很近。你今天有空儿吗？我有一点儿空儿。你为什么不去看电影？你有什么事？我想去，但是我没有时间。今天是几月几号？今天是我的生日，我很快乐。生日快乐！你真漂亮。我们晚上吃晚饭。这个电影太好看了！我们明天见。你喜欢这个电影吗？我非常喜欢。请坐，我们看电影。那是电影院，很大。我们怎么去学校？你坐地铁去吗？我坐公交车去学校。我们走路去学校吧。出租车很贵，地铁很便宜。这个饭店很有名，也很便宜。我们都喜欢坐地铁。师傅，去电影院，多少钱？十块钱，很便宜。谢谢师傅，不客气。我们到了，再见！你怎么样？我很好。我们又去看电影了。我家有五口人。我爸爸是律师，我妈妈是医生。我有一个哥哥，他是医生。我有一个姐姐，她是老师。你弟弟多大？他今年十岁。我妹妹很小，她今年三岁。我有一只狗，我的狗很可爱。这是我的家人，这是我家的照片。他们是谁？他们是我的爸爸和妈妈。你们家有几个人？我们家有四个人，爸爸，妈妈，哥哥和我。我的家人都很好。今年我学习汉语，也学习英语。我和朋友一起去学校。晚上，我们在家吃晚饭。晚饭很好吃，米饭也很好吃。我们吃晚饭，然后看电视。我们看电影，也听音乐。明天是星期六，我们去看电影。今天太好了，我们都很快乐。我又想去学校了。我们睡觉吧，明天见。谢谢你们，再见！你今天好吗？我很好，谢谢。我们明天去学校，也去超市。我很喜欢我的家人，我的学校，和我的朋友。', 0.88)">🔊 Nghe cả truyện</button>
+<button class="tts-btn" onclick="speakRate('我是学生，我在大学学习汉语。我的老师很好，他教我们汉语。今天是星期五，我很高兴。你好，请问，你叫什么名字？我叫小月，你呢？老师问我：“你贵姓？”我叫小月，老师。我们不知道老师姓什么。小月是我的朋友，她是留学生。她学习英语，也学习汉语。对，我是学生，我在中学学习。他是你的男朋友吗？不是，他是我的朋友。她是你的女朋友吗？不是，她是我的朋友。你们是学生吗？我们是学生。您好，老师。他是哪国人？我不知道。我的老师是好人，我们都很喜欢他。他是男学生，她是女学生。很高兴认识你。对不起，我不是老师，我是学生。没关系，我很好。这是我的名片。这很贵吗？不贵，很便宜。你有钱吗？我没有钱。我非常高兴。老师教汉语，也教英语。你做什么工作？我在公司工作。我还想学习汉语。他很快就来了。我们在学校学习，也在家学习。先生，您好，请问您是老师吗？我学汉语，也学英语。我们去饭店吃饭。我饿了，我想吃米饭。你吃什么菜？我想吃牛肉和青菜。这个菜很好吃，又便宜又好吃。你喝茶还是喝咖啡？我喝奶茶，不喝咖啡。我想喝一杯茶。这个碗很大，这个杯很小。一共多少钱？一共二十块钱。你要几个苹果？我要两个苹果。服务员，请问，这个菜多少钱？我想吃一点儿米饭。我喝点儿水。这个饭店很有名。我从大学去超市。超市在学校对面。学校附近有一个饭店。书店在银行前面。你往哪儿去？我往左拐。你往右拐，饭店在前面。我们去超市，然后去饭店。我家在那儿，饭店在对面。饭店在那里，超市也在这里。你去哪儿？你去哪里？我在这儿，我不在那里。广场很近，银行很远。人民很好，广场也很好。小姐，你好，请问，超市在哪儿？师傅，谢谢你。再见！不客气，没关系。你很客气，谢谢你。我们到了，超市在前面。我再去超市。我们走吧，去超市。今天是星期五。明天我们去看电影吧。电影院在那儿，很近。你今天有空儿吗？我有一点儿空儿。你为什么不去看电影？你有什么事？我想去，但是我没有时间。今天是几月几号？今天是我的生日，我很快乐。生日快乐！你真漂亮。我们晚上吃晚饭。这个电影太好看了！我们明天见。你喜欢这个电影吗？我非常喜欢。请坐，我们看电影。那是电影院，很大。我们怎么去学校？你坐地铁去吗？我坐公交车去学校。我们走路去学校吧。出租车很贵，地铁很便宜。这个饭店很有名，也很便宜。我们都喜欢坐地铁。师傅，去电影院，多少钱？十块钱，很便宜。谢谢师傅，不客气。我们到了，再见！你怎么样？我很好。我们又去看电影了。我家有五口人。我爸爸是律师，我妈妈是医生。我有一个哥哥，他是医生。我有一个姐姐，她是老师。你弟弟多大？他今年十岁。我妹妹很小，她今年三岁。我有一只狗，我的狗很可爱。这是我的家人，这是我家的照片。他们是谁？他们是我的爸爸和妈妈。你们家有几个人？我们家有四个人，爸爸，妈妈，哥哥和我。我的家人都很好。今年我学习汉语，也学习英语。我和朋友一起去学校。晚上，我们在家吃晚饭。晚饭很好吃，米饭也很好吃。我们吃晚饭，然后看电视。我们看电影，也听音乐。明天是星期六，我们去看电影。今天太好了，我们都很快乐。我又想去学校了。我们睡觉吧，明天见。谢谢你们，再见！你今天好吗？我很好，谢谢。我们明天去学校，也去超市。我很喜欢我的家人，我的学校，和我的朋友。', 0.62)">🐢 Nghe chậm</button>
+</div>
+<div class="reading-zh hide-ruby hide-trans" id="story-zh">
+<h3 style="margin:14px 0 6px;">👋 Gặp bạn mới ở trường</h3>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('我是学生，我在大学学习汉语。')">🔊</button></div>
+<div class="story-trans">Tôi là học sinh, tôi học tiếng Trung ở trường đại học.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>教<rt>jiāo</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('我的老师很好，他教我们汉语。')">🔊</button></div>
+<div class="story-trans">Thầy giáo của tôi rất tốt, thầy dạy chúng tôi tiếng Trung.</div>
+<div class="reading-line"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby><ruby>五<rt>wǔ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。 <button class="tts-btn" onclick="speak('今天是星期五，我很高兴。')">🔊</button></div>
+<div class="story-trans">Hôm nay là thứ Sáu, tôi rất vui.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>请<rt>qǐng</rt></ruby><ruby>问<rt>wèn</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>名<rt>míng</rt></ruby><ruby>字<rt>zi</rt></ruby>？ <button class="tts-btn" onclick="speak('你好，请问，你叫什么名字？')">🔊</button></div>
+<div class="story-trans">Chào bạn, xin hỏi, bạn tên là gì?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>小<rt>Xiǎo</rt></ruby><ruby>月<rt>yuè</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？ <button class="tts-btn" onclick="speak('我叫小月，你呢？')">🔊</button></div>
+<div class="story-trans">Tôi tên là Tiểu Nguyệt, còn bạn?</div>
+<div class="reading-line"><ruby>老<rt>Lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>问<rt>wèn</rt></ruby><ruby>我<rt>wǒ</rt></ruby>：“<ruby>你<rt>nǐ</rt></ruby><ruby>贵<rt>guì</rt></ruby><ruby>姓<rt>xìng</rt></ruby>？” <button class="tts-btn" onclick="speak('老师问我：“你贵姓？”')">🔊</button></div>
+<div class="story-trans">Thầy hỏi tôi: “Bạn họ gì?”</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>小<rt>Xiǎo</rt></ruby><ruby>月<rt>yuè</rt></ruby>，<ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。 <button class="tts-btn" onclick="speak('我叫小月，老师。')">🔊</button></div>
+<div class="story-trans">Tôi tên là Tiểu Nguyệt, thưa thầy.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>姓<rt>xìng</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby>。 <button class="tts-btn" onclick="speak('我们不知道老师姓什么。')">🔊</button></div>
+<div class="story-trans">Chúng tôi không biết thầy họ gì.</div>
+<div class="reading-line"><ruby>小<rt>Xiǎo</rt></ruby><ruby>月<rt>yuè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>留<rt>liú</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。 <button class="tts-btn" onclick="speak('小月是我的朋友，她是留学生。')">🔊</button></div>
+<div class="story-trans">Tiểu Nguyệt là bạn của tôi, cô ấy là lưu học sinh.</div>
+<div class="reading-line"><ruby>她<rt>Tā</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>英<rt>Yīng</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('她学习英语，也学习汉语。')">🔊</button></div>
+<div class="story-trans">Cô ấy học tiếng Anh, cũng học tiếng Trung.</div>
+<div class="reading-line"><ruby>对<rt>Duì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>中<rt>zhōng</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby>。 <button class="tts-btn" onclick="speak('对，我是学生，我在中学学习。')">🔊</button></div>
+<div class="story-trans">Đúng, tôi là học sinh, tôi học ở trường trung học.</div>
+<div class="reading-line"><ruby>他<rt>Tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>不<rt>Bú</rt></ruby><ruby>是<rt>shì</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby>。 <button class="tts-btn" onclick="speak('他是你的男朋友吗？不是，他是我的朋友。')">🔊</button></div>
+<div class="story-trans">Anh ấy là bạn trai của bạn à? Không, anh ấy là bạn của tôi.</div>
+<div class="reading-line"><ruby>她<rt>Tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>女<rt>nǚ</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>不<rt>Bú</rt></ruby><ruby>是<rt>shì</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby>。 <button class="tts-btn" onclick="speak('她是你的女朋友吗？不是，她是我的朋友。')">🔊</button></div>
+<div class="story-trans">Cô ấy là bạn gái của bạn à? Không, cô ấy là bạn của tôi.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。 <button class="tts-btn" onclick="speak('你们是学生吗？我们是学生。')">🔊</button></div>
+<div class="story-trans">Các bạn là học sinh à? Chúng tôi là học sinh.</div>
+<div class="reading-line"><ruby>您<rt>Nín</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。 <button class="tts-btn" onclick="speak('您好，老师。')">🔊</button></div>
+<div class="story-trans">Chào thầy ạ.</div>
+<div class="reading-line"><ruby>他<rt>Tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby>。 <button class="tts-btn" onclick="speak('他是哪国人？我不知道。')">🔊</button></div>
+<div class="story-trans">Anh ấy là người nước nào? Tôi không biết.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>人<rt>rén</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>他<rt>tā</rt></ruby>。 <button class="tts-btn" onclick="speak('我的老师是好人，我们都很喜欢他。')">🔊</button></div>
+<div class="story-trans">Thầy giáo của tôi là người tốt, chúng tôi đều rất thích thầy.</div>
+<div class="reading-line"><ruby>他<rt>Tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>女<rt>nǚ</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。 <button class="tts-btn" onclick="speak('他是男学生，她是女学生。')">🔊</button></div>
+<div class="story-trans">Anh ấy là học sinh nam, cô ấy là học sinh nữ.</div>
+<h3 style="margin:14px 0 6px;">🏫 Ở trường học</h3>
+<div class="reading-line"><ruby>很<rt>Hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby><ruby>认<rt>rèn</rt></ruby><ruby>识<rt>shi</rt></ruby><ruby>你<rt>nǐ</rt></ruby>。 <button class="tts-btn" onclick="speak('很高兴认识你。')">🔊</button></div>
+<div class="story-trans">Rất vui được gặp bạn.</div>
+<div class="reading-line"><ruby>对<rt>Duì</rt></ruby><ruby>不<rt>bu</rt></ruby><ruby>起<rt>qǐ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。 <button class="tts-btn" onclick="speak('对不起，我不是老师，我是学生。')">🔊</button></div>
+<div class="story-trans">Xin lỗi, tôi không phải là thầy giáo, tôi là học sinh.</div>
+<div class="reading-line"><ruby>没<rt>Méi</rt></ruby><ruby>关<rt>guān</rt></ruby><ruby>系<rt>xi</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <button class="tts-btn" onclick="speak('没关系，我很好。')">🔊</button></div>
+<div class="story-trans">Không sao, tôi rất khỏe.</div>
+<div class="reading-line"><ruby>这<rt>Zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>名<rt>míng</rt></ruby><ruby>片<rt>piàn</rt></ruby>。 <button class="tts-btn" onclick="speak('这是我的名片。')">🔊</button></div>
+<div class="story-trans">Đây là danh thiếp của tôi.</div>
+<div class="reading-line"><ruby>这<rt>Zhè</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>贵<rt>guì</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>不<rt>Bú</rt></ruby><ruby>贵<rt>guì</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>便<rt>pián</rt></ruby><ruby>宜<rt>yi</rt></ruby>。 <button class="tts-btn" onclick="speak('这很贵吗？不贵，很便宜。')">🔊</button></div>
+<div class="story-trans">Cái này đắt không? Không đắt, rất rẻ.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>钱<rt>qián</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>钱<rt>qián</rt></ruby>。 <button class="tts-btn" onclick="speak('你有钱吗？我没有钱。')">🔊</button></div>
+<div class="story-trans">Bạn có tiền không? Tôi không có tiền.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。 <button class="tts-btn" onclick="speak('我非常高兴。')">🔊</button></div>
+<div class="story-trans">Tôi rất vui.</div>
+<div class="reading-line"><ruby>老<rt>Lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>教<rt>jiāo</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>教<rt>jiāo</rt></ruby><ruby>英<rt>Yīng</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('老师教汉语，也教英语。')">🔊</button></div>
+<div class="story-trans">Thầy dạy tiếng Trung, cũng dạy tiếng Anh.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>做<rt>zuò</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>工<rt>gōng</rt></ruby><ruby>作<rt>zuò</rt></ruby>？ <button class="tts-btn" onclick="speak('你做什么工作？')">🔊</button></div>
+<div class="story-trans">Bạn làm công việc gì?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>司<rt>sī</rt></ruby><ruby>工<rt>gōng</rt></ruby><ruby>作<rt>zuò</rt></ruby>。 <button class="tts-btn" onclick="speak('我在公司工作。')">🔊</button></div>
+<div class="story-trans">Tôi làm việc ở công ty.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('我还想学习汉语。')">🔊</button></div>
+<div class="story-trans">Tôi còn muốn học tiếng Trung.</div>
+<div class="reading-line"><ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>快<rt>kuài</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>来<rt>lái</rt></ruby><ruby>了<rt>le</rt></ruby>。 <button class="tts-btn" onclick="speak('他很快就来了。')">🔊</button></div>
+<div class="story-trans">Anh ấy đến rất nhanh.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby>。 <button class="tts-btn" onclick="speak('我们在学校学习，也在家学习。')">🔊</button></div>
+<div class="story-trans">Chúng tôi học ở trường, cũng học ở nhà.</div>
+<div class="reading-line"><ruby>先<rt>Xiān</rt></ruby><ruby>生<rt>sheng</rt></ruby>，<ruby>您<rt>nín</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>请<rt>qǐng</rt></ruby><ruby>问<rt>wèn</rt></ruby><ruby>您<rt>nín</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>吗<rt>ma</rt></ruby>？ <button class="tts-btn" onclick="speak('先生，您好，请问您是老师吗？')">🔊</button></div>
+<div class="story-trans">Chào ông ạ, xin hỏi ông có phải là thầy giáo không?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>英<rt>Yīng</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('我学汉语，也学英语。')">🔊</button></div>
+<div class="story-trans">Tôi học tiếng Trung, cũng học tiếng Anh.</div>
+<h3 style="margin:14px 0 6px;">🍜 Ăn trưa ở nhà hàng</h3>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我们去饭店吃饭。')">🔊</button></div>
+<div class="story-trans">Chúng tôi đi ăn cơm ở nhà hàng.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>饿<rt>è</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>米<rt>mǐ</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我饿了，我想吃米饭。')">🔊</button></div>
+<div class="story-trans">Tôi đói rồi, tôi muốn ăn cơm.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>菜<rt>cài</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>牛<rt>niú</rt></ruby><ruby>肉<rt>ròu</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>青<rt>qīng</rt></ruby><ruby>菜<rt>cài</rt></ruby>。 <button class="tts-btn" onclick="speak('你吃什么菜？我想吃牛肉和青菜。')">🔊</button></div>
+<div class="story-trans">Bạn ăn món gì? Tôi muốn ăn thịt bò và rau xanh.</div>
+<div class="reading-line"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>菜<rt>cài</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby>，<ruby>又<rt>yòu</rt></ruby><ruby>便<rt>pián</rt></ruby><ruby>宜<rt>yi</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby>。 <button class="tts-btn" onclick="speak('这个菜很好吃，又便宜又好吃。')">🔊</button></div>
+<div class="story-trans">Món này rất ngon, vừa rẻ vừa ngon.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>喝<rt>hē</rt></ruby><ruby>茶<rt>chá</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>是<rt>shi</rt></ruby><ruby>喝<rt>hē</rt></ruby><ruby>咖<rt>kā</rt></ruby><ruby>啡<rt>fēi</rt></ruby>？ <button class="tts-btn" onclick="speak('你喝茶还是喝咖啡？')">🔊</button></div>
+<div class="story-trans">Bạn uống trà hay uống cà phê?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>喝<rt>hē</rt></ruby><ruby>奶<rt>nǎi</rt></ruby><ruby>茶<rt>chá</rt></ruby>，<ruby>不<rt>bù</rt></ruby><ruby>喝<rt>hē</rt></ruby><ruby>咖<rt>kā</rt></ruby><ruby>啡<rt>fēi</rt></ruby>。 <button class="tts-btn" onclick="speak('我喝奶茶，不喝咖啡。')">🔊</button></div>
+<div class="story-trans">Tôi uống trà sữa, không uống cà phê.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>喝<rt>hē</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>杯<rt>bēi</rt></ruby><ruby>茶<rt>chá</rt></ruby>。 <button class="tts-btn" onclick="speak('我想喝一杯茶。')">🔊</button></div>
+<div class="story-trans">Tôi muốn uống một chén trà.</div>
+<div class="reading-line"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>碗<rt>wǎn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>大<rt>dà</rt></ruby>，<ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>杯<rt>bēi</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>小<rt>xiǎo</rt></ruby>。 <button class="tts-btn" onclick="speak('这个碗很大，这个杯很小。')">🔊</button></div>
+<div class="story-trans">Cái bát này rất to, cái chén này rất nhỏ.</div>
+<div class="reading-line"><ruby>一<rt>Yí</rt></ruby><ruby>共<rt>gòng</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>少<rt>shao</rt></ruby><ruby>钱<rt>qián</rt></ruby>？<ruby>一<rt>Yí</rt></ruby><ruby>共<rt>gòng</rt></ruby><ruby>二<rt>èr</rt></ruby><ruby>十<rt>shí</rt></ruby><ruby>块<rt>kuài</rt></ruby><ruby>钱<rt>qián</rt></ruby>。 <button class="tts-btn" onclick="speak('一共多少钱？一共二十块钱。')">🔊</button></div>
+<div class="story-trans">Tổng cộng bao nhiêu tiền? Tổng cộng hai mươi đồng.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>苹<rt>píng</rt></ruby><ruby>果<rt>guǒ</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>两<rt>liǎng</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>苹<rt>píng</rt></ruby><ruby>果<rt>guǒ</rt></ruby>。 <button class="tts-btn" onclick="speak('你要几个苹果？我要两个苹果。')">🔊</button></div>
+<div class="story-trans">Bạn muốn mấy quả táo? Tôi muốn hai quả táo.</div>
+<div class="reading-line"><ruby>服<rt>Fú</rt></ruby><ruby>务<rt>wù</rt></ruby><ruby>员<rt>yuán</rt></ruby>，<ruby>请<rt>qǐng</rt></ruby><ruby>问<rt>wèn</rt></ruby>，<ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>菜<rt>cài</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>少<rt>shao</rt></ruby><ruby>钱<rt>qián</rt></ruby>？ <button class="tts-btn" onclick="speak('服务员，请问，这个菜多少钱？')">🔊</button></div>
+<div class="story-trans">Phục vụ ơi, xin hỏi, món này bao nhiêu tiền?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>儿<rt>er</rt></ruby><ruby>米<rt>mǐ</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我想吃一点儿米饭。')">🔊</button></div>
+<div class="story-trans">Tôi muốn ăn một chút cơm.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>喝<rt>hē</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>儿<rt>er</rt></ruby><ruby>水<rt>shuǐ</rt></ruby>。 <button class="tts-btn" onclick="speak('我喝点儿水。')">🔊</button></div>
+<div class="story-trans">Tôi uống một chút nước.</div>
+<div class="reading-line"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>名<rt>míng</rt></ruby>。 <button class="tts-btn" onclick="speak('这个饭店很有名。')">🔊</button></div>
+<div class="story-trans">Nhà hàng này rất nổi tiếng.</div>
+<h3 style="margin:14px 0 6px;">🛒 Đi siêu thị và đi đường</h3>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>从<rt>cóng</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby>。 <button class="tts-btn" onclick="speak('我从大学去超市。')">🔊</button></div>
+<div class="story-trans">Tôi từ trường đại học đi siêu thị.</div>
+<div class="reading-line"><ruby>超<rt>Chāo</rt></ruby><ruby>市<rt>shì</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>面<rt>miàn</rt></ruby>。 <button class="tts-btn" onclick="speak('超市在学校对面。')">🔊</button></div>
+<div class="story-trans">Siêu thị ở đối diện trường học.</div>
+<div class="reading-line"><ruby>学<rt>Xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>附<rt>fù</rt></ruby><ruby>近<rt>jìn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby>。 <button class="tts-btn" onclick="speak('学校附近有一个饭店。')">🔊</button></div>
+<div class="story-trans">Gần trường học có một nhà hàng.</div>
+<div class="reading-line"><ruby>书<rt>Shū</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>银<rt>yín</rt></ruby><ruby>行<rt>háng</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>面<rt>miàn</rt></ruby>。 <button class="tts-btn" onclick="speak('书店在银行前面。')">🔊</button></div>
+<div class="story-trans">Hiệu sách ở phía trước ngân hàng.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>往<rt>wǎng</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>去<rt>qù</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>往<rt>wǎng</rt></ruby><ruby>左<rt>zuǒ</rt></ruby><ruby>拐<rt>guǎi</rt></ruby>。 <button class="tts-btn" onclick="speak('你往哪儿去？我往左拐。')">🔊</button></div>
+<div class="story-trans">Bạn đi về đâu? Tôi rẽ trái.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>往<rt>wǎng</rt></ruby><ruby>右<rt>yòu</rt></ruby><ruby>拐<rt>guǎi</rt></ruby>，<ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>面<rt>miàn</rt></ruby>。 <button class="tts-btn" onclick="speak('你往右拐，饭店在前面。')">🔊</button></div>
+<div class="story-trans">Bạn rẽ phải, nhà hàng ở phía trước.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby>，<ruby>然<rt>rán</rt></ruby><ruby>后<rt>hòu</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我们去超市，然后去饭店。')">🔊</button></div>
+<div class="story-trans">Chúng tôi đi siêu thị, sau đó đi nhà hàng.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>儿<rt>ér</rt></ruby>，<ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>面<rt>miàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我家在那儿，饭店在对面。')">🔊</button></div>
+<div class="story-trans">Nhà tôi ở đằng kia, nhà hàng ở đối diện.</div>
+<div class="reading-line"><ruby>饭<rt>Fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby>，<ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>里<rt>lǐ</rt></ruby>。 <button class="tts-btn" onclick="speak('饭店在那里，超市也在这里。')">🔊</button></div>
+<div class="story-trans">Nhà hàng ở đó, siêu thị cũng ở đây.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>儿<rt>ér</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>里<rt>lǐ</rt></ruby>？ <button class="tts-btn" onclick="speak('你去哪儿？你去哪里？')">🔊</button></div>
+<div class="story-trans">Bạn đi đâu? Bạn đi đâu?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>儿<rt>ér</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby>。 <button class="tts-btn" onclick="speak('我在这儿，我不在那里。')">🔊</button></div>
+<div class="story-trans">Tôi ở đây, tôi không ở đó.</div>
+<div class="reading-line"><ruby>广<rt>Guǎng</rt></ruby><ruby>场<rt>chǎng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>近<rt>jìn</rt></ruby>，<ruby>银<rt>yín</rt></ruby><ruby>行<rt>háng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>远<rt>yuǎn</rt></ruby>。 <button class="tts-btn" onclick="speak('广场很近，银行很远。')">🔊</button></div>
+<div class="story-trans">Quảng trường rất gần, ngân hàng rất xa.</div>
+<div class="reading-line"><ruby>人<rt>Rén</rt></ruby><ruby>民<rt>mín</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>广<rt>guǎng</rt></ruby><ruby>场<rt>chǎng</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <button class="tts-btn" onclick="speak('人民很好，广场也很好。')">🔊</button></div>
+<div class="story-trans">Nhân dân rất tốt, quảng trường cũng rất đẹp.</div>
+<div class="reading-line"><ruby>小<rt>Xiǎo</rt></ruby><ruby>姐<rt>jiě</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>请<rt>qǐng</rt></ruby><ruby>问<rt>wèn</rt></ruby>，<ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>儿<rt>ér</rt></ruby>？ <button class="tts-btn" onclick="speak('小姐，你好，请问，超市在哪儿？')">🔊</button></div>
+<div class="story-trans">Cô ơi, chào cô, xin hỏi, siêu thị ở đâu?</div>
+<div class="reading-line"><ruby>师<rt>Shī</rt></ruby><ruby>傅<rt>fu</rt></ruby>，<ruby>谢<rt>xiè</rt></ruby><ruby>谢<rt>xie</rt></ruby><ruby>你<rt>nǐ</rt></ruby>。<ruby>再<rt>Zài</rt></ruby><ruby>见<rt>jiàn</rt></ruby>！ <button class="tts-btn" onclick="speak('师傅，谢谢你。再见！')">🔊</button></div>
+<div class="story-trans">Bác tài ơi, cảm ơn bác. Tạm biệt!</div>
+<div class="reading-line"><ruby>不<rt>Bú</rt></ruby><ruby>客<rt>kè</rt></ruby><ruby>气<rt>qi</rt></ruby>，<ruby>没<rt>méi</rt></ruby><ruby>关<rt>guān</rt></ruby><ruby>系<rt>xi</rt></ruby>。 <button class="tts-btn" onclick="speak('不客气，没关系。')">🔊</button></div>
+<div class="story-trans">Không có gì, không sao đâu.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>客<rt>kè</rt></ruby><ruby>气<rt>qi</rt></ruby>，<ruby>谢<rt>xiè</rt></ruby><ruby>谢<rt>xie</rt></ruby><ruby>你<rt>nǐ</rt></ruby>。 <button class="tts-btn" onclick="speak('你很客气，谢谢你。')">🔊</button></div>
+<div class="story-trans">Bạn thật lịch sự, cảm ơn bạn.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>面<rt>miàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我们到了，超市在前面。')">🔊</button></div>
+<div class="story-trans">Chúng tôi đến rồi, siêu thị ở phía trước.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>再<rt>zài</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby>。 <button class="tts-btn" onclick="speak('我再去超市。')">🔊</button></div>
+<div class="story-trans">Tôi lại đi siêu thị.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>走<rt>zǒu</rt></ruby><ruby>吧<rt>ba</rt></ruby>，<ruby>去<rt>qù</rt></ruby><ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby>。 <button class="tts-btn" onclick="speak('我们走吧，去超市。')">🔊</button></div>
+<div class="story-trans">Chúng ta đi thôi, đi siêu thị.</div>
+<h3 style="margin:14px 0 6px;">🎬 Cuối tuần xem phim</h3>
+<div class="reading-line"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby><ruby>五<rt>wǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('今天是星期五。')">🔊</button></div>
+<div class="story-trans">Hôm nay là thứ Sáu.</div>
+<div class="reading-line"><ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>吧<rt>ba</rt></ruby>。 <button class="tts-btn" onclick="speak('明天我们去看电影吧。')">🔊</button></div>
+<div class="story-trans">Ngày mai chúng ta đi xem phim nhé.</div>
+<div class="reading-line"><ruby>电<rt>Diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>院<rt>yuàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>儿<rt>ér</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>近<rt>jìn</rt></ruby>。 <button class="tts-btn" onclick="speak('电影院在那儿，很近。')">🔊</button></div>
+<div class="story-trans">Rạp chiếu phim ở đằng kia, rất gần.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>空<rt>kòng</rt></ruby><ruby>儿<rt>er</rt></ruby><ruby>吗<rt>ma</rt></ruby>？ <button class="tts-btn" onclick="speak('你今天有空儿吗？')">🔊</button></div>
+<div class="story-trans">Hôm nay bạn có rảnh không?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>儿<rt>er</rt></ruby><ruby>空<rt>kòng</rt></ruby><ruby>儿<rt>er</rt></ruby>。 <button class="tts-btn" onclick="speak('我有一点儿空儿。')">🔊</button></div>
+<div class="story-trans">Tôi có một chút thời gian rảnh.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>为<rt>wèi</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>？ <button class="tts-btn" onclick="speak('你为什么不去看电影？')">🔊</button></div>
+<div class="story-trans">Sao bạn không đi xem phim?</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>事<rt>shì</rt></ruby>？ <button class="tts-btn" onclick="speak('你有什么事？')">🔊</button></div>
+<div class="story-trans">Bạn có việc gì?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>去<rt>qù</rt></ruby>，<ruby>但<rt>dàn</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>间<rt>jiān</rt></ruby>。 <button class="tts-btn" onclick="speak('我想去，但是我没有时间。')">🔊</button></div>
+<div class="story-trans">Tôi muốn đi, nhưng tôi không có thời gian.</div>
+<div class="reading-line"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>月<rt>yuè</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>号<rt>hào</rt></ruby>？ <button class="tts-btn" onclick="speak('今天是几月几号？')">🔊</button></div>
+<div class="story-trans">Hôm nay là tháng mấy ngày mấy?</div>
+<div class="reading-line"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>日<rt>rì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>快<rt>kuài</rt></ruby><ruby>乐<rt>lè</rt></ruby>。 <button class="tts-btn" onclick="speak('今天是我的生日，我很快乐。')">🔊</button></div>
+<div class="story-trans">Hôm nay là sinh nhật của tôi, tôi rất vui.</div>
+<div class="reading-line"><ruby>生<rt>Shēng</rt></ruby><ruby>日<rt>rì</rt></ruby><ruby>快<rt>kuài</rt></ruby><ruby>乐<rt>lè</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>真<rt>zhēn</rt></ruby><ruby>漂<rt>piào</rt></ruby><ruby>亮<rt>liang</rt></ruby>。 <button class="tts-btn" onclick="speak('生日快乐！你真漂亮。')">🔊</button></div>
+<div class="story-trans">Chúc mừng sinh nhật! Bạn thật xinh đẹp.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我们晚上吃晚饭。')">🔊</button></div>
+<div class="story-trans">Buổi tối chúng tôi ăn cơm tối.</div>
+<div class="reading-line"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>了<rt>le</rt></ruby>！ <button class="tts-btn" onclick="speak('这个电影太好看了！')">🔊</button></div>
+<div class="story-trans">Bộ phim này hay quá!</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>见<rt>jiàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我们明天见。')">🔊</button></div>
+<div class="story-trans">Ngày mai chúng ta gặp nhau.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby>。 <button class="tts-btn" onclick="speak('你喜欢这个电影吗？我非常喜欢。')">🔊</button></div>
+<div class="story-trans">Bạn có thích bộ phim này không? Tôi rất thích.</div>
+<div class="reading-line"><ruby>请<rt>Qǐng</rt></ruby><ruby>坐<rt>zuò</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。 <button class="tts-btn" onclick="speak('请坐，我们看电影。')">🔊</button></div>
+<div class="story-trans">Mời ngồi, chúng ta xem phim.</div>
+<div class="reading-line"><ruby>那<rt>Nà</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>院<rt>yuàn</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>大<rt>dà</rt></ruby>。 <button class="tts-btn" onclick="speak('那是电影院，很大。')">🔊</button></div>
+<div class="story-trans">Đó là rạp chiếu phim, rất lớn.</div>
+<h3 style="margin:14px 0 6px;">🚇 Đi chơi bằng xe</h3>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>坐<rt>zuò</rt></ruby><ruby>地<rt>dì</rt></ruby><ruby>铁<rt>tiě</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？ <button class="tts-btn" onclick="speak('我们怎么去学校？你坐地铁去吗？')">🔊</button></div>
+<div class="story-trans">Chúng ta đi học bằng gì? Bạn đi tàu điện ngầm à?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>坐<rt>zuò</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>交<rt>jiāo</rt></ruby><ruby>车<rt>chē</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。 <button class="tts-btn" onclick="speak('我坐公交车去学校。')">🔊</button></div>
+<div class="story-trans">Tôi đi xe buýt đi học.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>走<rt>zǒu</rt></ruby><ruby>路<rt>lù</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>吧<rt>ba</rt></ruby>。 <button class="tts-btn" onclick="speak('我们走路去学校吧。')">🔊</button></div>
+<div class="story-trans">Chúng ta đi bộ đi học nhé.</div>
+<div class="reading-line"><ruby>出<rt>Chū</rt></ruby><ruby>租<rt>zū</rt></ruby><ruby>车<rt>chē</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>贵<rt>guì</rt></ruby>，<ruby>地<rt>dì</rt></ruby><ruby>铁<rt>tiě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>便<rt>pián</rt></ruby><ruby>宜<rt>yi</rt></ruby>。 <button class="tts-btn" onclick="speak('出租车很贵，地铁很便宜。')">🔊</button></div>
+<div class="story-trans">Taxi rất đắt, tàu điện ngầm rất rẻ.</div>
+<div class="reading-line"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>名<rt>míng</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>便<rt>pián</rt></ruby><ruby>宜<rt>yi</rt></ruby>。 <button class="tts-btn" onclick="speak('这个饭店很有名，也很便宜。')">🔊</button></div>
+<div class="story-trans">Nhà hàng này rất nổi tiếng, cũng rất rẻ.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>坐<rt>zuò</rt></ruby><ruby>地<rt>dì</rt></ruby><ruby>铁<rt>tiě</rt></ruby>。 <button class="tts-btn" onclick="speak('我们都喜欢坐地铁。')">🔊</button></div>
+<div class="story-trans">Chúng tôi đều thích đi tàu điện ngầm.</div>
+<div class="reading-line"><ruby>师<rt>Shī</rt></ruby><ruby>傅<rt>fu</rt></ruby>，<ruby>去<rt>qù</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>院<rt>yuàn</rt></ruby>，<ruby>多<rt>duō</rt></ruby><ruby>少<rt>shao</rt></ruby><ruby>钱<rt>qián</rt></ruby>？ <button class="tts-btn" onclick="speak('师傅，去电影院，多少钱？')">🔊</button></div>
+<div class="story-trans">Bác tài ơi, đi rạp chiếu phim, bao nhiêu tiền?</div>
+<div class="reading-line"><ruby>十<rt>Shí</rt></ruby><ruby>块<rt>kuài</rt></ruby><ruby>钱<rt>qián</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>便<rt>pián</rt></ruby><ruby>宜<rt>yi</rt></ruby>。 <button class="tts-btn" onclick="speak('十块钱，很便宜。')">🔊</button></div>
+<div class="story-trans">Mười đồng, rất rẻ.</div>
+<div class="reading-line"><ruby>谢<rt>Xiè</rt></ruby><ruby>谢<rt>xie</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>傅<rt>fu</rt></ruby>，<ruby>不<rt>bú</rt></ruby><ruby>客<rt>kè</rt></ruby><ruby>气<rt>qi</rt></ruby>。 <button class="tts-btn" onclick="speak('谢谢师傅，不客气。')">🔊</button></div>
+<div class="story-trans">Cảm ơn bác tài. — Không có gì.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>再<rt>zài</rt></ruby><ruby>见<rt>jiàn</rt></ruby>！ <button class="tts-btn" onclick="speak('我们到了，再见！')">🔊</button></div>
+<div class="story-trans">Chúng tôi đến rồi, tạm biệt!</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <button class="tts-btn" onclick="speak('你怎么样？我很好。')">🔊</button></div>
+<div class="story-trans">Bạn thế nào? Tôi rất khỏe.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>了<rt>le</rt></ruby>。 <button class="tts-btn" onclick="speak('我们又去看电影了。')">🔊</button></div>
+<div class="story-trans">Chúng tôi lại đi xem phim.</div>
+<h3 style="margin:14px 0 6px;">👨‍👩‍👧 Gia đình tôi</h3>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>五<rt>wǔ</rt></ruby><ruby>口<rt>kǒu</rt></ruby><ruby>人<rt>rén</rt></ruby>。 <button class="tts-btn" onclick="speak('我家有五口人。')">🔊</button></div>
+<div class="story-trans">Nhà tôi có năm người.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>律<rt>lǜ</rt></ruby><ruby>师<rt>shī</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>妈<rt>mā</rt></ruby><ruby>妈<rt>ma</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>医<rt>yī</rt></ruby><ruby>生<rt>shēng</rt></ruby>。 <button class="tts-btn" onclick="speak('我爸爸是律师，我妈妈是医生。')">🔊</button></div>
+<div class="story-trans">Bố tôi là luật sư, mẹ tôi là bác sĩ.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>哥<rt>gē</rt></ruby><ruby>哥<rt>ge</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>医<rt>yī</rt></ruby><ruby>生<rt>shēng</rt></ruby>。 <button class="tts-btn" onclick="speak('我有一个哥哥，他是医生。')">🔊</button></div>
+<div class="story-trans">Tôi có một anh trai, anh ấy là bác sĩ.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>姐<rt>jiě</rt></ruby><ruby>姐<rt>jiě</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。 <button class="tts-btn" onclick="speak('我有一个姐姐，她是老师。')">🔊</button></div>
+<div class="story-trans">Tôi có một chị gái, chị ấy là giáo viên.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>弟<rt>dì</rt></ruby><ruby>弟<rt>di</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>大<rt>dà</rt></ruby>？<ruby>他<rt>Tā</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>十<rt>shí</rt></ruby><ruby>岁<rt>suì</rt></ruby>。 <button class="tts-btn" onclick="speak('你弟弟多大？他今年十岁。')">🔊</button></div>
+<div class="story-trans">Em trai bạn bao nhiêu tuổi? Em ấy năm nay mười tuổi.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>妹<rt>mèi</rt></ruby><ruby>妹<rt>mei</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>小<rt>xiǎo</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>三<rt>sān</rt></ruby><ruby>岁<rt>suì</rt></ruby>。 <button class="tts-btn" onclick="speak('我妹妹很小，她今年三岁。')">🔊</button></div>
+<div class="story-trans">Em gái tôi còn rất nhỏ, em ấy năm nay ba tuổi.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>只<rt>zhī</rt></ruby><ruby>狗<rt>gǒu</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>狗<rt>gǒu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>爱<rt>ài</rt></ruby>。 <button class="tts-btn" onclick="speak('我有一只狗，我的狗很可爱。')">🔊</button></div>
+<div class="story-trans">Tôi có một con chó, con chó của tôi rất dễ thương.</div>
+<div class="reading-line"><ruby>这<rt>Zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>人<rt>rén</rt></ruby>，<ruby>这<rt>zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>照<rt>zhào</rt></ruby><ruby>片<rt>piàn</rt></ruby>。 <button class="tts-btn" onclick="speak('这是我的家人，这是我家的照片。')">🔊</button></div>
+<div class="story-trans">Đây là gia đình của tôi, đây là ảnh nhà tôi.</div>
+<div class="reading-line"><ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>谁<rt>shéi</rt></ruby>？<ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>妈<rt>mā</rt></ruby><ruby>妈<rt>ma</rt></ruby>。 <button class="tts-btn" onclick="speak('他们是谁？他们是我的爸爸和妈妈。')">🔊</button></div>
+<div class="story-trans">Họ là ai? Họ là bố và mẹ của tôi.</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>人<rt>rén</rt></ruby>？ <button class="tts-btn" onclick="speak('你们家有几个人？')">🔊</button></div>
+<div class="story-trans">Nhà bạn có mấy người?</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>四<rt>sì</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>人<rt>rén</rt></ruby>，<ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby>，<ruby>妈<rt>mā</rt></ruby><ruby>妈<rt>ma</rt></ruby>，<ruby>哥<rt>gē</rt></ruby><ruby>哥<rt>ge</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。 <button class="tts-btn" onclick="speak('我们家有四个人，爸爸，妈妈，哥哥和我。')">🔊</button></div>
+<div class="story-trans">Nhà tôi có bốn người: bố, mẹ, anh trai và tôi.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <button class="tts-btn" onclick="speak('我的家人都很好。')">🔊</button></div>
+<div class="story-trans">Gia đình tôi đều rất tốt.</div>
+<div class="reading-line"><ruby>今<rt>Jīn</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>英<rt>Yīng</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <button class="tts-btn" onclick="speak('今年我学习汉语，也学习英语。')">🔊</button></div>
+<div class="story-trans">Năm nay tôi học tiếng Trung, cũng học tiếng Anh.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。 <button class="tts-btn" onclick="speak('我和朋友一起去学校。')">🔊</button></div>
+<div class="story-trans">Tôi cùng bạn đi học.</div>
+<h3 style="margin:14px 0 6px;">🌙 Buổi tối ở nhà</h3>
+<div class="reading-line"><ruby>晚<rt>Wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <button class="tts-btn" onclick="speak('晚上，我们在家吃晚饭。')">🔊</button></div>
+<div class="story-trans">Buổi tối, chúng tôi ăn cơm tối ở nhà.</div>
+<div class="reading-line"><ruby>晚<rt>Wǎn</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby>，<ruby>米<rt>mǐ</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby>。 <button class="tts-btn" onclick="speak('晚饭很好吃，米饭也很好吃。')">🔊</button></div>
+<div class="story-trans">Cơm tối rất ngon, cơm cũng rất ngon.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>然<rt>rán</rt></ruby><ruby>后<rt>hòu</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。 <button class="tts-btn" onclick="speak('我们吃晚饭，然后看电视。')">🔊</button></div>
+<div class="story-trans">Chúng tôi ăn cơm tối, sau đó xem ti-vi.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby>。 <button class="tts-btn" onclick="speak('我们看电影，也听音乐。')">🔊</button></div>
+<div class="story-trans">Chúng tôi xem phim, cũng nghe nhạc.</div>
+<div class="reading-line"><ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby><ruby>六<rt>liù</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。 <button class="tts-btn" onclick="speak('明天是星期六，我们去看电影。')">🔊</button></div>
+<div class="story-trans">Ngày mai là thứ Bảy, chúng tôi đi xem phim.</div>
+<div class="reading-line"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>快<rt>kuài</rt></ruby><ruby>乐<rt>lè</rt></ruby>。 <button class="tts-btn" onclick="speak('今天太好了，我们都很快乐。')">🔊</button></div>
+<div class="story-trans">Hôm nay thật tuyệt, chúng tôi đều rất vui.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>了<rt>le</rt></ruby>。 <button class="tts-btn" onclick="speak('我又想去学校了。')">🔊</button></div>
+<div class="story-trans">Tôi lại muốn đi học.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>觉<rt>jiào</rt></ruby><ruby>吧<rt>ba</rt></ruby>，<ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>见<rt>jiàn</rt></ruby>。 <button class="tts-btn" onclick="speak('我们睡觉吧，明天见。')">🔊</button></div>
+<div class="story-trans">Chúng ta đi ngủ nhé, mai gặp nhau.</div>
+<div class="reading-line"><ruby>谢<rt>Xiè</rt></ruby><ruby>谢<rt>xie</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>们<rt>men</rt></ruby>，<ruby>再<rt>zài</rt></ruby><ruby>见<rt>jiàn</rt></ruby>！ <button class="tts-btn" onclick="speak('谢谢你们，再见！')">🔊</button></div>
+<div class="story-trans">Cảm ơn các bạn, tạm biệt!</div>
+<div class="reading-line"><ruby>你<rt>Nǐ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>谢<rt>xiè</rt></ruby><ruby>谢<rt>xie</rt></ruby>。 <button class="tts-btn" onclick="speak('你今天好吗？我很好，谢谢。')">🔊</button></div>
+<div class="story-trans">Hôm nay bạn khỏe không? Tôi rất khỏe, cảm ơn.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby>。 <button class="tts-btn" onclick="speak('我们明天去学校，也去超市。')">🔊</button></div>
+<div class="story-trans">Ngày mai chúng tôi đi học, cũng đi siêu thị.</div>
+<div class="reading-line"><ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>人<rt>rén</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>和<rt>hé</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby>。 <button class="tts-btn" onclick="speak('我很喜欢我的家人，我的学校，和我的朋友。')">🔊</button></div>
+<div class="story-trans">Tôi rất thích gia đình, trường học và bạn bè của tôi.</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5.0/dist/hanzi-writer.min.js"></script>
+<script>
+// ====== Trạng thái + lưu trữ (localStorage) ======
+var LS_KEY = 'hsk1-tong-ket';
+var TOTAL_TASKS = 62;
+var ITEM_INFO = {
+  "lis-1": [
+    "Nghe câu 1 (老师)",
+    "C — 你是老师吗？"
+  ],
+  "lis-2": [
+    "Nghe câu 2 (名字)",
+    "A — 这是我的名字。"
+  ],
+  "lis-3": [
+    "Nghe câu 3 (对不起)",
+    "A — 对不起，我不是老师。"
+  ],
+  "lis-4": [
+    "Nghe câu 4 (谢谢)",
+    "C — 谢谢你，你很好。"
+  ],
+  "lis-5": [
+    "Nghe câu 5 (咖啡)",
+    "B — 这咖啡很好。"
+  ],
+  "lis-6": [
+    "Nghe câu 6 (留学生)",
+    "D — 我是留学生。"
+  ],
+  "lis-7": [
+    "Nghe câu 7 (超市)",
+    "C — 我去超市。"
+  ],
+  "lis-8": [
+    "Nghe câu 8 (生日)",
+    "B — 今天是我的生日。"
+  ],
+  "lis-9": [
+    "Nghe câu 9 (出租车)",
+    "B — 出租车在前面。"
+  ],
+  "lis-10": [
+    "Nghe câu 10 (律师)",
+    "D — 我爸爸是律师。"
+  ],
+  "match-m1": [
+    "Ghép cặp: 好",
+    "hǎo — tốt; khỏe; hay"
+  ],
+  "match-m2": [
+    "Ghép cặp: 国",
+    "guó — nước; quốc gia"
+  ],
+  "match-m3": [
+    "Ghép cặp: 高兴",
+    "gāoxìng — vui vẻ; vui mừng"
+  ],
+  "match-m4": [
+    "Ghép cặp: 远",
+    "yuǎn — xa"
+  ],
+  "match-m5": [
+    "Ghép cặp: 杯",
+    "bēi — cốc; chén (lượng từ)"
+  ],
+  "match-m6": [
+    "Ghép cặp: 苹果",
+    "píngguǒ — quả táo"
+  ],
+  "match-m7": [
+    "Ghép cặp: 家",
+    "jiā — nhà; gia đình"
+  ],
+  "match-m8": [
+    "Ghép cặp: 电影",
+    "diànyǐng — phim; điện ảnh"
+  ],
+  "match-m9": [
+    "Ghép cặp: 地铁",
+    "dìtiě — tàu điện ngầm"
+  ],
+  "match-m10": [
+    "Ghép cặp: 狗",
+    "gǒu — chó"
+  ],
+  "mean-1": [
+    "Nghĩa: 你们",
+    "D — các bạn"
+  ],
+  "mean-2": [
+    "Nghĩa: 什么",
+    "C — cái gì; gì"
+  ],
+  "mean-3": [
+    "Nghĩa: 认识",
+    "A — quen biết; nhận ra"
+  ],
+  "mean-4": [
+    "Nghĩa: 知道",
+    "C — biết"
+  ],
+  "mean-5": [
+    "Nghĩa: 饿",
+    "C — đói"
+  ],
+  "mean-6": [
+    "Nghĩa: 工作",
+    "C — làm việc; công việc"
+  ],
+  "mean-7": [
+    "Nghĩa: 附近",
+    "D — gần đây; vùng lân cận"
+  ],
+  "mean-8": [
+    "Nghĩa: 漂亮",
+    "B — xinh đẹp"
+  ],
+  "mean-9": [
+    "Nghĩa: 便宜",
+    "B — rẻ"
+  ],
+  "mean-10": [
+    "Nghĩa: 可爱",
+    "A — đáng yêu"
+  ],
+  "cloze-1": [
+    "Đoạn văn 1 (5 chỗ trống)",
+    "吃 → 喝 → 牛肉 → 奶茶 → 青菜"
+  ],
+  "cloze-2": [
+    "Đoạn văn 2 (5 chỗ trống)",
+    "爸爸 → 妈妈 → 哥哥 → 姐姐 → 弟弟"
+  ],
+  "scr-1": [
+    "Sắp xếp câu 1 (学习)",
+    "我学习汉语。"
+  ],
+  "scr-2": [
+    "Sắp xếp câu 2 (想)",
+    "我想去看电影。"
+  ],
+  "scr-3": [
+    "Sắp xếp câu 3 (喜欢)",
+    "我喜欢吃米饭。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4 (走路)",
+    "我走路去学校。"
+  ],
+  "scr-5": [
+    "Sắp xếp câu 5 (明天)",
+    "明天我去学校。"
+  ],
+  "py-1": [
+    "Pinyin: 是 (shì)",
+    "C — shì"
+  ],
+  "py-2": [
+    "Pinyin: 事 (shì)",
+    "C — shì"
+  ],
+  "py-3": [
+    "Pinyin: 哪 (nǎ)",
+    "B — nǎ"
+  ],
+  "py-4": [
+    "Pinyin: 那 (nà)",
+    "C — nà"
+  ],
+  "py-5": [
+    "Pinyin: 你 (nǐ)",
+    "A — nǐ"
+  ],
+  "py-6": [
+    "Pinyin: 左 (zuǒ)",
+    "A — zuǒ"
+  ],
+  "py-7": [
+    "Pinyin: 前 (qián)",
+    "B — qián"
+  ],
+  "py-8": [
+    "Pinyin: 钱 (qián)",
+    "C — qián"
+  ],
+  "py-9": [
+    "Pinyin: 做 (zuò)",
+    "C — zuò"
+  ],
+  "py-10": [
+    "Pinyin: 坐 (zuò)",
+    "C — zuò"
+  ],
+  "read-1": [
+    "Đọc hiểu câu 1",
+    "D — 星期五"
+  ],
+  "read-2": [
+    "Đọc hiểu câu 2",
+    "D — 和朋友"
+  ],
+  "read-3": [
+    "Đọc hiểu câu 3",
+    "A — 去书店"
+  ],
+  "read-4": [
+    "Đọc hiểu câu 4",
+    "D — 看电视和电影"
+  ],
+  "read-5": [
+    "Đọc hiểu câu 5",
+    "D — 去电影院"
+  ],
+  "type-1": [
+    "Gõ pinyin: 您",
+    "您"
+  ],
+  "type-2": [
+    "Gõ pinyin: 我",
+    "我"
+  ],
+  "type-3": [
+    "Gõ pinyin: 有",
+    "有"
+  ],
+  "type-4": [
+    "Gõ pinyin: 去",
+    "去"
+  ],
+  "type-5": [
+    "Gõ pinyin: 茶",
+    "茶"
+  ],
+  "type-6": [
+    "Gõ pinyin: 学",
+    "学"
+  ],
+  "type-7": [
+    "Gõ pinyin: 银行",
+    "银行"
+  ],
+  "type-8": [
+    "Gõ pinyin: 看",
+    "看"
+  ],
+  "type-9": [
+    "Gõ pinyin: 好吃",
+    "好吃"
+  ],
+  "type-10": [
+    "Gõ pinyin: 医生",
+    "医生"
+  ]
+};
+var state = { done: {}, wrong: {}, inputs: {}, selects: [], mc: {}, matched: [], scr: {}, imeOn: true };
+try { var raw = localStorage.getItem(LS_KEY); if (raw) { var p = JSON.parse(raw); for (var k in p) state[k] = p[k]; } } catch (e) {}
+if (typeof state.imeOn !== 'boolean') state.imeOn = true;
+
+function save() { try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch (e) {} }
+function doneCount() { return Object.keys(state.done).length; }
+function updateProgress() {
+  var d = doneCount();
+  document.getElementById('prog-fill').style.width = Math.min(100, Math.round(d / TOTAL_TASKS * 100)) + '%';
+  document.getElementById('prog-text').textContent = d + ' / ' + TOTAL_TASKS;
+  var sc = document.getElementById('sum-score'); if (sc) sc.textContent = d + ' / ' + TOTAL_TASKS;
+}
+function renderSummary() {
+  var ul = document.getElementById('wrong-list'); if (!ul) return;
+  var ids = Object.keys(state.wrong);
+  if (!ids.length) { ul.innerHTML = '<li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li>'; return; }
+  ul.innerHTML = ids.map(function (id) { var inf = ITEM_INFO[id]; return '<li>' + inf[0] + ' → đáp án: <b>' + inf[1] + '</b></li>'; }).join('');
+}
+function markDone(id) { state.done[id] = true; delete state.wrong[id]; save(); updateProgress(); renderSummary(); }
+function recordWrong(id) { if (!state.done[id]) state.wrong[id] = true; save(); renderSummary(); }
+function resetAll() { if (!confirm('Xoá toàn bộ tiến độ đã lưu và làm lại từ đầu?')) return; try { localStorage.removeItem(LS_KEY); } catch (e) {} location.reload(); }
+
+// ====== TTS ======
+function speakRate(text, rate) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(text); u.lang = 'zh-CN'; u.rate = rate || 0.88;
+  window.speechSynthesis.speak(u);
+}
+function speak(text) { speakRate(text, 0.88); }
+
+// ====== BỘ GÕ PINYIN NHIỀU TRANG (Offline HSK Dictionary + Cloud 30 Candidates) ======
+var PAGE_SIZE = 6;
+var LOCAL_PY_DICT = {
+  "beifang": [
+    "北方",
+    "北方的",
+    "倍放",
+    "被访",
+    "备方"
+  ],
+  "beibian": [
+    "北边",
+    "北面",
+    "北部"
+  ],
+  "bei": [
+    "北",
+    "被",
+    "杯",
+    "背",
+    "倍",
+    "备",
+    "悲",
+    "碑",
+    "辈",
+    "贝",
+    "臂",
+    "卑",
+    "北边",
+    "北方",
+    "北京"
+  ],
+  "fang": [
+    "方",
+    "房",
+    "放",
+    "访",
+    "防",
+    "芳",
+    "仿",
+    "妨",
+    "纺",
+    "坊",
+    "房间",
+    "方法",
+    "方向",
+    "方面"
+  ],
+  "bian": [
+    "边",
+    "变",
+    "便",
+    "遍",
+    "编",
+    "辩",
+    "扁",
+    "辨",
+    "鞭",
+    "贬",
+    "变化",
+    "方便",
+    "东边",
+    "北边"
+  ],
+  "chengshi": [
+    "城市",
+    "诚实",
+    "程式",
+    "盛事",
+    "成事"
+  ],
+  "cheng": [
+    "城",
+    "成",
+    "程",
+    "乘",
+    "盛",
+    "称",
+    "诚",
+    "承",
+    "呈",
+    "撑",
+    "橙",
+    "惩",
+    "城市",
+    "成功",
+    "成为",
+    "成绩"
+  ],
+  "shi": [
+    "市",
+    "是",
+    "时",
+    "事",
+    "室",
+    "试",
+    "师",
+    "十",
+    "石",
+    "食",
+    "识",
+    "实",
+    "史",
+    "使",
+    "始",
+    "式",
+    "世",
+    "势",
+    "视",
+    "士",
+    "示",
+    "适",
+    "时间",
+    "时候",
+    "事情"
+  ],
+  "jihui": [
+    "机会",
+    "集会",
+    "几回",
+    "忌讳",
+    "记会"
+  ],
+  "ji": [
+    "机",
+    "技",
+    "几",
+    "记",
+    "级",
+    "急",
+    "极",
+    "己",
+    "计",
+    "季",
+    "际",
+    "继",
+    "寄",
+    "既",
+    "纪",
+    "鸡",
+    "积",
+    "基",
+    "激",
+    "及",
+    "吉",
+    "集",
+    "击",
+    "饥",
+    "机会",
+    "技术",
+    "自己"
+  ],
+  "hui": [
+    "会",
+    "回",
+    "灰",
+    "挥",
+    "辉",
+    "恢",
+    "悔",
+    "毁",
+    "汇",
+    "绘",
+    "惠",
+    "慧",
+    "会议",
+    "回答",
+    "回家"
+  ],
+  "dui": [
+    "队",
+    "对",
+    "堆",
+    "兑",
+    "敦",
+    "怼",
+    "队伍",
+    "队长",
+    "排队",
+    "足球队"
+  ],
+  "duiwu": [
+    "队伍",
+    "队"
+  ],
+  "bi": [
+    "比",
+    "笔",
+    "必",
+    "鼻",
+    "毕",
+    "币",
+    "闭",
+    "避",
+    "壁",
+    "臂",
+    "碧",
+    "逼",
+    "彼",
+    "比较",
+    "比赛",
+    "笔记本"
+  ],
+  "bijiao": [
+    "比较",
+    "比"
+  ],
+  "bisai": [
+    "比赛",
+    "比"
+  ],
+  "fangjian": [
+    "房间",
+    "坊间"
+  ],
+  "jian": [
+    "间",
+    "件",
+    "见",
+    "健",
+    "简",
+    "建",
+    "剑",
+    "减",
+    "检",
+    "坚",
+    "肩",
+    "艰",
+    "兼",
+    "监",
+    "渐",
+    "箭",
+    "浅",
+    "房间",
+    "健康",
+    "见面",
+    "简单"
+  ],
+  "jishu": [
+    "技术",
+    "记述",
+    "基数",
+    "奇数",
+    "计数"
+  ],
+  "shu": [
+    "术",
+    "束",
+    "书",
+    "树",
+    "数",
+    "叔",
+    "输",
+    "舒",
+    "熟",
+    "暑",
+    "属",
+    "署",
+    "鼠",
+    "蔬",
+    "梳",
+    "竖",
+    "恕",
+    "数学",
+    "舒服",
+    "暑假"
+  ],
+  "jiayou": [
+    "加油",
+    "家有",
+    "佳友",
+    "加倍",
+    "加油站"
+  ],
+  "jia": [
+    "加",
+    "家",
+    "假",
+    "价",
+    "架",
+    "驾",
+    "嫁",
+    "佳",
+    "夹",
+    "甲",
+    "钾",
+    "稼",
+    "加油",
+    "大家",
+    "家庭",
+    "参加"
+  ],
+  "you": [
+    "油",
+    "有",
+    "又",
+    "友",
+    "右",
+    "游",
+    "由",
+    "邮",
+    "优",
+    "忧",
+    "幽",
+    "悠",
+    "尤",
+    "犹",
+    "诱",
+    "幼",
+    "朋友",
+    "游泳",
+    "有名",
+    "有点儿"
+  ],
+  "jieshu": [
+    "结束",
+    "借书",
+    "接住",
+    "节数",
+    "解说"
+  ],
+  "jie": [
+    "结",
+    "节",
+    "姐",
+    "借",
+    "接",
+    "街",
+    "界",
+    "解",
+    "届",
+    "戒",
+    "杰",
+    "洁",
+    "捷",
+    "竭",
+    "截",
+    "皆",
+    "阶",
+    "结束",
+    "节目",
+    "姐姐",
+    "介绍"
+  ],
+  "jinzhang": [
+    "紧张",
+    "进账",
+    "金章",
+    "晋升"
+  ],
+  "jin": [
+    "紧",
+    "进",
+    "近",
+    "今",
+    "斤",
+    "金",
+    "尽",
+    "仅",
+    "禁",
+    "劲",
+    "锦",
+    "谨",
+    "津",
+    "筋",
+    "巾",
+    "紧张",
+    "今天",
+    "进去",
+    "最近"
+  ],
+  "zhang": [
+    "张",
+    "长",
+    "丈",
+    "账",
+    "章",
+    "掌",
+    "涨",
+    "障",
+    "帐",
+    "杖",
+    "樟",
+    "彰",
+    "紧张",
+    "校长",
+    "队长"
+  ],
+  "jingcai": [
+    "精彩",
+    "精采",
+    "敬才",
+    "竞猜",
+    "净菜"
+  ],
+  "jing": [
+    "精",
+    "经",
+    "京",
+    "睛",
+    "静",
+    "景",
+    "惊",
+    "警",
+    "敬",
+    "境",
+    "镜",
+    "竟",
+    "竞",
+    "净",
+    "井",
+    "颈",
+    "晶",
+    "精彩",
+    "经常",
+    "经过",
+    "北京",
+    "眼睛"
+  ],
+  "cai": [
+    "彩",
+    "才",
+    "菜",
+    "猜",
+    "采",
+    "财",
+    "裁",
+    "材",
+    "踩",
+    "睬",
+    "精彩",
+    "刚才",
+    "菜单"
+  ],
+  "mi": [
+    "迷",
+    "米",
+    "密",
+    "蜜",
+    "谜",
+    "弥",
+    "觅",
+    "秘",
+    "眯",
+    "靡",
+    "球迷",
+    "迷上",
+    "迷路",
+    "米饭"
+  ],
+  "mishang": [
+    "迷上",
+    "米上"
+  ],
+  "qiumi": [
+    "球迷",
+    "求迷"
+  ],
+  "zuqiu": [
+    "足球",
+    "足"
+  ],
+  "women": [
+    "我们",
+    "我"
+  ],
+  "tamen": [
+    "他们",
+    "她们",
+    "它们"
+  ]
+};
+
+function getLocalCandidates(py) {
+  py = py.toLowerCase().replace(/[^a-z]/g, '');
+  if (!py) return [];
+  var res = [];
+  function addList(arr) {
+    if (!arr) return;
+    for (var i = 0; i < arr.length; i++) {
+      if (res.indexOf(arr[i]) < 0) res.push(arr[i]);
+    }
+  }
+  if (LOCAL_PY_DICT[py]) addList(LOCAL_PY_DICT[py]);
+  Object.keys(LOCAL_PY_DICT).forEach(function (k) {
+    if (k !== py && k.indexOf(py) === 0) addList(LOCAL_PY_DICT[k]);
+  });
+  return res;
+}
+
+var imeFetchTimer = null;
+function queryCloudCandidates(py, cb) {
+  if (!navigator.onLine || py.length < 1) return;
+  clearTimeout(imeFetchTimer);
+  imeFetchTimer = setTimeout(function () {
+    var url = 'https://inputtools.google.com/request?text=' + encodeURIComponent(py) + '&itc=zh-t-i0-pinyin&num=30&cp=0&cs=1&ie=utf-8&oe=utf-8';
+    fetch(url).then(function (r) { return r.json(); }).then(function (data) {
+      if (data && data[0] === 'SUCCESS' && data[1] && data[1][0] && data[1][0][1]) {
+        cb(data[1][0][1]);
+      }
+    }).catch(function () {});
+  }, 85);
+}
+
+function toggleIME() {
+  state.imeOn = !state.imeOn;
+  save();
+  syncIMEUI();
+}
+
+function syncIMEUI() {
+  var btn = document.getElementById('ime-toggle-btn');
+  if (btn) {
+    btn.textContent = state.imeOn ? '⌨️ Gõ Pinyin: BẬT' : '⌨️ Gõ Pinyin: TẮT';
+    btn.classList.toggle('active', state.imeOn);
+  }
+  document.querySelectorAll('.py-badge').forEach(function (b) {
+    b.textContent = state.imeOn ? '拼' : 'A';
+    b.classList.toggle('off', !state.imeOn);
+  });
+  if (!state.imeOn) {
+    document.querySelectorAll('.py-popup').forEach(function (p) { p.classList.remove('show'); });
+  }
+}
+
+function attachPinyinIME(inp) {
+  var wrap = document.createElement('div');
+  wrap.className = 'py-wrap';
+  inp.parentNode.insertBefore(wrap, inp);
+  wrap.appendChild(inp);
+
+  var badge = document.createElement('span');
+  badge.className = 'py-badge';
+  badge.textContent = '拼';
+  wrap.appendChild(badge);
+
+  var popup = document.createElement('div');
+  popup.className = 'py-popup';
+  popup.innerHTML =
+    '<div class="py-header">' +
+      '<span class="py-code"></span>' +
+      '<div class="py-pager">' +
+        '<button type="button" class="py-page-btn py-prev" title="Trang trước (- hoặc , hoặc ↑)">◀</button>' +
+        '<span class="py-page-info">1/1</span>' +
+        '<button type="button" class="py-page-btn py-next" title="Trang sau (= hoặc . hoặc ↓)">▶</button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="py-cand-list"></div>' +
+    '<div class="py-footer">' +
+      '<span>Chọn: <b>1–6</b> / <b>Space</b></span>' +
+      '<span>Lật trang: <b>- / =</b> · <b>, / .</b> · <b>◀ / ▶</b></span>' +
+    '</div>';
+  wrap.appendChild(popup);
+
+  popup.addEventListener('mousedown', function (e) { e.preventDefault(); });
+  popup.addEventListener('touchstart', function (e) { e.stopPropagation(); }, { passive: true });
+
+  var codeEl = popup.querySelector('.py-code');
+  var pageInfoEl = popup.querySelector('.py-page-info');
+  var prevBtn = popup.querySelector('.py-prev');
+  var nextBtn = popup.querySelector('.py-next');
+  var listEl = popup.querySelector('.py-cand-list');
+
+  var currentCands = [];
+  var currentPage = 0;
+  var activeIdx = 0;
+  var currentPy = '';
+
+  function totalPages() {
+    return Math.max(1, Math.ceil(currentCands.length / PAGE_SIZE));
+  }
+
+  function pageSlice() {
+    var start = currentPage * PAGE_SIZE;
+    return currentCands.slice(start, start + PAGE_SIZE);
+  }
+
+  function changePage(delta) {
+    var tp = totalPages();
+    if (tp <= 1) return;
+    var nextP = currentPage + delta;
+    if (nextP < 0) nextP = tp - 1;
+    if (nextP >= tp) nextP = 0;
+    currentPage = nextP;
+    activeIdx = 0;
+    renderPopup();
+    inp.focus();
+  }
+
+  prevBtn.onclick = function (e) { e.preventDefault(); changePage(-1); };
+  nextBtn.onclick = function (e) { e.preventDefault(); changePage(1); };
+
+  function extractTrailingPinyin(val) {
+    var m = val.match(/([a-zA-Z']+)$/);
+    return m ? m[1] : '';
+  }
+
+  function renderPopup() {
+    if (!state.imeOn || !currentPy || !currentCands.length) {
+      popup.classList.remove('show');
+      return;
+    }
+    var tp = totalPages();
+    if (currentPage >= tp) currentPage = tp - 1;
+    if (currentPage < 0) currentPage = 0;
+
+    var items = pageSlice();
+    if (activeIdx >= items.length) activeIdx = Math.max(0, items.length - 1);
+
+    codeEl.textContent = '🔤 ' + currentPy;
+    pageInfoEl.textContent = (currentPage + 1) + '/' + tp;
+    prevBtn.disabled = tp <= 1;
+    nextBtn.disabled = tp <= 1;
+
+    listEl.innerHTML = '';
+    items.forEach(function (hz, idx) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'py-cand' + (idx === activeIdx ? ' active' : '');
+      btn.innerHTML = '<span class="py-idx">' + (idx + 1) + '.</span>' + hz;
+      btn.onclick = function (e) {
+        e.preventDefault();
+        pickCandidateOnPage(idx);
+      };
+      listEl.appendChild(btn);
+    });
+    popup.classList.add('show');
+  }
+
+  function pickCandidateOnPage(idxOnPage) {
+    var absIdx = currentPage * PAGE_SIZE + idxOnPage;
+    if (!currentCands[absIdx] || !currentPy) return;
+    var chosen = currentCands[absIdx];
+    var val = inp.value;
+    inp.value = val.slice(0, val.length - currentPy.length) + chosen;
+    currentPy = '';
+    currentCands = [];
+    currentPage = 0;
+    activeIdx = 0;
+    popup.classList.remove('show');
+    var box = inp.closest('.q-item');
+    if (box) { state.inputs[box.id] = inp.value; save(); }
+    inp.focus();
+  }
+
+  function updateCandidates() {
+    if (!state.imeOn) { popup.classList.remove('show'); return; }
+    var py = extractTrailingPinyin(inp.value);
+    if (!py) {
+      popup.classList.remove('show');
+      currentPy = '';
+      currentCands = [];
+      currentPage = 0;
+      activeIdx = 0;
+      return;
+    }
+    if (py !== currentPy) {
+      currentPage = 0;
+      activeIdx = 0;
+    }
+    currentPy = py;
+    var local = getLocalCandidates(py);
+    currentCands = local;
+    renderPopup();
+
+    queryCloudCandidates(py, function (cloudList) {
+      if (extractTrailingPinyin(inp.value) !== py) return;
+      var merged = cloudList.slice();
+      local.forEach(function (item) {
+        if (merged.indexOf(item) < 0) merged.push(item);
+      });
+      currentCands = merged;
+      renderPopup();
+    });
+  }
+
+  inp.addEventListener('input', function () {
+    var box = inp.closest('.q-item');
+    if (box) { state.inputs[box.id] = inp.value; save(); }
+    updateCandidates();
+  });
+
+  inp.addEventListener('keydown', function (e) {
+    var isPopupOpen = popup.classList.contains('show') && currentCands.length > 0;
+    if (isPopupOpen) {
+      var items = pageSlice();
+      if (e.key >= '1' && e.key <= '6') {
+        var idx = parseInt(e.key, 10) - 1;
+        if (items[idx]) {
+          e.preventDefault();
+          pickCandidateOnPage(idx);
+          return;
+        }
+      }
+      if (e.key === ' ') {
+        e.preventDefault();
+        pickCandidateOnPage(activeIdx);
+        return;
+      }
+      if (e.key === '=' || e.key === '+' || e.key === '.' || e.key === ']' || e.key === 'PageDown' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        changePage(1);
+        return;
+      }
+      if (e.key === '-' || e.key === '_' || e.key === ',' || e.key === '[' || e.key === 'PageUp' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        changePage(-1);
+        return;
+      }
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (activeIdx + 1 < items.length) {
+          activeIdx++;
+          renderPopup();
+        } else if (totalPages() > 1) {
+          changePage(1);
+        } else {
+          activeIdx = 0;
+          renderPopup();
+        }
+        return;
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (activeIdx > 0) {
+          activeIdx--;
+          renderPopup();
+        } else if (totalPages() > 1) {
+          changePage(-1);
+          activeIdx = pageSlice().length - 1;
+          renderPopup();
+        } else {
+          activeIdx = items.length - 1;
+          renderPopup();
+        }
+        return;
+      }
+      if (e.key === 'Escape') {
+        popup.classList.remove('show');
+        return;
+      }
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        pickCandidateOnPage(activeIdx);
+        return;
+      }
+    }
+    if (e.key === 'Enter') {
+      var b = inp.closest('.input-check').querySelector('.btn-primary');
+      if (b) b.click();
+    }
+  });
+
+  inp.addEventListener('blur', function () {
+    setTimeout(function () { popup.classList.remove('show'); }, 180);
+  });
+  inp.addEventListener('focus', function () {
+    updateCandidates();
+  });
+}
+
+// ====== Hanzi Writer: Xem nét + Tập viết ======
+var writers = {}, modeByBox = {}, loopTimers = {};
+var BOXES = [];
+BOXES.forEach(function (b) {
+  modeByBox[b.box] = 'anim';
+  var w = HanziWriter.create(b.box, b.char, {
+    width: 146, height: 146, padding: 8, showOutline: true, outlineColor: '#cbd5e1',
+    strokeColor: '#171c26', highlightColor: '#dc2626', drawingColor: '#2563eb', drawingWidth: 20,
+    strokeAnimationSpeed: 1, delayBetweenStrokes: 240, showHintAfterMisses: 1
+  });
+  writers[b.box] = w; runAnimLoop(b.box, b.char);
+});
+function runAnimLoop(boxId, ch) {
+  if (modeByBox[boxId] !== 'anim') return;
+  clearTimeout(loopTimers[boxId]);
+  writers[boxId].animateCharacter().then(function () {
+    if (modeByBox[boxId] !== 'anim') return;
+    loopTimers[boxId] = setTimeout(function () { runAnimLoop(boxId, ch); }, 900);
+  });
+}
+function setMode(boxId, ch, mode, btn) {
+  var parent = btn.parentElement;
+  Array.from(parent.children).forEach(function (b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  modeByBox[boxId] = mode; clearTimeout(loopTimers[boxId]);
+  var boxEl = document.getElementById(boxId), statusEl = document.getElementById('status-' + boxId);
+  if (mode === 'anim') {
+    boxEl.classList.remove('quiz-active'); statusEl.style.color = '#6b7280'; statusEl.textContent = 'Đang chạy nét mẫu';
+    writers[boxId].cancelQuiz(); writers[boxId].showCharacter(); runAnimLoop(boxId, ch);
+  } else {
+    boxEl.classList.add('quiz-active'); statusEl.style.color = '#2563eb'; statusEl.textContent = '✍️ Kéo chuột/ngón tay viết nét 1...';
+    writers[boxId].hideCharacter(); writers[boxId].showOutline();
+    writers[boxId].quiz({
+      onMistake: function (sd) { statusEl.style.color = '#dc2626'; statusEl.textContent = 'Sai nét ' + (sd.strokeNum + 1) + ', nhìn gợi ý đỏ nhé!'; },
+      onCorrectStroke: function (sd) { statusEl.style.color = '#2563eb'; statusEl.textContent = 'Đúng nét ' + (sd.strokeNum + 1) + '! Còn ' + sd.strokesRemaining + ' nét'; },
+      onComplete: function (sum) { statusEl.style.color = '#15803d'; statusEl.textContent = '🎉 Tuyệt vời! (Sai ' + sum.totalMistakes + ' lần) - Bấm Xem nét để xem lại'; speak(ch); }
+    });
+  }
+}
+
+// ====== Điền chữ (Ôn nhanh + Tự kiểm tra) ======
+function paintInput(box, okState) {
+  var input = box.querySelector('input'), fb = box.querySelector('.feedback');
+  if (okState) { fb.textContent = '✓ Chính xác!'; fb.className = 'feedback ok'; input.style.borderColor = '#16a34a'; }
+  else { fb.textContent = '✗ Chưa đúng, thử lại!'; fb.className = 'feedback err'; input.style.borderColor = '#dc2626'; }
+}
+function checkInput(btn) {
+  var box = btn.closest('.q-item'), expected = box.getAttribute('data-ans').trim(), input = box.querySelector('input');
+  var trailing = input.value.match(/([a-zA-Z']+)$/);
+  if (state.imeOn && trailing) {
+    var cands = getLocalCandidates(trailing[1]);
+    if (cands.length) {
+      input.value = input.value.slice(0, input.value.length - trailing[1].length) + cands[0];
+    }
+  }
+  state.inputs[box.id] = input.value;
+  if (input.value.trim() === expected) { paintInput(box, true); speak(expected); markDone(box.id); }
+  else { paintInput(box, false); recordWrong(box.id); }
+  save();
+}
+
+document.querySelectorAll('.q-item input').forEach(attachPinyinIME);
+
+// ====== Trắc nghiệm (Nghe / Ngữ pháp / Đọc hiểu / Pinyin) ======
+function checkMC(btn, isCorrect, taskId, expl, speakText) {
+  var box = document.getElementById(taskId), fb = box.querySelector('.feedback');
+  var btns = Array.from(box.querySelectorAll('.mc-btn'));
+  btns.forEach(function (b) { b.classList.remove('correct', 'wrong'); });
+  state.mc[taskId] = { idx: btns.indexOf(btn), correct: !!isCorrect };
+  if (isCorrect) {
+    btn.classList.add('correct'); fb.className = 'feedback ok'; fb.textContent = expl || '✓ Chính xác!';
+    var rev = box.querySelector('.reveal'); if (rev) rev.style.display = 'block';
+    if (speakText) speak(speakText);
+    markDone(taskId);
+  } else {
+    btn.classList.add('wrong'); fb.className = 'feedback err'; fb.textContent = expl || '✗ Chưa đúng, thử lại nhé!';
+    recordWrong(taskId);
+  }
+  save();
+}
+
+// ====== Ghép cặp ======
+var matchPairs = [
+  {
+    "id": "m1",
+    "zh": "好",
+    "vi": "hǎo — tốt; khỏe; hay"
+  },
+  {
+    "id": "m2",
+    "zh": "国",
+    "vi": "guó — nước; quốc gia"
+  },
+  {
+    "id": "m3",
+    "zh": "高兴",
+    "vi": "gāoxìng — vui vẻ; vui mừng"
+  },
+  {
+    "id": "m4",
+    "zh": "远",
+    "vi": "yuǎn — xa"
+  },
+  {
+    "id": "m5",
+    "zh": "杯",
+    "vi": "bēi — cốc; chén (lượng từ)"
+  },
+  {
+    "id": "m6",
+    "zh": "苹果",
+    "vi": "píngguǒ — quả táo"
+  },
+  {
+    "id": "m7",
+    "zh": "家",
+    "vi": "jiā — nhà; gia đình"
+  },
+  {
+    "id": "m8",
+    "zh": "电影",
+    "vi": "diànyǐng — phim; điện ảnh"
+  },
+  {
+    "id": "m9",
+    "zh": "地铁",
+    "vi": "dìtiě — tàu điện ngầm"
+  },
+  {
+    "id": "m10",
+    "zh": "狗",
+    "vi": "gǒu — chó"
+  }
+];
+var leftOrder = ["m4", "m5", "m8", "m1", "m3", "m2", "m10", "m6", "m9", "m7"]; var rightOrder = ["m9", "m6", "m3", "m7", "m4", "m2", "m1", "m5", "m8", "m10"];
+var selectedLeft = null, selectedRight = null;
+function pairById(id) { return matchPairs.filter(function (p) { return p.id === id; })[0]; }
+function initMatching() {
+  var leftCol = document.getElementById('match-left'), rightCol = document.getElementById('match-right');
+  leftOrder.forEach(function (id) { var item = pairById(id); var el = document.createElement('div'); el.className = 'match-card'; el.textContent = item.zh; el.dataset.id = item.id; el.onclick = function () { selectMatch(el, 'left', item.zh); }; leftCol.appendChild(el); });
+  rightOrder.forEach(function (id) { var item = pairById(id); var el = document.createElement('div'); el.className = 'match-card'; el.textContent = item.vi; el.dataset.id = item.id; el.onclick = function () { selectMatch(el, 'right'); }; rightCol.appendChild(el); });
+}
+function selectMatch(el, side, zhSpeak) {
+  if (el.classList.contains('matched')) return;
+  if (zhSpeak) speak(zhSpeak);
+  if (side === 'left') { if (selectedLeft) selectedLeft.classList.remove('selected'); selectedLeft = el; el.classList.add('selected'); }
+  else { if (selectedRight) selectedRight.classList.remove('selected'); selectedRight = el; el.classList.add('selected'); }
+  if (selectedLeft && selectedRight) {
+    var l = selectedLeft, r = selectedRight; selectedLeft = null; selectedRight = null;
+    if (l.dataset.id === r.dataset.id) {
+      l.classList.remove('selected'); r.classList.remove('selected'); l.classList.add('matched'); r.classList.add('matched');
+      if (state.matched.indexOf(l.dataset.id) < 0) state.matched.push(l.dataset.id);
+      markDone('match-' + l.dataset.id);
+      if (state.matched.length === matchPairs.length) { var fb = document.getElementById('match-feedback'); fb.className = 'feedback ok'; fb.textContent = '🎉 Đã ghép đúng toàn bộ 10 từ!'; }
+    } else {
+      recordWrong('match-' + l.dataset.id);
+      l.classList.add('wrong-flash'); r.classList.add('wrong-flash');
+      setTimeout(function () { l.classList.remove('selected', 'wrong-flash'); r.classList.remove('selected', 'wrong-flash'); }, 450);
+    }
+    save();
+  }
+}
+
+// ====== Đoạn văn điền từ ======
+function checkCloze() {
+  var selects = document.querySelectorAll('#cloze-box .cloze-select'), allOk = true;
+  selects.forEach(function (sel, i) {
+    state.selects[i] = sel.value;
+    if (sel.value === sel.getAttribute('data-ans')) { sel.style.borderColor = '#16a34a'; sel.style.backgroundColor = '#dcfce7'; }
+    else { sel.style.borderColor = '#dc2626'; sel.style.backgroundColor = '#fee2e2'; allOk = false; }
+  });
+  var fb = document.getElementById('cloze-fb');
+  if (allOk) { fb.className = 'feedback ok'; fb.textContent = '✓ Hoàn hảo! Cả 5 từ đều khớp ngữ cảnh.'; markDone('cloze-task'); }
+  else { fb.className = 'feedback err'; fb.textContent = '✗ Có chỗ trống chưa đúng (ô màu đỏ), hãy kiểm tra lại!'; recordWrong('cloze-task'); }
+  save();
+}
+document.querySelectorAll('#cloze-box .cloze-select').forEach(function (sel, i) {
+  sel.addEventListener('change', function () { state.selects[i] = sel.value; save(); });
+});
+
+// ====== Sắp xếp câu ======
+function makeTile(w, box) {
+  var tile = document.createElement('span'); tile.className = 'tile'; tile.textContent = w;
+  tile.onclick = function () {
+    var bank = box.querySelector('.word-bank'), zone = box.querySelector('.answer-zone');
+    if (tile.parentElement === bank) zone.appendChild(tile); else bank.appendChild(tile);
+    saveScramble(box);
+  };
+  return tile;
+}
+function saveScramble(box) {
+  state.scr[box.id] = Array.from(box.querySelector('.answer-zone').children).map(function (el) { return el.textContent; });
+  save();
+}
+function renderScramble(box) {
+  var bank = box.querySelector('.word-bank'), zone = box.querySelector('.answer-zone'), fb = box.querySelector('.feedback');
+  bank.innerHTML = ''; zone.innerHTML = ''; fb.textContent = '';
+  var words = bank.getAttribute('data-words').split('|');
+  var placed = (state.scr[box.id] || []).slice();
+  var remaining = words.slice();
+  placed.forEach(function (w) { var i = remaining.indexOf(w); if (i >= 0) { remaining.splice(i, 1); zone.appendChild(makeTile(w, box)); } });
+  remaining.forEach(function (w) { bank.appendChild(makeTile(w, box)); });
+}
+function resetScramble(btn) { var box = btn.closest('.scramble-box'); state.scr[box.id] = []; save(); renderScramble(box); }
+function checkScramble(btn) {
+  var box = btn.closest('.scramble-box'), target = box.getAttribute('data-target');
+  var zone = box.querySelector('.answer-zone'), fb = box.querySelector('.feedback');
+  var current = Array.from(zone.children).map(function (el) { return el.textContent; }).join('');
+  saveScramble(box);
+  if (current === target) { fb.textContent = '✓ Chuẩn ngữ pháp!'; fb.className = 'feedback ok'; speak(target); markDone(box.id); }
+  else { fb.textContent = '✗ Trật tự từ chưa đúng, thử xếp lại nhé!'; fb.className = 'feedback err'; recordWrong(box.id); }
+}
+
+// ====== Tổng kết / chép kết quả ======
+function copySummary() {
+  var ids = Object.keys(state.wrong);
+  var lines = ['PHIẾU BÀI TẬP HSK 1 — BÀI TỔNG KẾT (178 từ)', 'Đúng ' + doneCount() + ' / ' + TOTAL_TASKS + ' mục.'];
+  if (ids.length) { lines.push('Câu cần ôn lại:'); ids.forEach(function (id) { lines.push('- ' + ITEM_INFO[id][0] + ' → đáp án: ' + ITEM_INFO[id][1]); }); }
+  else lines.push('Không có câu sai nào. 🎉');
+  var text = lines.join('\n'), fb = document.getElementById('copy-fb');
+  function done() { fb.className = 'feedback ok'; fb.textContent = '✓ Đã chép! Anh dán gửi em qua WhatsApp nhé.'; }
+  if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, function () { fallback(); }); } else fallback();
+  function fallback() { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); done(); } catch (e) { fb.className = 'feedback err'; fb.textContent = 'Không chép tự động được, anh mở Tổng kết xem trực tiếp nhé.'; } document.body.removeChild(ta); }
+}
+
+// ====== Khôi phục trạng thái đã lưu ======
+function restore() {
+  syncIMEUI();
+  document.querySelectorAll('.q-item').forEach(function (box) {
+    if (!box.id) return;
+    var input = box.querySelector('input');
+    if (input && state.inputs[box.id] != null) { input.value = state.inputs[box.id]; if (state.done[box.id]) paintInput(box, true); }
+  });
+  document.querySelectorAll('#cloze-box .cloze-select').forEach(function (sel, i) { if (state.selects[i]) sel.value = state.selects[i]; });
+  if (state.done['cloze-task']) { var fb = document.getElementById('cloze-fb'); fb.className = 'feedback ok'; fb.textContent = '✓ Hoàn hảo! Cả 5 từ đều khớp ngữ cảnh.'; document.querySelectorAll('#cloze-box .cloze-select').forEach(function (sel) { sel.style.borderColor = '#16a34a'; sel.style.backgroundColor = '#dcfce7'; }); }
+  Object.keys(state.mc).forEach(function (id) {
+    var box = document.getElementById(id); if (!box) return;
+    var rec = state.mc[id], btns = box.querySelectorAll('.mc-btn'), btn = btns[rec.idx]; if (!btn) return;
+    if (rec.correct) { btn.classList.add('correct'); var fb = box.querySelector('.feedback'); fb.className = 'feedback ok'; fb.textContent = '✓ Đã trả lời đúng.'; var rev = box.querySelector('.reveal'); if (rev) rev.style.display = 'block'; }
+    else btn.classList.add('wrong');
+  });
+  state.matched.forEach(function (id) {
+    document.querySelectorAll('.match-card').forEach(function (el) { if (el.dataset.id === id) el.classList.add('matched'); });
+  });
+  if (state.matched.length === matchPairs.length) { var mfb = document.getElementById('match-feedback'); mfb.className = 'feedback ok'; mfb.textContent = '🎉 Đã ghép đúng toàn bộ 10 từ!'; }
+  document.querySelectorAll('.scramble-box').forEach(function (box) {
+    renderScramble(box);
+    if (state.done[box.id]) { var fb = box.querySelector('.feedback'); fb.textContent = '✓ Chuẩn ngữ pháp!'; fb.className = 'feedback ok'; }
+  });
+  updateProgress(); renderSummary();
+}
+initMatching();
+restore();
+
+
+// ====== Điền từ: kiểm tra theo từng đoạn (Bài tổng kết) ======
+function checkClozeBox(boxId, fbId, taskId, n) {
+  var box = document.getElementById(boxId), fb = document.getElementById(fbId);
+  var sels = box.querySelectorAll('.cloze-select'), ok = 0;
+  sels.forEach(function (sel) {
+    if (sel.value === sel.getAttribute('data-ans')) { ok++; sel.style.borderColor = '#16a34a'; sel.style.backgroundColor = '#dcfce7'; }
+    else { sel.style.borderColor = '#dc2626'; sel.style.backgroundColor = '#fee2e2'; }
+  });
+  var all = document.querySelectorAll('.cloze-select');
+  state.selects = Array.from(all).map(function (s) { return s.value; });
+  save();
+  if (ok === n) { fb.className = 'feedback ok'; fb.textContent = '✓ Hoàn hảo! Cả ' + n + ' từ đều khớp ngữ cảnh.'; markDone(taskId); }
+  else { fb.className = 'feedback err'; fb.textContent = 'Đúng ' + ok + ' / ' + n + ' từ — xem lại các ô đỏ nhé!'; recordWrong(taskId); }
+}
+// khôi phục lựa chọn cho cả 2 đoạn điền từ (restore() gốc chỉ khôi phục đoạn đầu)
+document.querySelectorAll('.cloze-select').forEach(function (sel, i) { if (state.selects && state.selects[i]) sel.value = state.selects[i]; });
+</script>
+<script>
+// ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
+var FLASH_DATA = [{"word": "好", "pinyin": "hǎo", "hanviet": "hảo", "meaning": "tốt; khỏe; hay"}, {"word": "老师", "pinyin": "lǎoshī", "hanviet": "lão sư", "meaning": "thầy giáo; cô giáo"}, {"word": "你", "pinyin": "nǐ", "hanviet": "nhĩ", "meaning": "bạn; anh; chị; em"}, {"word": "你们", "pinyin": "nǐmen", "hanviet": "nhĩ môn", "meaning": "các bạn"}, {"word": "您", "pinyin": "nín", "hanviet": "nâm", "meaning": "ngài; ông; bà (cách xưng hô kính trọng)"}, {"word": "国", "pinyin": "guó", "hanviet": "quốc", "meaning": "nước; quốc gia"}, {"word": "叫", "pinyin": "jiào", "hanviet": "khiếu", "meaning": "gọi; tên là"}, {"word": "名字", "pinyin": "míngzi", "hanviet": "danh tự", "meaning": "tên (tên gọi)"}, {"word": "哪", "pinyin": "nǎ", "hanviet": "na", "meaning": "nào; đâu"}, {"word": "呢", "pinyin": "ne", "hanviet": "ni", "meaning": "trợ từ cuối câu (hỏi lại; nhấn mạnh)"}, {"word": "人", "pinyin": "rén", "hanviet": "nhân", "meaning": "người"}, {"word": "什么", "pinyin": "shénme", "hanviet": "thập ma", "meaning": "cái gì; gì"}, {"word": "是", "pinyin": "shì", "hanviet": "thị", "meaning": "là"}, {"word": "他", "pinyin": "tā", "hanviet": "tha", "meaning": "anh ấy; ông ấy"}, {"word": "我", "pinyin": "wǒ", "hanviet": "ngã", "meaning": "tôi; mình"}, {"word": "不", "pinyin": "bù", "hanviet": "bất", "meaning": "không"}, {"word": "的", "pinyin": "de", "hanviet": "đích", "meaning": "của (trợ từ)"}, {"word": "对不起", "pinyin": "duìbuqǐ", "hanviet": "đối bất khởi", "meaning": "xin lỗi"}, {"word": "高兴", "pinyin": "gāoxìng", "hanviet": "cao hưng", "meaning": "vui vẻ; vui mừng"}, {"word": "贵", "pinyin": "guì", "hanviet": "quý", "meaning": "đắt; quý"}, {"word": "贵姓", "pinyin": "guìxìng", "hanviet": "quý tính", "meaning": "họ gì (cách hỏi lịch sự)"}, {"word": "很", "pinyin": "hěn", "hanviet": "ngận", "meaning": "rất"}, {"word": "吗", "pinyin": "ma", "hanviet": "ma", "meaning": "trợ từ hỏi có–không"}, {"word": "没关系", "pinyin": "méiguānxi", "hanviet": "một quan hệ", "meaning": "không sao; không có gì"}, {"word": "没有", "pinyin": "méiyǒu", "hanviet": "một hữu", "meaning": "không có; chưa có"}, {"word": "名片", "pinyin": "míngpiàn", "hanviet": "danh phiến", "meaning": "danh thiếp"}, {"word": "请问", "pinyin": "qǐngwèn", "hanviet": "thỉnh vấn", "meaning": "xin hỏi"}, {"word": "认识", "pinyin": "rènshi", "hanviet": "nhận thức", "meaning": "quen biết; nhận ra"}, {"word": "问", "pinyin": "wèn", "hanviet": "vấn", "meaning": "hỏi"}, {"word": "先生", "pinyin": "xiānsheng", "hanviet": "tiên sinh", "meaning": "ông; ngài; thầy"}, {"word": "姓", "pinyin": "xìng", "hanviet": "tính", "meaning": "họ; mang họ"}, {"word": "也", "pinyin": "yě", "hanviet": "dã", "meaning": "cũng; cũng vậy"}, {"word": "有", "pinyin": "yǒu", "hanviet": "hữu", "meaning": "có"}, {"word": "这", "pinyin": "zhè", "hanviet": "giá", "meaning": "này; đây"}, {"word": "不客气", "pinyin": "búkèqi", "hanviet": "bất khách khí", "meaning": "không có gì; đừng khách sáo"}, {"word": "到", "pinyin": "dào", "hanviet": "đáo", "meaning": "đến; tới"}, {"word": "多少", "pinyin": "duōshao", "hanviet": "đa thiểu", "meaning": "bao nhiêu"}, {"word": "广场", "pinyin": "guǎngchǎng", "hanviet": "quảng trường", "meaning": "quảng trường"}, {"word": "近", "pinyin": "jìn", "hanviet": "cận", "meaning": "gần"}, {"word": "客气", "pinyin": "kèqi", "hanviet": "khách khí", "meaning": "khách sáo; lịch sự"}, {"word": "块", "pinyin": "kuài", "hanviet": "khối", "meaning": "đồng (tiền); miếng, cục (lượng từ)"}, {"word": "了", "pinyin": "le", "hanviet": "liễu", "meaning": "rồi; đã (trợ từ)"}, {"word": "哪儿 / 哪里", "pinyin": "nǎr/nǎli", "hanviet": "ná nhi / ná lý", "meaning": "đâu; ở đâu"}, {"word": "钱", "pinyin": "qián", "hanviet": "tiền", "meaning": "tiền"}, {"word": "去", "pinyin": "qù", "hanviet": "khứ", "meaning": "đi; đến"}, {"word": "人民", "pinyin": "rénmín", "hanviet": "nhân dân", "meaning": "nhân dân"}, {"word": "师傅", "pinyin": "shīfu", "hanviet": "sư phó", "meaning": "bác tài; thầy thợ (cách gọi tôn trọng người làm nghề)"}, {"word": "小姐", "pinyin": "xiǎojiě", "hanviet": "tiểu thư", "meaning": "cô; tiểu thư"}, {"word": "谢谢", "pinyin": "xièxie", "hanviet": "tạ tạ", "meaning": "cảm ơn"}, {"word": "远", "pinyin": "yuǎn", "hanviet": "viễn", "meaning": "xa"}, {"word": "再", "pinyin": "zài", "hanviet": "tái", "meaning": "lại; nữa"}, {"word": "再见", "pinyin": "zàijiàn", "hanviet": "tái kiến", "meaning": "tạm biệt"}, {"word": "知道", "pinyin": "zhīdào", "hanviet": "tri đạo", "meaning": "biết"}, {"word": "杯", "pinyin": "bēi", "hanviet": "bôi", "meaning": "cốc; chén (lượng từ)"}, {"word": "茶", "pinyin": "chá", "hanviet": "trà", "meaning": "trà"}, {"word": "吃", "pinyin": "chī", "hanviet": "ngật", "meaning": "ăn"}, {"word": "大", "pinyin": "dà", "hanviet": "đại", "meaning": "to; lớn"}, {"word": "饿", "pinyin": "è", "hanviet": "ngạ", "meaning": "đói"}, {"word": "个", "pinyin": "gè", "hanviet": "cá", "meaning": "cái (lượng từ chung)"}, {"word": "还", "pinyin": "hái", "hanviet": "hoàn", "meaning": "còn; vẫn"}, {"word": "还是", "pinyin": "háishi", "hanviet": "hoàn thị", "meaning": "hay là; vẫn là"}, {"word": "喝", "pinyin": "hē", "hanviet": "hát", "meaning": "uống"}, {"word": "咖啡", "pinyin": "kāfēi", "hanviet": "già phi", "meaning": "cà phê"}, {"word": "快", "pinyin": "kuài", "hanviet": "khoái", "meaning": "nhanh"}, {"word": "两", "pinyin": "liǎng", "hanviet": "lưỡng", "meaning": "hai"}, {"word": "米饭", "pinyin": "mǐfàn", "hanviet": "mễ phạn", "meaning": "cơm"}, {"word": "奶茶", "pinyin": "nǎichá", "hanviet": "nãi trà", "meaning": "trà sữa"}, {"word": "牛肉", "pinyin": "niúròu", "hanviet": "ngưu nhục", "meaning": "thịt bò"}, {"word": "青菜", "pinyin": "qīngcài", "hanviet": "thanh thái", "meaning": "rau xanh"}, {"word": "碗", "pinyin": "wǎn", "hanviet": "oản", "meaning": "bát"}, {"word": "小", "pinyin": "xiǎo", "hanviet": "tiểu", "meaning": "nhỏ; bé"}, {"word": "要", "pinyin": "yào", "hanviet": "yếu", "meaning": "muốn; cần; phải"}, {"word": "一共", "pinyin": "yígòng", "hanviet": "nhất cộng", "meaning": "tổng cộng; tất cả"}, {"word": "（一）点儿", "pinyin": "(yì)diǎnr", "hanviet": "(nhất) điểm nhi", "meaning": "một chút; một ít"}, {"word": "大学", "pinyin": "dàxué", "hanviet": "đại học", "meaning": "đại học; trường đại học"}, {"word": "对", "pinyin": "duì", "hanviet": "đối", "meaning": "đúng; đối với"}, {"word": "工作", "pinyin": "gōngzuò", "hanviet": "công tác", "meaning": "làm việc; công việc"}, {"word": "公司", "pinyin": "gōngsī", "hanviet": "công ty", "meaning": "công ty"}, {"word": "汉语", "pinyin": "Hànyǔ", "hanviet": "Hán ngữ", "meaning": "tiếng Hán; tiếng Trung"}, {"word": "教", "pinyin": "jiāo", "hanviet": "giáo", "meaning": "dạy"}, {"word": "留学生", "pinyin": "liúxuéshēng", "hanviet": "lưu học sinh", "meaning": "du học sinh; lưu học sinh"}, {"word": "男", "pinyin": "nán", "hanviet": "nam", "meaning": "nam; đàn ông; con trai"}, {"word": "男朋友", "pinyin": "nánpéngyou", "hanviet": "nam bằng hữu", "meaning": "bạn trai"}, {"word": "女", "pinyin": "nǚ", "hanviet": "nữ", "meaning": "nữ; đàn bà; con gái"}, {"word": "女朋友", "pinyin": "nǚpéngyou", "hanviet": "nữ bằng hữu", "meaning": "bạn gái"}, {"word": "朋友", "pinyin": "péngyou", "hanviet": "bằng hữu", "meaning": "bạn; bạn bè"}, {"word": "苹果", "pinyin": "píngguǒ", "hanviet": "bình quả", "meaning": "quả táo"}, {"word": "她", "pinyin": "tā", "hanviet": "tha", "meaning": "cô ấy; bà ấy; chị ấy"}, {"word": "学", "pinyin": "xué", "hanviet": "học", "meaning": "học"}, {"word": "学生", "pinyin": "xuéshēng", "hanviet": "học sinh", "meaning": "học sinh; sinh viên"}, {"word": "学习", "pinyin": "xuéxí", "hanviet": "học tập", "meaning": "học tập; học"}, {"word": "英语", "pinyin": "Yīngyǔ", "hanviet": "Anh ngữ", "meaning": "tiếng Anh"}, {"word": "在", "pinyin": "zài", "hanviet": "tại", "meaning": "ở; tại; đang"}, {"word": "这儿 / 这里", "pinyin": "zhèr/zhèlǐ", "hanviet": "giá nhi / giá lý", "meaning": "đây; chỗ này"}, {"word": "中学", "pinyin": "zhōngxué", "hanviet": "trung học", "meaning": "trường trung học"}, {"word": "做", "pinyin": "zuò", "hanviet": "tố", "meaning": "làm"}, {"word": "超市", "pinyin": "chāoshì", "hanviet": "siêu thị", "meaning": "siêu thị"}, {"word": "从", "pinyin": "cóng", "hanviet": "tòng", "meaning": "từ"}, {"word": "对面", "pinyin": "duìmiàn", "hanviet": "đối diện", "meaning": "đối diện; phía đối diện"}, {"word": "饭店", "pinyin": "fàndiàn", "hanviet": "phạn điếm", "meaning": "nhà hàng; quán ăn"}, {"word": "附近", "pinyin": "fùjìn", "hanviet": "phụ cận", "meaning": "gần đây; vùng lân cận"}, {"word": "拐", "pinyin": "guǎi", "hanviet": "quải", "meaning": "rẽ; quặt; ngoặt"}, {"word": "家", "pinyin": "jiā", "hanviet": "gia", "meaning": "nhà; gia đình"}, {"word": "就", "pinyin": "jiù", "hanviet": "tựu", "meaning": "thì; liền; ngay; chính là"}, {"word": "面", "pinyin": "miàn", "hanviet": "diện", "meaning": "mặt; bề mặt; mì"}, {"word": "前", "pinyin": "qián", "hanviet": "tiền", "meaning": "trước; phía trước; trước đây"}, {"word": "然后", "pinyin": "ránhòu", "hanviet": "nhiên hậu", "meaning": "sau đó; rồi"}, {"word": "书店", "pinyin": "shūdiàn", "hanviet": "thư điếm", "meaning": "hiệu sách; cửa hàng sách"}, {"word": "往", "pinyin": "wǎng", "hanviet": "vãng", "meaning": "đi về phía; hướng về"}, {"word": "银行", "pinyin": "yínháng", "hanviet": "ngân hàng", "meaning": "ngân hàng"}, {"word": "右", "pinyin": "yòu", "hanviet": "hữu", "meaning": "bên phải; phía phải"}, {"word": "走", "pinyin": "zǒu", "hanviet": "tẩu", "meaning": "đi bộ; đi"}, {"word": "左", "pinyin": "zuǒ", "hanviet": "tả", "meaning": "bên trái; phía trái"}, {"word": "电影", "pinyin": "diànyǐng", "hanviet": "điện ảnh", "meaning": "phim; điện ảnh"}, {"word": "号", "pinyin": "hào", "hanviet": "hào", "meaning": "số; ngày (trong tháng)"}, {"word": "几", "pinyin": "jǐ", "hanviet": "kỷ", "meaning": "mấy; bao nhiêu"}, {"word": "见", "pinyin": "jiàn", "hanviet": "kiến", "meaning": "thấy; gặp"}, {"word": "今天", "pinyin": "jīntiān", "hanviet": "kim thiên", "meaning": "hôm nay"}, {"word": "看", "pinyin": "kàn", "hanviet": "khán", "meaning": "nhìn; xem"}, {"word": "空儿", "pinyin": "kòngr", "hanviet": "không nhi", "meaning": "thời gian rảnh"}, {"word": "快乐", "pinyin": "kuàilè", "hanviet": "khoái lạc", "meaning": "vui vẻ; hạnh phúc"}, {"word": "那", "pinyin": "nà", "hanviet": "na", "meaning": "kia; đó"}, {"word": "漂亮", "pinyin": "piàoliang", "hanviet": "phiêu lượng", "meaning": "xinh đẹp"}, {"word": "请", "pinyin": "qǐng", "hanviet": "thỉnh", "meaning": "mời; xin; làm ơn"}, {"word": "生日", "pinyin": "shēngrì", "hanviet": "sinh nhật", "meaning": "sinh nhật"}, {"word": "事", "pinyin": "shì", "hanviet": "sự", "meaning": "việc; chuyện"}, {"word": "太……了", "pinyin": "tài…le", "hanviet": "thái……liễu", "meaning": "quá... (rồi)"}, {"word": "晚饭", "pinyin": "wǎnfàn", "hanviet": "vãn phạn", "meaning": "bữa tối; cơm tối"}, {"word": "晚上", "pinyin": "wǎnshang", "hanviet": "vãn thượng", "meaning": "buổi tối"}, {"word": "为什么", "pinyin": "wèishénme", "hanviet": "vị thập ma", "meaning": "tại sao"}, {"word": "想", "pinyin": "xiǎng", "hanviet": "tưởng", "meaning": "nghĩ; muốn"}, {"word": "星期", "pinyin": "xīngqī", "hanviet": "tinh kỳ", "meaning": "tuần; thứ (trong tuần)"}, {"word": "星期五", "pinyin": "xīngqīwǔ", "hanviet": "tinh kỳ ngũ", "meaning": "thứ Sáu"}, {"word": "学校", "pinyin": "xuéxiào", "hanviet": "học hiệu", "meaning": "trường học"}, {"word": "有空儿", "pinyin": "yǒukòngr", "hanviet": "hữu không nhi", "meaning": "có thời gian rảnh"}, {"word": "月", "pinyin": "yuè", "hanviet": "nguyệt", "meaning": "tháng; mặt trăng"}, {"word": "真", "pinyin": "zhēn", "hanviet": "chân", "meaning": "thật; thực sự"}, {"word": "吧", "pinyin": "ba", "hanviet": "ba", "meaning": "(trợ từ) nhé; đi"}, {"word": "菜", "pinyin": "cài", "hanviet": "thái", "meaning": "món ăn; rau"}, {"word": "出租车", "pinyin": "chūzūchē", "hanviet": "xuất tô xa", "meaning": "xe taxi"}, {"word": "地铁", "pinyin": "dìtiě", "hanviet": "địa thiết", "meaning": "tàu điện ngầm"}, {"word": "电影院", "pinyin": "diànyǐngyuàn", "hanviet": "điện ảnh viện", "meaning": "rạp chiếu phim"}, {"word": "都", "pinyin": "dōu", "hanviet": "đô", "meaning": "đều; tất cả"}, {"word": "非常", "pinyin": "fēicháng", "hanviet": "phi thường", "meaning": "rất; vô cùng"}, {"word": "公交车", "pinyin": "gōngjiāochē", "hanviet": "công giao xa", "meaning": "xe buýt"}, {"word": "好吃", "pinyin": "hǎochī", "hanviet": "hảo ngật", "meaning": "ngon (món ăn)"}, {"word": "明天", "pinyin": "míngtiān", "hanviet": "minh thiên", "meaning": "ngày mai"}, {"word": "那儿 / 那里", "pinyin": "nàr/nàli", "hanviet": "na nhi / na lí", "meaning": "đằng kia; ở đó"}, {"word": "便宜", "pinyin": "piányi", "hanviet": "tiện nghi", "meaning": "rẻ"}, {"word": "喜欢", "pinyin": "xǐhuan", "hanviet": "hỉ hoan", "meaning": "thích"}, {"word": "有名", "pinyin": "yǒumíng", "hanviet": "hữu danh", "meaning": "nổi tiếng"}, {"word": "又", "pinyin": "yòu", "hanviet": "hựu", "meaning": "lại; cũng"}, {"word": "又……", "pinyin": "yòu…yòu…", "hanviet": "hựu……hựu……", "meaning": "vừa... vừa..."}, {"word": "怎么", "pinyin": "zěnme", "hanviet": "chẩm ma", "meaning": "thế nào; làm sao"}, {"word": "怎么样", "pinyin": "zěnmeyàng", "hanviet": "chẩm ma dạng", "meaning": "thế nào; ra sao"}, {"word": "走路", "pinyin": "zǒulù", "hanviet": "tẩu lộ", "meaning": "đi bộ"}, {"word": "坐", "pinyin": "zuò", "hanviet": "tọa", "meaning": "ngồi; đi (xe)"}, {"word": "爸爸", "pinyin": "bàba", "hanviet": "ba ba", "meaning": "bố; ba"}, {"word": "弟弟", "pinyin": "dìdi", "hanviet": "đệ đệ", "meaning": "em trai"}, {"word": "多大", "pinyin": "duōdà", "hanviet": "đa đại", "meaning": "bao nhiêu tuổi; lớn cỡ nào"}, {"word": "哥哥", "pinyin": "gēge", "hanviet": "ca ca", "meaning": "anh trai"}, {"word": "狗", "pinyin": "gǒu", "hanviet": "cẩu", "meaning": "chó"}, {"word": "和", "pinyin": "hé", "hanviet": "hòa", "meaning": "và; cùng"}, {"word": "家人", "pinyin": "jiārén", "hanviet": "gia nhân", "meaning": "người nhà; gia đình"}, {"word": "姐姐", "pinyin": "jiějiě", "hanviet": "tỉ tỉ", "meaning": "chị gái"}, {"word": "今年", "pinyin": "jīnnián", "hanviet": "kim niên", "meaning": "năm nay"}, {"word": "可爱", "pinyin": "kě'ài", "hanviet": "khả ái", "meaning": "đáng yêu"}, {"word": "口", "pinyin": "kǒu", "hanviet": "khẩu", "meaning": "(lượng từ chỉ người trong gia đình); miệng"}, {"word": "律师", "pinyin": "lǜshī", "hanviet": "luật sư", "meaning": "luật sư"}, {"word": "妈妈", "pinyin": "māma", "hanviet": "ma ma", "meaning": "mẹ; má"}, {"word": "妹妹", "pinyin": "mèimei", "hanviet": "muội muội", "meaning": "em gái"}, {"word": "们", "pinyin": "men", "hanviet": "môn", "meaning": "(hậu tố chỉ số nhiều)"}, {"word": "谁", "pinyin": "shéi", "hanviet": "thùy", "meaning": "ai"}, {"word": "岁", "pinyin": "suì", "hanviet": "tuế", "meaning": "tuổi"}, {"word": "他们", "pinyin": "tāmen", "hanviet": "tha môn", "meaning": "họ (nam hoặc hỗn hợp)"}, {"word": "医生", "pinyin": "yīshēng", "hanviet": "y sinh", "meaning": "bác sĩ"}, {"word": "照片", "pinyin": "zhàopiàn", "hanviet": "chiếu phiến", "meaning": "ảnh; bức ảnh"}, {"word": "只", "pinyin": "zhī", "hanviet": "chỉ", "meaning": "(lượng từ chỉ con vật); chỉ"}];
+var flashDeck = [], flashIdx = 0;
+function flashShuffleDeck() {
+  flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
+  for (var i = flashDeck.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = flashDeck[i]; flashDeck[i] = flashDeck[j]; flashDeck[j] = t; }
+  flashIdx = 0;
+}
+function flashRender() {
+  var wrap = document.getElementById('flash-wrap');
+  if (!wrap) return;
+  if (!FLASH_DATA.length) { wrap.style.display = 'none'; return; }
+  var cur = flashDeck[flashIdx], w = cur.w;
+  var front = document.getElementById('flash-front'), back = document.getElementById('flash-back');
+  if (cur.hanziFront) {
+    front.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">Chạm để lật — nhớ nghĩa của từ này</div>';
+    back.innerHTML = '<div class="flash-tag">Nghĩa</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+  } else {
+    front.innerHTML = '<div class="flash-tag">Nghĩa tiếng Việt</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">Chạm để lật — nhớ chữ Hán của nghĩa này</div>';
+    back.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+  }
+  document.getElementById('flash-card').classList.remove('flipped');
+  document.getElementById('flash-count').textContent = 'Thẻ ' + (flashIdx + 1) + ' / ' + flashDeck.length;
+}
+function flashFlip() { var c = document.getElementById('flash-card'); if (c) c.classList.toggle('flipped'); }
+function flashNext() { if (flashIdx < flashDeck.length - 1) { flashIdx++; flashRender(); } }
+function flashPrev() { if (flashIdx > 0) { flashIdx--; flashRender(); } }
+function flashReshuffle() { flashShuffleDeck(); flashRender(); }
+
+flashShuffleDeck(); flashRender();
+</script>
+</body>
+</html>
