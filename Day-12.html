@@ -574,6 +574,7 @@ img, svg { max-width: 100%; }
 <div class="reading-box">
 <div class="reading-Controls">
 <button class="tts-btn" onclick="playDlgAll()">▶️ Nghe cả đoạn hội thoại</button>
+<button class="tts-btn" id="dlg-pause-btn" onclick="toggleDlgPause()">⏸️ Tạm dừng</button>
 <button class="tts-btn" onclick="stopDlg()">⏹️ Dừng</button>
 <button class="btn-sm" id="dlg-toggle" onclick="toggleDlgScript()">👁️ Hiện lời thoại</button>
 <button class="btn-sm" onclick="toggleDlgRuby()">🔤 Ẩn/Hiện Pinyin</button>
@@ -2610,6 +2611,7 @@ flashShuffleDeck(); flashRender();
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
 var DLG_LINES = [{"sp": "ming", "zh": "你好！你饿吗？"}, {"sp": "hong", "zh": "你好！我很饿。你呢？"}, {"sp": "ming", "zh": "我也很饿。你吃什么？"}, {"sp": "hong", "zh": "我吃饭。你吃什么？"}, {"sp": "ming", "zh": "我也吃饭。你还饿吗？"}, {"sp": "hong", "zh": "我还饿。饭在家。你家大吗？"}, {"sp": "ming", "zh": "我家很大。你家呢？"}, {"sp": "hong", "zh": "我家也很大。你去我家吃饭，好吗？"}, {"sp": "ming", "zh": "好！我去你家吃饭。明天你去我家吃饭，好吗？"}, {"sp": "hong", "zh": "好！明天我去你家吃饭。再见！"}, {"sp": "ming", "zh": "再见！"}];
 var dlgPlaying = false;
+var dlgPaused = false;
 var dlgRate = 0.88;
 var DLG_VOICE_LS = 'dialogue-voices';
 var DLG_ZH_VOICES = [];
@@ -2745,11 +2747,23 @@ function playDlgAll() {
   dlgPlaying = true;
   var i = 0;
   (function next() {
-    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; return; }
+    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; dlgPaused = false; updateDlgPauseBtn(); return; }
     dlgSpeak(i, function () { i++; if (dlgPlaying) next(); });
   })();
 }
-function stopDlg() { dlgPlaying = false; if ('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+function updateDlgPauseBtn() {
+  var b = document.getElementById('dlg-pause-btn');
+  if (b) b.textContent = dlgPaused ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+}
+function toggleDlgPause() {
+  if (!('speechSynthesis' in window)) return;
+  var ss = window.speechSynthesis;
+  if (ss.paused) { ss.resume(); dlgPaused = false; }
+  else if (ss.speaking) { ss.pause(); dlgPaused = true; }
+  else return;
+  updateDlgPauseBtn();
+}
+function stopDlg() { dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPauseBtn(); }
 function playDlgLine(i) { stopDlg(); dlgSpeak(i); }
 function previewDlgVoice(spId) {
   for (var i = 0; i < DLG_LINES.length; i++)

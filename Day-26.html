@@ -671,6 +671,7 @@ img, svg { max-width: 100%; }
 <div class="reading-box">
 <div class="reading-Controls">
 <button class="tts-btn" onclick="playDlgAll()">▶️ Nghe cả đoạn hội thoại</button>
+<button class="tts-btn" id="dlg-pause-btn" onclick="toggleDlgPause()">⏸️ Tạm dừng</button>
 <button class="tts-btn" onclick="stopDlg()">⏹️ Dừng</button>
 <button class="btn-sm" id="dlg-toggle" onclick="toggleDlgScript()">👁️ Hiện lời thoại</button>
 <button class="btn-sm" onclick="toggleDlgRuby()">🔤 Ẩn/Hiện Pinyin</button>
@@ -2709,6 +2710,7 @@ flashShuffleDeck(); flashRender();
 var DLG_SPEAKERS = [{"id": "ming", "name": "小明", "py": "Xiǎo Míng", "gender": "nam", "vi": "Minh", "color": "#2563eb"}, {"id": "hong", "name": "小红", "py": "Xiǎo Hóng", "gender": "nữ", "vi": "Hồng", "color": "#db2777"}];
 var DLG_LINES = [{"sp": "ming", "zh": "你好！晚上你有事吗？"}, {"sp": "hong", "zh": "你好！晚上我有事，我去饭店吃晚饭。"}, {"sp": "ming", "zh": "你为什么去饭店吃晚饭？"}, {"sp": "hong", "zh": "因为明天是我的生日，今天晚上我请朋友去饭店吃晚饭。"}, {"sp": "ming", "zh": "晚饭好吃吗？"}, {"sp": "hong", "zh": "晚饭很好吃。那家饭店很漂亮。"}, {"sp": "ming", "zh": "饭店贵吗？"}, {"sp": "hong", "zh": "饭店不贵。晚饭太好吃了！"}, {"sp": "ming", "zh": "晚上我也去饭店，好吗？"}, {"sp": "hong", "zh": "好！晚上你去饭店，我请你吃晚饭。"}, {"sp": "ming", "zh": "谢谢！你很好。"}, {"sp": "hong", "zh": "不客气。明天是我的生日，明天见！"}, {"sp": "ming", "zh": "明天见！"}];
 var dlgPlaying = false;
+var dlgPaused = false;
 var dlgRate = 0.88;
 var DLG_VOICE_LS = 'dialogue-voices';
 var DLG_ZH_VOICES = [];
@@ -2844,11 +2846,23 @@ function playDlgAll() {
   dlgPlaying = true;
   var i = 0;
   (function next() {
-    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; return; }
+    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; dlgPaused = false; updateDlgPauseBtn(); return; }
     dlgSpeak(i, function () { i++; if (dlgPlaying) next(); });
   })();
 }
-function stopDlg() { dlgPlaying = false; if ('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+function updateDlgPauseBtn() {
+  var b = document.getElementById('dlg-pause-btn');
+  if (b) b.textContent = dlgPaused ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+}
+function toggleDlgPause() {
+  if (!('speechSynthesis' in window)) return;
+  var ss = window.speechSynthesis;
+  if (ss.paused) { ss.resume(); dlgPaused = false; }
+  else if (ss.speaking) { ss.pause(); dlgPaused = true; }
+  else return;
+  updateDlgPauseBtn();
+}
+function stopDlg() { dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPauseBtn(); }
 function playDlgLine(i) { stopDlg(); dlgSpeak(i); }
 function previewDlgVoice(spId) {
   for (var i = 0; i < DLG_LINES.length; i++)

@@ -676,6 +676,7 @@ img, svg { max-width: 100%; }
 <div class="reading-box">
 <div class="reading-Controls">
 <button class="tts-btn" onclick="playDlgAll()">▶️ Nghe cả đoạn hội thoại</button>
+<button class="tts-btn" id="dlg-pause-btn" onclick="toggleDlgPause()">⏸️ Tạm dừng</button>
 <button class="tts-btn" onclick="stopDlg()">⏹️ Dừng</button>
 <button class="btn-sm" id="dlg-toggle" onclick="toggleDlgScript()">👁️ Hiện lời thoại</button>
 <button class="btn-sm" onclick="toggleDlgRuby()">🔤 Ẩn/Hiện Pinyin</button>
@@ -2715,6 +2716,7 @@ flashShuffleDeck(); flashRender();
 var DLG_SPEAKERS = [{"id": "ming", "name": "小明", "py": "Xiǎo Míng", "gender": "nam", "vi": "Minh", "color": "#2563eb"}, {"id": "hong", "name": "小红", "py": "Xiǎo Hóng", "gender": "nữ", "vi": "Hồng", "color": "#db2777"}, {"id": "lao", "name": "老师", "py": "Lǎoshī", "gender": "nam", "vi": "Thầy", "color": "#059669"}];
 var DLG_LINES = [{"sp": "ming", "zh": "老师，你好！今天是星期五。"}, {"sp": "lao", "zh": "你好，小明！你今天想去哪儿？"}, {"sp": "ming", "zh": "老师，今天我想去学校。"}, {"sp": "lao", "zh": "你想去学校学习汉语吗？"}, {"sp": "ming", "zh": "我想去学校学习汉语，也想去看电影。"}, {"sp": "lao", "zh": "明天你有空儿吗？"}, {"sp": "ming", "zh": "明天我有空儿。老师，你明天有空儿吗？"}, {"sp": "lao", "zh": "明天我没有空儿，我去学校。"}, {"sp": "hong", "zh": "老师，你好！小明明天去学校，我也去学校。"}, {"sp": "lao", "zh": "好！明天你们去学校学习汉语。"}, {"sp": "ming", "zh": "小红，明天你想去学校吗？"}, {"sp": "hong", "zh": "明天我想去学校，也想去看电影。"}, {"sp": "ming", "zh": "好！明天你去学校，我也去学校。"}, {"sp": "hong", "zh": "明天见！"}];
 var dlgPlaying = false;
+var dlgPaused = false;
 var dlgRate = 0.88;
 var DLG_VOICE_LS = 'dialogue-voices';
 var DLG_ZH_VOICES = [];
@@ -2850,11 +2852,23 @@ function playDlgAll() {
   dlgPlaying = true;
   var i = 0;
   (function next() {
-    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; return; }
+    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; dlgPaused = false; updateDlgPauseBtn(); return; }
     dlgSpeak(i, function () { i++; if (dlgPlaying) next(); });
   })();
 }
-function stopDlg() { dlgPlaying = false; if ('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+function updateDlgPauseBtn() {
+  var b = document.getElementById('dlg-pause-btn');
+  if (b) b.textContent = dlgPaused ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+}
+function toggleDlgPause() {
+  if (!('speechSynthesis' in window)) return;
+  var ss = window.speechSynthesis;
+  if (ss.paused) { ss.resume(); dlgPaused = false; }
+  else if (ss.speaking) { ss.pause(); dlgPaused = true; }
+  else return;
+  updateDlgPauseBtn();
+}
+function stopDlg() { dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPauseBtn(); }
 function playDlgLine(i) { stopDlg(); dlgSpeak(i); }
 function previewDlgVoice(spId) {
   for (var i = 0; i < DLG_LINES.length; i++)

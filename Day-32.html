@@ -629,6 +629,7 @@ img, svg { max-width: 100%; }
 <div class="reading-box">
 <div class="reading-Controls">
 <button class="tts-btn" onclick="playDlgAll()">▶️ Nghe cả đoạn hội thoại</button>
+<button class="tts-btn" id="dlg-pause-btn" onclick="toggleDlgPause()">⏸️ Tạm dừng</button>
 <button class="tts-btn" onclick="stopDlg()">⏹️ Dừng</button>
 <button class="btn-sm" id="dlg-toggle" onclick="toggleDlgScript()">👁️ Hiện lời thoại</button>
 <button class="btn-sm" onclick="toggleDlgRuby()">🔤 Ẩn/Hiện Pinyin</button>
@@ -2668,6 +2669,7 @@ flashShuffleDeck(); flashRender();
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
 var DLG_LINES = [{"sp": "hong", "zh": "小明，你好！你爸爸在哪儿？"}, {"sp": "ming", "zh": "我爸爸在大学。他是老师。"}, {"sp": "hong", "zh": "你有弟弟吗？"}, {"sp": "ming", "zh": "我有弟弟。我弟弟很小。"}, {"sp": "hong", "zh": "你弟弟多大？"}, {"sp": "ming", "zh": "我弟弟很小，他不去大学。"}, {"sp": "hong", "zh": "你爸爸去大学，你怎么去大学？"}, {"sp": "ming", "zh": "我走路去大学。"}, {"sp": "hong", "zh": "你坐公交车去大学吗？"}, {"sp": "ming", "zh": "我不坐公交车，我走路去。"}, {"sp": "hong", "zh": "大学远吗？"}, {"sp": "ming", "zh": "大学不远，在饭店对面。"}, {"sp": "hong", "zh": "好！明天你去大学吗？"}, {"sp": "ming", "zh": "明天我去大学。你去吗？"}];
 var dlgPlaying = false;
+var dlgPaused = false;
 var dlgRate = 0.88;
 var DLG_VOICE_LS = 'dialogue-voices';
 var DLG_ZH_VOICES = [];
@@ -2803,11 +2805,23 @@ function playDlgAll() {
   dlgPlaying = true;
   var i = 0;
   (function next() {
-    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; return; }
+    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; dlgPaused = false; updateDlgPauseBtn(); return; }
     dlgSpeak(i, function () { i++; if (dlgPlaying) next(); });
   })();
 }
-function stopDlg() { dlgPlaying = false; if ('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+function updateDlgPauseBtn() {
+  var b = document.getElementById('dlg-pause-btn');
+  if (b) b.textContent = dlgPaused ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+}
+function toggleDlgPause() {
+  if (!('speechSynthesis' in window)) return;
+  var ss = window.speechSynthesis;
+  if (ss.paused) { ss.resume(); dlgPaused = false; }
+  else if (ss.speaking) { ss.pause(); dlgPaused = true; }
+  else return;
+  updateDlgPauseBtn();
+}
+function stopDlg() { dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPauseBtn(); }
 function playDlgLine(i) { stopDlg(); dlgSpeak(i); }
 function previewDlgVoice(spId) {
   for (var i = 0; i < DLG_LINES.length; i++)
