@@ -1,8 +1,38 @@
-# HSK 1 — Bài học tiếng Trung (Day 1–36)
+# HSK 1 — Bài học mỗi ngày
 
-Học từ Bài 1 lên Bài 10, mỗi ngày 5 từ mới, 7 ngày/tuần. Tổng 178 từ / 36 ngày.
+Bộ bài học HSK 1: 36 ngày, mỗi ngày 5 từ mới, học từ Bài 1 đến Bài 10. Tổng 178 từ / 36 ngày.
 
-| Ngày | Bài | Từ mới | Link |
+👉 **Mở trang mục lục (đầy đủ 36 ngày):**
+
+**[https://vinhnd2026.github.io/HSK1/](https://vinhnd2026.github.io/HSK1/)**
+
+## 📚 Mục lục các khóa học
+
+| Khóa học | Từ mới | Số ngày | Trang học |
+|---|---|---|---|
+| HSK 1 | 178 | 36 | [Mở](https://vinhnd2026.github.io/HSK1/) |
+| HSK 2 | 213 | 43 | [Mở](https://vinhnd2026.github.io/HSK2/) |
+| HSK 3 | 197 | 40 | [Mở](https://vinhnd2026.github.io/HSK3/) |
+| HSK 4 | 191 | 39 | [Mở](https://vinhnd2026.github.io/HSK4/) |
+| HSK 3 — bản theo ngày (Homework) | 198 | 36 | [Mở](https://vinhnd2026.github.io/Homework/) |
+| Trung cấp 1 | 266 | 54 | ⏳ đang hoàn thiện |
+| Trung cấp 2 | 355 | 71 | ⏳ đang hoàn thiện |
+| Trung cấp 3 | 236 | 48 | ⏳ đang hoàn thiện |
+| Trung cấp 4 | 206 | 42 | ⏳ đang hoàn thiện |
+| Cao cấp 1 | 447 | 90 | ⏳ đang hoàn thiện |
+| Cao cấp 2 | 405 | 81 | ⏳ đang hoàn thiện |
+| Cao cấp 3 | 353 | 71 | ⏳ đang hoàn thiện |
+| Cao cấp 4 | 357 | 72 | ⏳ đang hoàn thiện |
+
+## Bổ sung (học sau khi xong 36 ngày)
+
+- **📖 Ôn tập Ngữ pháp HSK 1 (40 điểm + 33 bài tập):** [Bai-Hoc-On-Ngu-Phap-HSK1.html](https://vinhnd2026.github.io/HSK1/Bai-Hoc-On-Ngu-Phap-HSK1.html) — pinyin hiện sẵn trong mọi ví dụ.
+- **📚 Bài Tổng Kết HSK 1:** [Bai-Hoc-Tong-Ket-HSK1.html](https://vinhnd2026.github.io/HSK1/Bai-Hoc-Tong-Ket-HSK1.html) — flashcard toàn bộ từ, bảng từ vựng 10 bài, 8 bài tập tổng kết (62 bài tập), truyện tổng kết dùng đủ toàn bộ từ vựng.
+
+Bấm vào từng ngày bên dưới để mở thẳng trang bài học của ngày đó.
+(Bài học được mở trực tiếp trên trình duyệt, không cần tải file về.)
+
+| Ngày | Bài | Từ mới | Bài học |
 |---|---|---|---|
 | Day 1 | Bài 1 | 好, 老师, 你, 你们, 您 | [Mở bài học](https://vinhnd2026.github.io/HSK1/Day-01.html) |
 | Day 2 | Bài 2 | 国, 叫, 名字, 哪, 呢 | [Mở bài học](https://vinhnd2026.github.io/HSK1/Day-02.html) |
@@ -40,3 +70,13 @@ Học từ Bài 1 lên Bài 10, mỗi ngày 5 từ mới, 7 ngày/tuần. Tổng
 | Day 34 | Bài 10 | 今年, 可爱, 口, 律师, 妈妈 | [Mở bài học](https://vinhnd2026.github.io/HSK1/Day-34.html) |
 | Day 35 | Bài 10 | 妹妹, 们, 谁, 岁, 他们 | [Mở bài học](https://vinhnd2026.github.io/HSK1/Day-35.html) |
 | Day 36 | Bài 10 | 医生, 照片, 只 | [Mở bài học](https://vinhnd2026.github.io/HSK1/Day-36.html) |
+
+## Tài liệu kèm theo
+
+- [Lịch học HSK 1 (Excel)](https://github.com/vinhnd2026/HSK1/blob/main/Lich-hoc-hsk1.xlsx)
+
+## Ghi chú
+
+- Mỗi bài học có flashcard 20 từ (20 từ gần nhất đã học trước đó), bài nghe, nối từ, bẫy ngữ pháp, điền từ, xếp câu, đọc hiểu và đáp án.
+- Cuối tuần Bài 7 là đoạn văn đọc hiểu tổng kết tuần.
+- Tiến độ làm bài được lưu riêng trên trình duyệt của từng người học.
