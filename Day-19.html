@@ -620,6 +620,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('我在学校学习。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby>。</span> <span class="hint">(Tôi đang học ở trường.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他在中学。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>中<rt>zhōng</rt></ruby><ruby>学<rt>xué</rt></ruby>。</span> <span class="hint">(Anh ấy ở trường cấp hai.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('你在学校吗？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span> <span class="hint">(Bạn ở trường à?)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Điền từ đúng vào chỗ trống:</b> 他<span class="gram-blank">......</span>学校。</div>
 <div class="mc-options">
@@ -653,22 +654,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="我在这里学习英语。">
-<div><b>Câu 1:</b> Tôi học tiếng Anh ở đây.</div>
+<div class="scramble-box" id="scr-1" data-target="我在这里学习英语，你在这里学习汉语吗？">
+<div><b>Câu 1:</b> Tôi học tiếng Anh ở đây, bạn học tiếng Hán ở đây không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="英语|我|。|在|学习|这里"></div>
+<div class="word-bank" data-words="学习|学习|英语|吗|汉语|？|我|在|在|这里|这里|你|，"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="他在中学，你在大学吗？">
-<div><b>Câu 2:</b> Anh ấy ở trường trung học, bạn ở trường đại học không?</div>
+<div class="scramble-box" id="scr-2" data-target="他在中学，你在大学吗？你在中学学习英语吗？">
+<div><b>Câu 2:</b> Anh ấy ở trường trung học, bạn ở trường đại học không? Bạn học tiếng Anh ở trường trung học không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="，|？|大学|你|他|中学|在|在|吗"></div>
+<div class="word-bank" data-words="在|大学|在|中学|中学|吗|英语|你|学习|，|在|他|？|你|吗|？"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="老师在中学教英语。">
-<div><b>Câu 3:</b> Thầy giáo dạy tiếng Anh ở trường trung học.</div>
+<div class="scramble-box" id="scr-3" data-target="老师在中学教英语，老师也在大学教汉语吗？">
+<div><b>Câu 3:</b> Thầy giáo dạy tiếng Anh ở trường trung học, thầy giáo cũng dạy tiếng Hán ở trường đại học phải không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="在|教|。|老师|英语|中学"></div>
+<div class="word-bank" data-words="？|老师|教|中学|也|汉语|英语|在|在|大学|教|吗|老师|，"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -776,19 +777,19 @@ img, svg { max-width: 100%; }
 <div class="q-item" id="dlg-3">
 <div><b>Câu 3.</b> 明天小明去大学吗？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác! 小红：明天我去大学，我学习英语。你去吗？')">A. 不知道</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：明天我去大学，我学习英语。你去吗？')">B. 去</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：明天我去大学，我学习英语。你去吗？')">C. 不去</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：明天我去大学，我学习英语。你去吗？')">D. 他去中学</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小明：我去大学学习。')">A. 不去</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小明：我去大学学习。')">B. 他去中学</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác! 小明：我去大学学习。')">C. 去</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小明：我去大学学习。')">D. 不知道</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
 <div><b>Câu 4.</b> 小红的老师是男人还是女人？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我的老师很好，他教汉语，也教英语。')">A. 不知道</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我的老师很好，他教汉语，也教英语。')">B. 学生</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác! 小红：我的老师很好，他教汉语，也教英语。')">C. 男人</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我的老师很好，他教汉语，也教英语。')">D. 女人</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác! 小红：我的老师很好，他教汉语，也教英语。')">A. 男人</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我的老师很好，他教汉语，也教英语。')">B. 女人</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我的老师很好，他教汉语，也教英语。')">C. 不知道</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我的老师很好，他教汉语，也教英语。')">D. 学生</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -834,9 +835,9 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 学习 = xuéxí · 英语 = Yīngyǔ · 在 = zài · 这儿 / 这里 = zhè ér/zhèlǐ · 中学 = zhōngxué</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. C — 在 &nbsp;|&nbsp; 2. 他在学校学习。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 学习 → 英语 → 在 → 这儿 / 这里 → 中学</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我在这里学习英语。<br>2. 他在中学，你在大学吗？<br>3. 老师在中学教英语。</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我在这里学习英语，你在这里学习汉语吗？<br>2. 他在中学，你在大学吗？你在中学学习英语吗？<br>3. 老师在中学教英语，老师也在大学教汉语吗？</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. B — 大学 &nbsp;|&nbsp; 2. A — 他 &nbsp;|&nbsp; 3. D — 很大</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 大学 &nbsp; 2. B — 她的老师很好 &nbsp; 3. A — 不知道 &nbsp; 4. C — 男人</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 大学 &nbsp; 2. B — 她的老师很好 &nbsp; 3. C — 去 &nbsp; 4. A — 男人</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -929,15 +930,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "我在这里学习英语。"
+    "我在这里学习英语，你在这里学习汉语吗？"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "他在中学，你在大学吗？"
+    "他在中学，你在大学吗？你在中学学习英语吗？"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "老师在中学教英语。"
+    "老师在中学教英语，老师也在大学教汉语吗？"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
@@ -961,7 +962,7 @@ var ITEM_INFO = {
   ],
   "dlg-3": [
     "Nghe hội thoại 3 (明天小明去大学吗？)",
-    "不知道"
+    "去"
   ],
   "dlg-4": [
     "Nghe hội thoại 4 (小红的老师是男人还是女人？)",

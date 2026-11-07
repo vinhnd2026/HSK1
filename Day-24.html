@@ -571,6 +571,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('你有多少杯茶？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>少<rt>shǎo</rt></ruby><ruby>杯<rt>bēi</rt></ruby><ruby>茶<rt>chá</rt></ruby>？</span> <span class="hint">(Bạn có bao nhiêu cốc trà?)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('你有几杯咖啡？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>杯<rt>bēi</rt></ruby><ruby>咖<rt>kā</rt></ruby><ruby>啡<rt>fēi</rt></ruby>？</span> <span class="hint">(Bạn có mấy cốc cà phê?)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('这米饭多少钱？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>米<rt>mǐ</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>少<rt>shǎo</rt></ruby><ruby>钱<rt>qián</rt></ruby>？</span> <span class="hint">(Cơm này bao nhiêu tiền?)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. 几 / 多少 — hỏi số lượng:</b></div>
 <div class="mc-options">
@@ -605,22 +606,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="今天我去见老师，你去吗？">
-<div><b>Câu 1:</b> Hôm nay tôi đi gặp thầy giáo, bạn đi không?</div>
+<div class="scramble-box" id="scr-1" data-target="今天我去见老师，你去吗？你今天有空儿吗？">
+<div><b>Câu 1:</b> Hôm nay tôi đi gặp thầy giáo, bạn đi không? Hôm nay bạn có rảnh không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="今天|，|？|你|去|吗|见|老师|我|去"></div>
+<div class="word-bank" data-words="你|今天|？|今天|有空儿|？|，|吗|吗|见|去|老师|我|你|去"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="你有空儿吗？我看电影。">
-<div><b>Câu 2:</b> Bạn có rảnh không? Tôi xem phim.</div>
+<div class="scramble-box" id="scr-2" data-target="你有空儿吗？今天我去看电影，你去看电影吗？">
+<div><b>Câu 2:</b> Bạn có rảnh không? Hôm nay tôi đi xem phim, bạn đi xem phim không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="有空儿|电影|吗|。|看|我|你|？"></div>
+<div class="word-bank" data-words="你|去|电影|？|电影|我|？|你|，|吗|吗|有空儿|看|看|去|今天"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="今天有几个人去看电影？">
-<div><b>Câu 3:</b> Hôm nay có mấy người đi xem phim?</div>
+<div class="scramble-box" id="scr-3" data-target="今天有几个人去看电影？你们去看电影吗？">
+<div><b>Câu 3:</b> Hôm nay có mấy người đi xem phim? Các bạn đi xem phim không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="几|去|？|人|有|个|今天|电影|看"></div>
+<div class="word-bank" data-words="电影|去|吗|看|几|有|人|看|去|你们|今天|个|？|电影|？"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -788,7 +789,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 几 = jǐ · 见 = jiàn · 今天 = jīntiān · 看 = kàn · 空儿 = kòng ér</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. A — 你有几杯茶？ &nbsp;|&nbsp; 2. A — 多少</p>
 <p><b>Bài 5 (Đoạn văn):</b> 几 → 见 → 今天 → 看 → 空儿</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 今天我去见老师，你去吗？<br>2. 你有空儿吗？我看电影。<br>3. 今天有几个人去看电影？</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 今天我去见老师，你去吗？你今天有空儿吗？<br>2. 你有空儿吗？今天我去看电影，你去看电影吗？<br>3. 今天有几个人去看电影？你们去看电影吗？</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. A — 老师 &nbsp;|&nbsp; 2. D — 电影 &nbsp;|&nbsp; 3. B — 你</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. A — 她的朋友 &nbsp; 2. D — 她去见朋友 &nbsp; 3. B — 不去 &nbsp; 4. C — 不知道</p>
 </details>
@@ -883,15 +884,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "今天我去见老师，你去吗？"
+    "今天我去见老师，你去吗？你今天有空儿吗？"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "你有空儿吗？我看电影。"
+    "你有空儿吗？今天我去看电影，你去看电影吗？"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "今天有几个人去看电影？"
+    "今天有几个人去看电影？你们去看电影吗？"
   ],
   "read-1": [
     "Đọc hiểu câu 1",

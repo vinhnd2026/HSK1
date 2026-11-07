@@ -539,6 +539,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('去超市，往右拐。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>去<rt>Qù</rt></ruby><ruby>超<rt>chāo</rt></ruby><ruby>市<rt>shì</rt></ruby>，<ruby>往<rt>wǎng</rt></ruby><ruby>右<rt>yòu</rt></ruby><ruby>拐<rt>guǎi</rt></ruby>。</span> <span class="hint">(Đi siêu thị thì rẽ phải.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('去饭店，往左拐。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>去<rt>Qù</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby>，<ruby>往<rt>wǎng</rt></ruby><ruby>左<rt>zuǒ</rt></ruby><ruby>拐<rt>guǎi</rt></ruby>。</span> <span class="hint">(Đi quán ăn thì rẽ trái.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('去学校，往右拐。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>去<rt>Qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>往<rt>wǎng</rt></ruby><ruby>右<rt>yòu</rt></ruby><ruby>拐<rt>guǎi</rt></ruby>。</span> <span class="hint">(Đi học thì rẽ phải.)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Điền từ đúng vào chỗ trống:</b> 去超市，<span class="gram-blank">......</span>左拐。</div>
 <div class="mc-options">
@@ -573,22 +574,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="我家在学校附近，你去我家吗？">
-<div><b>Câu 1:</b> Nhà tôi ở gần trường, bạn đi nhà tôi không?</div>
+<div class="scramble-box" id="scr-1" data-target="我家在学校附近，你去我家吗？我家在超市附近，很近。">
+<div><b>Câu 1:</b> Nhà tôi ở gần trường, bạn đi nhà tôi không? Nhà tôi ở gần siêu thị, rất gần.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="去|学校|吗|你|我|在|，|附近|？|我|家|家"></div>
+<div class="word-bank" data-words="？|你|我|家|家|超市|家|在|在|。|吗|去|，|附近|，|附近|我|很|我|学校|近"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="去我家，在这儿拐，就到了。">
-<div><b>Câu 2:</b> Đi nhà tôi, rẽ ở đây, là đến.</div>
+<div class="scramble-box" id="scr-2" data-target="去我家，在这儿拐，就到了，你知道吗？">
+<div><b>Câu 2:</b> Đi nhà tôi, rẽ ở đây, là đến, bạn có biết không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="，|儿|拐|。|了|在|这|我|就|家|去|，|到"></div>
+<div class="word-bank" data-words="，|就|拐|去|在|？|到|，|这|儿|了|，|吗|你|家|知道|我"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="我吃面，你吃面吗？">
-<div><b>Câu 3:</b> Tôi ăn mì, bạn ăn mì không?</div>
+<div class="scramble-box" id="scr-3" data-target="我吃面，你吃面吗？我家附近有饭店，面很好。">
+<div><b>Câu 3:</b> Tôi ăn mì, bạn ăn mì không? Gần nhà tôi có nhà hàng, mì rất ngon.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="我|吃|？|，|你|吃|面|面|吗"></div>
+<div class="word-bank" data-words="家|有|我|，|附近|好|很|吃|我|饭店|吃|？|吗|面|。|面|面|你|，"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -703,10 +704,10 @@ img, svg { max-width: 100%; }
 <div class="q-item" id="dlg-3">
 <div><b>Câu 3.</b> 小明的家在哪儿？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我的家在大学附近，很近。')">A. 大学附近</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác! 小红：我的家在大学附近，很近。')">B. 不知道</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我的家在大学附近，很近。')">C. 超市对面</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我的家在大学附近，很近。')">D. 饭店对面</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小明：我的家在大学附近。')">A. 饭店对面</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác! 小明：我的家在大学附近。')">B. 大学附近</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小明：我的家在大学附近。')">C. 超市对面</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小明：我的家在大学附近。')">D. 不知道</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
@@ -761,9 +762,9 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 附近 = fùjìn · 拐 = guǎi · 家 = jiā · 就 = jiù · 面 = miàn</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. A — 往 &nbsp;|&nbsp; 2. B — 去超市，往左拐。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 附近 → 拐 → 家 → 就 → 面</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我家在学校附近，你去我家吗？<br>2. 去我家，在这儿拐，就到了。<br>3. 我吃面，你吃面吗？</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我家在学校附近，你去我家吗？我家在超市附近，很近。<br>2. 去我家，在这儿拐，就到了，你知道吗？<br>3. 我吃面，你吃面吗？我家附近有饭店，面很好。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. B — 超市附近 &nbsp;|&nbsp; 2. B — 吃面 &nbsp;|&nbsp; 3. A — 饭店</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 饭店对面 &nbsp; 2. D — 面 &nbsp; 3. B — 不知道 &nbsp; 4. A — 不去</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 饭店对面 &nbsp; 2. D — 面 &nbsp; 3. B — 大学附近 &nbsp; 4. A — 不去</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -856,15 +857,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "我家在学校附近，你去我家吗？"
+    "我家在学校附近，你去我家吗？我家在超市附近，很近。"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "去我家，在这儿拐，就到了。"
+    "去我家，在这儿拐，就到了，你知道吗？"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "我吃面，你吃面吗？"
+    "我吃面，你吃面吗？我家附近有饭店，面很好。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
@@ -888,7 +889,7 @@ var ITEM_INFO = {
   ],
   "dlg-3": [
     "Nghe hội thoại 3 (小明的家在哪儿？)",
-    "不知道"
+    "大学附近"
   ],
   "dlg-4": [
     "Nghe hội thoại 4 (明天小明去超市，小红也去吗？)",
