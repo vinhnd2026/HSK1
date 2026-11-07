@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -640,6 +640,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="去|。|你|吗|他|工作|去|公司|在|他|工作|？|，|工作"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="两杯奶茶一共十块钱。">
+<div><b>Câu 4:</b> Hai cốc trà sữa tổng cộng mười đồng.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="。|杯|十|块|两|奶茶|一共|钱"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu HSK 1</span></h2>
@@ -649,10 +655,10 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 4)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>对<rt>Duì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>工<rt>gōng</rt></ruby><ruby>作<rt>zuò</rt></ruby><ruby>了<rt>le</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>司<rt>sī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>大<rt>dà</rt></ruby>。 <ruby>老<rt>Lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>教<rt>jiāo</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</p>
+<p class="read-para-text"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>司<rt>sī</rt></ruby><ruby>工<rt>gōng</rt></ruby><ruby>作<rt>zuò</rt></ruby>。 <ruby>他<rt>Tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>司<rt>sī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>大<rt>dà</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>他<rt>Tā</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>司<rt>sī</rt></ruby><ruby>教<rt>jiāo</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["对，我是老师。", "我去工作了。", "我的公司很大。", "老师教汉语。", "汉语老师很好。"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["我的汉语老师在公司工作。", "他的公司很大，也很好。", "他在公司教汉语，我学习汉语。", "我觉得学习汉语对我很好。", "我喜欢我的汉语老师。"];</script>
 <div class="reading-Controls">
 <button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
 <button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
@@ -661,34 +667,34 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
 <div class="reading-help" id="read-help">
-<div class="read-para-trans"><p>Đúng, tôi là thầy giáo. Tôi đi làm rồi. Công ty của tôi rất lớn. Thầy giáo dạy tiếng Hán. Thầy giáo tiếng Hán rất tốt.</p></div>
+<div class="read-para-trans"><p>Thầy giáo tiếng Hán của tôi làm việc ở công ty. Công ty của anh ấy rất lớn, cũng rất tốt. Anh ấy dạy tiếng Hán ở công ty, tôi học tiếng Hán. Tôi cảm thấy học tiếng Hán rất tốt cho tôi. Tôi thích thầy giáo tiếng Hán của tôi.</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
-<div class="read-q-head"><span class="read-q-num">1</span><span>谁去工作了？</span></div>
+<div class="read-q-head"><span class="read-q-num">1</span><span>汉语老师在哪儿工作？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 我去工作了。')">A. 我</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去工作了。')">B. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去工作了。')">C. 他</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去工作了。')">D. 你</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 我的汉语老师在公司工作。')">A. 公司</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我的汉语老师在公司工作。')">B. 大学</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我的汉语老师在公司工作。')">C. 广场</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我的汉语老师在公司工作。')">D. 学校</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-2">
-<div class="read-q-head"><span class="read-q-num">2</span><span>谁的公司很大？</span></div>
+<div class="read-q-head"><span class="read-q-num">2</span><span>汉语老师的公司大不大？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 我的公司很大。')">A. 我</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 我的公司很大。')">B. 你</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 我的公司很大。')">C. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 我的公司很大。')">D. 他</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 他的公司很大，也很好。')">A. 很大，也很好</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 他的公司很大，也很好。')">B. 很小</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 他的公司很大，也很好。')">C. 很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 他的公司很大，也很好。')">D. 很远</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-3">
-<div class="read-q-head"><span class="read-q-num">3</span><span>老师教什么？</span></div>
+<div class="read-q-head"><span class="read-q-num">3</span><span>学习汉语对我好吗？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 老师教汉语。')">A. 钱</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 老师教汉语。')">B. 东西</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 老师教汉语。')">C. 茶</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 老师教汉语。')">D. 汉语</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我觉得学习汉语对我很好。')">A. 很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我觉得学习汉语对我很好。')">B. 对我不好</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我觉得学习汉语对我很好。')">C. 很远</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 我觉得学习汉语对我很好。')">D. 对我很好</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -786,7 +792,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -807,7 +813,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 4 (Ngữ pháp):</b> 1. A — 两杯茶一共多少钱？ &nbsp;|&nbsp; 2. A — 一共多少钱？</p>
 <p><b>Bài 5 (Đoạn văn):</b> 对 → 工作 → 公司 → 汉语 → 教</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 对，老师教汉语，老师是大学老师吗？<br>2. 你的公司很大，我的公司很小，你去工作吗？<br>3. 他去工作，你去工作吗？他在公司工作。</p>
-<p><b>Bài 7 (Đọc hiểu):</b> 1. A — 我 &nbsp;|&nbsp; 2. A — 我 &nbsp;|&nbsp; 3. D — 汉语</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. A — 公司 &nbsp;|&nbsp; 2. A — 很大，也很好 &nbsp;|&nbsp; 3. D — 对我很好</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 大学 &nbsp; 2. A — 他很高兴 &nbsp; 3. C — 可以，他教汉语 &nbsp; 4. B — 公司</p>
 </details>
 </div>
@@ -817,7 +823,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'hsk1-Day-16';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (小)",
@@ -911,17 +917,21 @@ var ITEM_INFO = {
     "Sắp xếp câu 3",
     "他去工作，你去工作吗？他在公司工作。"
   ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "两杯奶茶一共十块钱。"
+  ],
   "read-1": [
     "Đọc hiểu câu 1",
-    "A — 我"
+    "A — 公司"
   ],
   "read-2": [
     "Đọc hiểu câu 2",
-    "A — 我"
+    "A — 很大，也很好"
   ],
   "read-3": [
     "Đọc hiểu câu 3",
-    "D — 汉语"
+    "D — 对我很好"
   ],
   "dlg-1": [
     "Nghe hội thoại 1 (小明在哪儿工作？)",
