@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -611,6 +611,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="去|？|学校|吗|你|又|明天|去|，|？|怎么样|又|我|学校"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="这个饭店又大又有名，你喜欢吗？">
+<div><b>Câu 4:</b> Nhà hàng này vừa to vừa nổi tiếng, bạn có thích không?</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="吗|又|喜欢|这个|又|有名|饭店|？|大|你|，"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu HSK 1</span></h2>
@@ -620,10 +626,10 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 4)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>名<rt>míng</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>了<rt>le</rt></ruby>。 <ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>贵<rt>guì</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>你<rt>Nǐ</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>？ <ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</p>
+<p class="read-para-text"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>名<rt>míng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby>。 <ruby>饭<rt>Fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>菜<rt>cài</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>便<rt>pián</rt></ruby><ruby>宜<rt>yí</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>走<rt>zǒu</rt></ruby><ruby>路<rt>lù</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby>。 <ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？ <ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>又<rt>yòu</rt></ruby><ruby>去<rt>qù</rt></ruby>。</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["这个饭店很有名。", "我又去学校了。", "这个又贵又好。", "你怎么去学校？", "这个怎么样？"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["这个饭店非常有名，我很喜欢。", "饭店的菜又便宜又好吃。", "我怎么去饭店？我走路去饭店。", "你觉得这个饭店怎么样？", "我觉得饭店很好，明天又去。"];</script>
 <div class="reading-Controls">
 <button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
 <button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
@@ -632,34 +638,34 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
 <div class="reading-help" id="read-help">
-<div class="read-para-trans"><p>Nhà hàng này rất nổi tiếng. Tôi lại đi học rồi. Cái này vừa đắt vừa tốt. Bạn đi học bằng cách nào? Cái này thế nào?</p></div>
+<div class="read-para-trans"><p>Nhà hàng này rất nổi tiếng, tôi rất thích. Món ăn của nhà hàng vừa rẻ vừa ngon. Tôi đến nhà hàng bằng cách nào? Tôi đi bộ đến nhà hàng. Bạn cảm thấy nhà hàng này thế nào? Tôi cảm thấy nhà hàng rất tốt, ngày mai lại đến.</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
-<div class="read-q-head"><span class="read-q-num">1</span><span>哪个饭店很有名？</span></div>
+<div class="read-q-head"><span class="read-q-num">1</span><span>这个饭店怎么样？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这个饭店很有名。')">A. 广场</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这个饭店很有名。')">B. 那个</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 这个饭店很有名。')">C. 这个</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这个饭店很有名。')">D. 书店</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这个饭店非常有名，我很喜欢。')">A. 很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这个饭店非常有名，我很喜欢。')">B. 很远</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 这个饭店非常有名，我很喜欢。')">C. 非常有名</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这个饭店非常有名，我很喜欢。')">D. 太大了</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-2">
-<div class="read-q-head"><span class="read-q-num">2</span><span>谁又去学校了？</span></div>
+<div class="read-q-head"><span class="read-q-num">2</span><span>饭店的菜怎么样？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 我又去学校了。')">A. 他</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 我又去学校了。')">B. 我</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 我又去学校了。')">C. 你</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 我又去学校了。')">D. 老师</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 饭店的菜又便宜又好吃。')">A. 又便宜又贵</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 饭店的菜又便宜又好吃。')">B. 又便宜又好吃</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 饭店的菜又便宜又好吃。')">C. 又贵又好吃</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 饭店的菜又便宜又好吃。')">D. 很远</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-3">
-<div class="read-q-head"><span class="read-q-num">3</span><span>这个又贵又怎么样？</span></div>
+<div class="read-q-head"><span class="read-q-num">3</span><span>我怎么去饭店？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 这个又贵又好。')">A. 又远</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 这个又贵又好。')">B. 又大</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 这个又贵又好。')">C. 又小</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 这个又贵又好。')">D. 又好</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我怎么去饭店？我走路去饭店。')">A. 火车</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我怎么去饭店？我走路去饭店。')">B. 打车</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我怎么去饭店？我走路去饭店。')">C. 地铁</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 我怎么去饭店？我走路去饭店。')">D. 走路</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -756,7 +762,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -777,7 +783,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 4 (Ngữ pháp):</b> 1. A — 好吃 &nbsp;|&nbsp; 2. 这杯奶茶又便宜又好吃。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 有名 → 又 → 又…… → 怎么 → 怎么样</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 你怎么去饭店？饭店很有名，你喜欢饭店吗？<br>2. 这个饭店又便宜又好吃，很有名，你喜欢吗？明天去，好吗？<br>3. 明天怎么样？我又去学校，你又去学校吗？</p>
-<p><b>Bài 7 (Đọc hiểu):</b> 1. C — 这个 &nbsp;|&nbsp; 2. B — 我 &nbsp;|&nbsp; 3. D — 又好</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. C — 非常有名 &nbsp;|&nbsp; 2. B — 又便宜又好吃 &nbsp;|&nbsp; 3. D — 走路</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 超市对面 &nbsp; 2. D — 很好 &nbsp; 3. A — 喜欢 &nbsp; 4. B — 她去饭店</p>
 </details>
 </div>
@@ -787,7 +793,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'hsk1-Day-31';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (好吃)",
@@ -881,17 +887,21 @@ var ITEM_INFO = {
     "Sắp xếp câu 3",
     "明天怎么样？我又去学校，你又去学校吗？"
   ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "这个饭店又大又有名，你喜欢吗？"
+  ],
   "read-1": [
     "Đọc hiểu câu 1",
-    "C — 这个"
+    "C — 非常有名"
   ],
   "read-2": [
     "Đọc hiểu câu 2",
-    "B — 我"
+    "B — 又便宜又好吃"
   ],
   "read-3": [
     "Đọc hiểu câu 3",
-    "D — 又好"
+    "D — 走路"
   ],
   "dlg-1": [
     "Nghe hội thoại 1 (饭店在哪儿？)",

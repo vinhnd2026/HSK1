@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -624,6 +624,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="电影|去|吗|看|几|有|人|看|去|你们|今天|个|？|电影|？"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="今天几个人去见朋友？你有空儿吗？">
+<div><b>Câu 4:</b> Hôm nay mấy người đi gặp bạn? Bạn có rảnh không?</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="去|有空儿|今天|？|见|朋友|你|？|吗|几|个|人"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu HSK 1</span></h2>
@@ -633,10 +639,10 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 4)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>你<rt>Nǐ</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>人<rt>rén</rt></ruby>？ <ruby>我<rt>Wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>见<rt>jiàn</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>空<rt>kòng</rt></ruby><ruby>儿<rt>er</rt></ruby><ruby>吗<rt>ma</rt></ruby>？ <ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。</p>
+<p class="read-para-text"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>见<rt>jiàn</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。 <ruby>老<rt>Lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>问<rt>wèn</rt></ruby>：<ruby>你<rt>Nǐ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>空<rt>kòng</rt></ruby><ruby>儿<rt>er</rt></ruby><ruby>吗<rt>ma</rt></ruby>？ <ruby>好<rt>Hǎo</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>空<rt>kòng</rt></ruby><ruby>儿<rt>er</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。 <ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby>？ <ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>，<ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["今天很好。", "你家有几个人？", "我去见老师。", "我看电影，你有空儿吗？", "今天我去看电影。"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["今天我去学校见老师。", "老师问：你今天有空儿吗？", "好，我有空儿，我去看电影。", "今天看电影的人有几个？", "我喜欢看电影，今天很高兴。"];</script>
 <div class="reading-Controls">
 <button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
 <button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
@@ -645,34 +651,34 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
 <div class="reading-help" id="read-help">
-<div class="read-para-trans"><p>Hôm nay rất tốt. Nhà bạn có mấy người? Tôi đi gặp thầy giáo. Tôi xem phim, bạn có rảnh không? Hôm nay tôi đi xem phim.</p></div>
+<div class="read-para-trans"><p>Hôm nay tôi đến trường gặp thầy giáo. Thầy giáo hỏi: Hôm nay bạn có rảnh không? Được, tôi có thời gian rảnh, tôi đi xem phim. Hôm nay có mấy người xem phim? Tôi thích xem phim, hôm nay rất vui.</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
-<div class="read-q-head"><span class="read-q-num">1</span><span>我去见谁？</span></div>
+<div class="read-q-head"><span class="read-q-num">1</span><span>今天我去学校见谁？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 我去见老师。')">A. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去见老师。')">B. 朋友</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去见老师。')">C. 学生</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去见老师。')">D. 小姐</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 今天我去学校见老师。')">A. 老师</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天我去学校见老师。')">B. 朋友</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天我去学校见老师。')">C. 学生</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天我去学校见老师。')">D. 小姐</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-2">
-<div class="read-q-head"><span class="read-q-num">2</span><span>今天我去看什么？</span></div>
+<div class="read-q-head"><span class="read-q-num">2</span><span>老师问我今天有什么？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天我去看电影。')">A. 苹果</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天我去看电影。')">B. 米饭</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天我去看电影。')">C. 东西</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 今天我去看电影。')">D. 电影</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 老师问：你今天有空儿吗？')">A. 茶</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 老师问：你今天有空儿吗？')">B. 钱</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 老师问：你今天有空儿吗？')">C. 东西</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 老师问：你今天有空儿吗？')">D. 空儿</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-3">
-<div class="read-q-head"><span class="read-q-num">3</span><span>谁家有几个人？</span></div>
+<div class="read-q-head"><span class="read-q-num">3</span><span>我今天去做什么？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 你家有几个人？')">A. 他</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 你家有几个人？')">B. 你</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 你家有几个人？')">C. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 你家有几个人？')">D. 我</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 好，我有空儿，我去看电影。')">A. 买东西</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 好，我有空儿，我去看电影。')">B. 看电影</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 好，我有空儿，我去看电影。')">C. 去银行</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 好，我有空儿，我去看电影。')">D. 吃米饭</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -769,7 +775,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -790,7 +796,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 4 (Ngữ pháp):</b> 1. A — 你有几杯茶？ &nbsp;|&nbsp; 2. A — 多少</p>
 <p><b>Bài 5 (Đoạn văn):</b> 几 → 见 → 今天 → 看 → 空儿</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 今天我去见老师，你去吗？你今天有空儿吗？<br>2. 你有空儿吗？今天我去看电影，你去看电影吗？<br>3. 今天有几个人去看电影？你们去看电影吗？</p>
-<p><b>Bài 7 (Đọc hiểu):</b> 1. A — 老师 &nbsp;|&nbsp; 2. D — 电影 &nbsp;|&nbsp; 3. B — 你</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. A — 老师 &nbsp;|&nbsp; 2. D — 空儿 &nbsp;|&nbsp; 3. B — 看电影</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. A — 她的朋友 &nbsp; 2. D — 她去见朋友 &nbsp; 3. B — 不去 &nbsp; 4. C — 不知道</p>
 </details>
 </div>
@@ -800,7 +806,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'hsk1-Day-24';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (右)",
@@ -894,17 +900,21 @@ var ITEM_INFO = {
     "Sắp xếp câu 3",
     "今天有几个人去看电影？你们去看电影吗？"
   ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "今天几个人去见朋友？你有空儿吗？"
+  ],
   "read-1": [
     "Đọc hiểu câu 1",
     "A — 老师"
   ],
   "read-2": [
     "Đọc hiểu câu 2",
-    "D — 电影"
+    "D — 空儿"
   ],
   "read-3": [
     "Đọc hiểu câu 3",
-    "B — 你"
+    "B — 看电影"
   ],
   "dlg-1": [
     "Nghe hội thoại 1 (小红今天去见谁？)",
