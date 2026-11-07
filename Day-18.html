@@ -571,6 +571,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('我有五个苹果。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>五<rt>wǔ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>苹<rt>píng</rt></ruby><ruby>果<rt>guǒ</rt></ruby>。</span> <span class="hint">(Tôi có năm quả táo.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他有十个朋友。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>十<rt>shí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby>。</span> <span class="hint">(Anh ấy có mười người bạn.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('她有三个学生。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>她<rt>Tā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>三<rt>sān</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。</span> <span class="hint">(Cô ấy có ba học sinh.)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Sửa câu sai sau: 我有苹果三。:</b></div>
 <div class="mc-options">
@@ -602,22 +603,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="她是学生，她学汉语。">
-<div><b>Câu 1:</b> Cô ấy là học sinh, cô ấy học tiếng Hán.</div>
+<div class="scramble-box" id="scr-1" data-target="她是学生，她学汉语，我也学汉语。">
+<div><b>Câu 1:</b> Cô ấy là học sinh, cô ấy học tiếng Hán, tôi cũng học tiếng Hán.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="，|学|她|。|她|学生|是|汉语"></div>
+<div class="word-bank" data-words="，|，|学|学|是|。|也|我|汉语|她|她|学生|汉语"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="我的朋友吃苹果吗？">
-<div><b>Câu 2:</b> Bạn của tôi ăn táo không?</div>
+<div class="scramble-box" id="scr-2" data-target="我的朋友吃苹果吗？这个苹果很好，我也吃苹果。">
+<div><b>Câu 2:</b> Bạn của tôi ăn táo không? Quả táo này rất ngon, tôi cũng ăn táo.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="吃|苹果|吗|？|朋友|我的"></div>
+<div class="word-bank" data-words="吗|很|这个|苹果|苹果|我的|苹果|吃|。|好|吃|我|朋友|，|？|也"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="我是学生，我的朋友也是学生。">
-<div><b>Câu 3:</b> Tôi là học sinh, bạn của tôi cũng là học sinh.</div>
+<div class="scramble-box" id="scr-3" data-target="我是学生，我的朋友也是学生，她是我的朋友吗？">
+<div><b>Câu 3:</b> Tôi là học sinh, bạn của tôi cũng là học sinh, cô ấy là bạn của tôi phải không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="是|学生|，|我|我的|。|学生|是|朋友|也"></div>
+<div class="word-bank" data-words="，|吗|我|朋友|？|也|学生|是|她|学生|是|我的|我的|，|朋友|是"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -785,7 +786,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 朋友 = péngyǒu · 苹果 = píngguǒ · 她 = tā · 学 = xué · 学生 = xuéshēng</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. B — 我有三个苹果。 &nbsp;|&nbsp; 2. 学校有三个学生。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 朋友 → 苹果 → 她 → 学 → 学生</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 她是学生，她学汉语。<br>2. 我的朋友吃苹果吗？<br>3. 我是学生，我的朋友也是学生。</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 她是学生，她学汉语，我也学汉语。<br>2. 我的朋友吃苹果吗？这个苹果很好，我也吃苹果。<br>3. 我是学生，我的朋友也是学生，她是我的朋友吗？</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. D — 她 &nbsp;|&nbsp; 2. B — 这个苹果 &nbsp;|&nbsp; 3. C — 她</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. B — 不贵 &nbsp; 2. D — 小明，小红 &nbsp; 3. C — 去大学学习 &nbsp; 4. A — 她去学习</p>
 </details>
@@ -880,15 +881,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "她是学生，她学汉语。"
+    "她是学生，她学汉语，我也学汉语。"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "我的朋友吃苹果吗？"
+    "我的朋友吃苹果吗？这个苹果很好，我也吃苹果。"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "我是学生，我的朋友也是学生。"
+    "我是学生，我的朋友也是学生，她是我的朋友吗？"
   ],
   "read-1": [
     "Đọc hiểu câu 1",

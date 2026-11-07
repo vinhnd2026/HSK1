@@ -587,6 +587,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('学校很近。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>学<rt>Xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>近<rt>jìn</rt></ruby>。</span> <span class="hint">(Trường rất gần.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他家很远。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>远<rt>yuǎn</rt></ruby>。</span> <span class="hint">(Nhà anh ấy rất xa.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('你家很近吗？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>近<rt>jìn</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span> <span class="hint">(Nhà bạn có gần không?)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Điền từ đúng vào chỗ trống:</b> 学校很<span class="gram-blank">......</span>。</div>
 <div class="mc-options">
@@ -621,22 +622,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="我的男朋友是留学生。">
-<div><b>Câu 1:</b> Bạn trai của tôi là du học sinh.</div>
+<div class="scramble-box" id="scr-1" data-target="我的男朋友是留学生，他是男老师吗？他教汉语吗？">
+<div><b>Câu 1:</b> Bạn trai của tôi là du học sinh, anh ấy là thầy giáo phải không? Anh ấy dạy tiếng Hán không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="男朋友|。|是|我的|留学生"></div>
+<div class="word-bank" data-words="？|是|男朋友|是|留学生|，|男|他|吗|？|吗|他|教|老师|我的|汉语"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="我是女老师，他是男老师。">
-<div><b>Câu 2:</b> Tôi là cô giáo, anh ấy là thầy giáo.</div>
+<div class="scramble-box" id="scr-2" data-target="我是女老师，他是男老师，我的女朋友也是老师吗？">
+<div><b>Câu 2:</b> Tôi là cô giáo, anh ấy là thầy giáo, bạn gái của tôi cũng là cô giáo phải không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="是|我|老师|，|。|是|女|男|老师|他"></div>
+<div class="word-bank" data-words="老师|老师|也|女|女朋友|？|是|，|，|我|老师|是|吗|男|是|他|我的"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="我的女朋友是留学生吗？">
-<div><b>Câu 3:</b> Bạn gái của tôi là du học sinh phải không?</div>
+<div class="scramble-box" id="scr-3" data-target="我的女朋友是留学生吗？我的女朋友是女老师，你认识我的女朋友吗？">
+<div><b>Câu 3:</b> Bạn gái của tôi là du học sinh phải không? Bạn gái của tôi là cô giáo, bạn có biết bạn gái của tôi không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="吗|？|女朋友|是|留学生|我的"></div>
+<div class="word-bank" data-words="，|我的|我的|老师|吗|吗|是|是|女朋友|我的|你|认识|女|女朋友|？|女朋友|留学生|？"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -710,12 +711,12 @@ img, svg { max-width: 100%; }
 <div class="dlg-script" id="dlg-script" style="display:none">
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>留<rt>liú</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>留<rt>liú</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>留<rt>liú</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。</span><div class="dlg-vi">Chào bạn! Bạn là lưu học sinh à? Bạn là lưu học sinh, tôi cũng là lưu học sinh.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>留<rt>liú</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>留<rt>liú</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。</span><div class="dlg-vi">Chào bạn! Tôi là lưu học sinh. Còn bạn? Bạn là lưu học sinh không? Tôi học tiếng Trung.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>留<rt>liú</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Tôi cũng là lưu học sinh. Bạn có bạn trai không? Tôi có bạn trai, còn bạn?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>女<rt>nǚ</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Bạn có bạn trai không? Tôi không có bạn gái, còn bạn?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby>。<ruby>他<rt>Tā</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>留<rt>liú</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。</span><div class="dlg-vi">Tôi có bạn trai. Anh ấy cũng là lưu học sinh. Bạn trai của tôi học tiếng Trung ở trường đại học.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>男<rt>nán</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Bạn trai của bạn học ở đâu? Bạn trai của bạn học tiếng Trung ở trường đại học không?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>工<rt>gōng</rt></ruby><ruby>作<rt>zuò</rt></ruby>。<ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>忙<rt>máng</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Anh ấy học tiếng Trung ở trường đại học, cũng làm việc. Anh ấy rất bận, cũng rất vui, còn bạn?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>忙<rt>máng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>忙<rt>máng</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>女<rt>nǚ</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Anh ấy bận lắm à? Anh ấy rất bận, cũng rất vui, bạn có bạn gái không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>忙<rt>máng</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>女<rt>nǚ</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>女<rt>nǚ</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Anh ấy rất bận, cũng rất vui. Bạn có bạn gái không? Tôi không có bạn gái, còn bạn?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>忙<rt>máng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>忙<rt>máng</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Anh ấy bận lắm à? Anh ấy rất bận, cũng rất vui, còn bạn?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>忙<rt>máng</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>女<rt>nǚ</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Anh ấy rất bận, cũng rất vui. Bạn có bạn gái không?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>女<rt>nǚ</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Tôi không có bạn gái. Tôi học tiếng Trung. Tôi rất thích học tiếng Trung, còn bạn?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。</span><div class="dlg-vi">Bạn thích học tiếng Trung không? Bạn thích học tiếng Trung, tôi cũng rất thích học tiếng Trung.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。</span><div class="dlg-vi">Tôi rất thích học tiếng Trung. Còn bạn? Bạn thích học tiếng Trung không? Tôi rất thích tiếng Trung.</div></div>
@@ -805,7 +806,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 留学生 = liúxuéshēng · 男 = nán · 男朋友 = nánpéngyǒu · 女 = nǚ · 女朋友 = nǚpéngyǒu</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. A — 远 &nbsp;|&nbsp; 2. A — 学校很远。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 留学生 → 男 → 男朋友 → 女 → 女朋友</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我的男朋友是留学生。<br>2. 我是女老师，他是男老师。<br>3. 我的女朋友是留学生吗？</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我的男朋友是留学生，他是男老师吗？他教汉语吗？<br>2. 我是女老师，他是男老师，我的女朋友也是老师吗？<br>3. 我的女朋友是留学生吗？我的女朋友是女老师，你认识我的女朋友吗？</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. C — 我 &nbsp;|&nbsp; 2. B — 他 &nbsp;|&nbsp; 3. C — 他</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 是，他也是留学生 &nbsp; 2. A — 不是，小红有男朋友 &nbsp; 3. B — 汉语 &nbsp; 4. D — 他没有女朋友</p>
 </details>
@@ -900,15 +901,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "我的男朋友是留学生。"
+    "我的男朋友是留学生，他是男老师吗？他教汉语吗？"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "我是女老师，他是男老师。"
+    "我是女老师，他是男老师，我的女朋友也是老师吗？"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "我的女朋友是留学生吗？"
+    "我的女朋友是留学生吗？我的女朋友是女老师，你认识我的女朋友吗？"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
@@ -2734,7 +2735,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
-var DLG_LINES = [{"sp": "ming", "zh": "你好！你是留学生吗？你是留学生，我也是留学生。"}, {"sp": "hong", "zh": "你好！我是留学生。你呢？你是留学生吗？我学习汉语。"}, {"sp": "ming", "zh": "我也是留学生。你有男朋友吗？我有男朋友，你呢？"}, {"sp": "hong", "zh": "我有男朋友。他也是留学生。我的男朋友在大学学习汉语。"}, {"sp": "ming", "zh": "你的男朋友在哪儿学习？你的男朋友在大学学习汉语吗？"}, {"sp": "hong", "zh": "他在大学学习汉语，也工作。他很忙，也很高兴，你呢？"}, {"sp": "ming", "zh": "他很忙吗？他很忙，也很高兴，你有女朋友吗？"}, {"sp": "hong", "zh": "他很忙，也很高兴。你有女朋友吗？我没有女朋友，你呢？"}, {"sp": "ming", "zh": "我没有女朋友。我学习汉语。我很喜欢学习汉语，你呢？"}, {"sp": "hong", "zh": "你喜欢学习汉语吗？你喜欢学习汉语，我也很喜欢学习汉语。"}, {"sp": "ming", "zh": "我很喜欢学习汉语。你呢？你喜欢学习汉语吗？我很喜欢汉语。"}, {"sp": "hong", "zh": "我也很喜欢学习汉语。明天你去大学吗？明天我去大学，你去吗？"}, {"sp": "ming", "zh": "明天我去大学。你呢？明天我去大学学习汉语，你去吗？"}, {"sp": "hong", "zh": "明天我也去大学。再见！明天去大学学习，再见！"}, {"sp": "ming", "zh": "再见！明天我去大学，再见！我很高兴，再见！"}];
+var DLG_LINES = [{"sp": "ming", "zh": "你好！你是留学生吗？你是留学生，我也是留学生。"}, {"sp": "hong", "zh": "你好！我是留学生。你呢？你是留学生吗？我学习汉语。"}, {"sp": "ming", "zh": "你有男朋友吗？我没有女朋友，你呢？"}, {"sp": "hong", "zh": "我有男朋友。他也是留学生。我的男朋友在大学学习汉语。"}, {"sp": "ming", "zh": "你的男朋友在哪儿学习？你的男朋友在大学学习汉语吗？"}, {"sp": "hong", "zh": "他在大学学习汉语，也工作。他很忙，也很高兴，你呢？"}, {"sp": "ming", "zh": "他很忙吗？他很忙，也很高兴，你呢？"}, {"sp": "hong", "zh": "他很忙，也很高兴。你有女朋友吗？"}, {"sp": "ming", "zh": "我没有女朋友。我学习汉语。我很喜欢学习汉语，你呢？"}, {"sp": "hong", "zh": "你喜欢学习汉语吗？你喜欢学习汉语，我也很喜欢学习汉语。"}, {"sp": "ming", "zh": "我很喜欢学习汉语。你呢？你喜欢学习汉语吗？我很喜欢汉语。"}, {"sp": "hong", "zh": "我也很喜欢学习汉语。明天你去大学吗？明天我去大学，你去吗？"}, {"sp": "ming", "zh": "明天我去大学。你呢？明天我去大学学习汉语，你去吗？"}, {"sp": "hong", "zh": "明天我也去大学。再见！明天去大学学习，再见！"}, {"sp": "ming", "zh": "再见！明天我去大学，再见！我很高兴，再见！"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;

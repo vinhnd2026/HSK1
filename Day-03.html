@@ -540,6 +540,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('我是学生。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。</span> <span class="hint">(Tôi là học sinh.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他是中国人。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>。</span> <span class="hint">(Anh ấy là người Trung Quốc.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('你是什么人？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>人<rt>rén</rt></ruby>？</span> <span class="hint">(Bạn là người nào?)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Điền từ đúng vào chỗ trống:</b> 我<span class="gram-blank">......</span>老师。</div>
 <div class="mc-options">
@@ -573,22 +574,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="他是什么人？">
-<div><b>Câu 1:</b> Anh ấy là người thế nào?</div>
+<div class="scramble-box" id="scr-1" data-target="他是什么人？他是老师，他是中国人。">
+<div><b>Câu 1:</b> Anh ấy là người thế nào? Anh ấy là thầy giáo, anh ấy là người Trung Quốc.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="是|他|什么|人|？"></div>
+<div class="word-bank" data-words="是|他|是|他|人|是|什么|。|他|？|人|中国|老师|，"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="我是中国人，他也是中国人。">
-<div><b>Câu 2:</b> Tôi là người Trung Quốc, anh ấy cũng là người Trung Quốc.</div>
+<div class="scramble-box" id="scr-2" data-target="我是学生，他是老师，你是什么人？">
+<div><b>Câu 2:</b> Tôi là học sinh, anh ấy là thầy giáo, bạn là người thế nào?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="是|他|人|人|是|也|中国|中国|我|，|。"></div>
+<div class="word-bank" data-words="他|人|老师|，|，|是|什么|你|是|？|学生|是|我"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="你是学生，他是老师。">
-<div><b>Câu 3:</b> Bạn là học sinh, anh ấy là thầy giáo.</div>
+<div class="scramble-box" id="scr-3" data-target="我是中国人，他也是中国人，你是中国人。">
+<div><b>Câu 3:</b> Tôi là người Trung Quốc, anh ấy cũng là người Trung Quốc, bạn là người Trung Quốc.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="他|学生|，|老师|是|是|。|你"></div>
+<div class="word-bank" data-words="你|人|我|他|中国|也|人|中国|，|，|中国|是|人|是|。|是"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -761,7 +762,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 人 = rén · 什么 = shénme · 是 = shì · 他 = tā · 我 = wǒ</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. D — 是 &nbsp;|&nbsp; 2. 他是学校老师。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 人 → 什么 → 是 → 他 → 我</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 他是什么人？<br>2. 我是中国人，他也是中国人。<br>3. 你是学生，他是老师。</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 他是什么人？他是老师，他是中国人。<br>2. 我是学生，他是老师，你是什么人？<br>3. 我是中国人，他也是中国人，你是中国人。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. A — 小红 &nbsp;|&nbsp; 2. A — 是 &nbsp;|&nbsp; 3. A — 是</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 小红 &nbsp; 2. C — 中国人 &nbsp; 3. B — 老师 &nbsp; 4. A — 是</p>
 </details>
@@ -856,15 +857,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "他是什么人？"
+    "他是什么人？他是老师，他是中国人。"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "我是中国人，他也是中国人。"
+    "我是学生，他是老师，你是什么人？"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "你是学生，他是老师。"
+    "我是中国人，他也是中国人，你是中国人。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",

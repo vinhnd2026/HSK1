@@ -573,6 +573,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('我是你的老师。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。</span> <span class="hint">(Tôi là thầy giáo của bạn.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他是我的学生。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。</span> <span class="hint">(Anh ấy là học sinh của tôi.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('妈妈的朋友是老师。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>妈<rt>Mā</rt></ruby><ruby>妈<rt>ma</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby>。</span> <span class="hint">(Bạn của mẹ là thầy giáo.)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. 的 — sở hữu:</b></div>
 <div class="mc-options">
@@ -605,22 +606,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="我的老师不是中国人。">
-<div><b>Câu 1:</b> Thầy của tôi không phải là người Trung Quốc.</div>
+<div class="scramble-box" id="scr-1" data-target="我的老师不是中国人，他是老师，你呢？">
+<div><b>Câu 1:</b> Thầy của tôi không phải là người Trung Quốc, anh ấy là thầy giáo, còn bạn thì sao?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="中国|人|不|我的|老师|。|是"></div>
+<div class="word-bank" data-words="，|人|你|是|呢|不|中国|老师|，|我的|老师|是|？|他"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="他很高兴，我也很高兴。">
-<div><b>Câu 2:</b> Anh ấy rất vui, tôi cũng rất vui.</div>
+<div class="scramble-box" id="scr-2" data-target="对不起，我的东西很贵，你的东西不贵。">
+<div><b>Câu 2:</b> Xin lỗi, đồ của tôi rất đắt, đồ của bạn không đắt.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="很|也|，|。|高兴|高兴|我|他|很"></div>
+<div class="word-bank" data-words="东西|贵|很|你的|我的|，|东西|对不起|贵|，|不|。"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="对不起，你的东西很贵。">
-<div><b>Câu 3:</b> Xin lỗi, đồ của bạn rất đắt.</div>
+<div class="scramble-box" id="scr-3" data-target="你的东西很贵，我的东西不贵，你很高兴。">
+<div><b>Câu 3:</b> Đồ của bạn rất đắt, đồ của tôi không đắt, bạn rất vui.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="，|。|东西|你的|对不起|很|贵"></div>
+<div class="word-bank" data-words="贵|贵|你|你的|，|东西|不|很|，|东西|高兴|。|我的|很"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -780,7 +781,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 不 = bù · 的 = de · 对不起 = duìbùqǐ · 高兴 = gāoxìng · 贵 = guì</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. B — 他是我的老师。 &nbsp;|&nbsp; 2. B — 他是我的老师。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 不 → 的 → 对不起 → 高兴 → 贵</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我的老师不是中国人。<br>2. 他很高兴，我也很高兴。<br>3. 对不起，你的东西很贵。</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我的老师不是中国人，他是老师，你呢？<br>2. 对不起，我的东西很贵，你的东西不贵。<br>3. 你的东西很贵，我的东西不贵，你很高兴。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. A — 我 &nbsp;|&nbsp; 2. A — 我 &nbsp;|&nbsp; 3. D — 你</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 小红 &nbsp; 2. C — 小明 &nbsp; 3. B — 很高兴 &nbsp; 4. A — 很高兴</p>
 </details>
@@ -875,15 +876,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "我的老师不是中国人。"
+    "我的老师不是中国人，他是老师，你呢？"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "他很高兴，我也很高兴。"
+    "对不起，我的东西很贵，你的东西不贵。"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "对不起，你的东西很贵。"
+    "你的东西很贵，我的东西不贵，你很高兴。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",

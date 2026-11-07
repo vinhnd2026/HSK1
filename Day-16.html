@@ -589,6 +589,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('一共多少钱？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>一<rt>Yí</rt></ruby><ruby>共<rt>gòng</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>少<rt>shǎo</rt></ruby><ruby>钱<rt>qián</rt></ruby>？</span> <span class="hint">(Tổng cộng bao nhiêu tiền?)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('这饭一共多少钱？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>共<rt>gòng</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>少<rt>shǎo</rt></ruby><ruby>钱<rt>qián</rt></ruby>？</span> <span class="hint">(Cơm này tổng cộng bao nhiêu tiền?)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('两杯咖啡一共多少钱？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>两<rt>Liǎng</rt></ruby><ruby>杯<rt>bēi</rt></ruby><ruby>咖<rt>kā</rt></ruby><ruby>啡<rt>fēi</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>共<rt>gòng</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>少<rt>shǎo</rt></ruby><ruby>钱<rt>qián</rt></ruby>？</span> <span class="hint">(Hai cốc cà phê tổng cộng bao nhiêu tiền?)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. 一共 — tổng cộng:</b></div>
 <div class="mc-options">
@@ -621,22 +622,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="对，老师教汉语，我学习汉语。">
-<div><b>Câu 1:</b> Đúng, thầy giáo dạy tiếng Hán, tôi học tiếng Hán.</div>
+<div class="scramble-box" id="scr-1" data-target="对，老师教汉语，老师是大学老师吗？">
+<div><b>Câu 1:</b> Đúng, thầy giáo dạy tiếng Hán, thầy giáo là thầy giáo đại học phải không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="学习|老师|，|教|。|，|汉语|我|对|汉语"></div>
+<div class="word-bank" data-words="老师|，|大学|老师|教|吗|是|，|老师|对|汉语|？"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="你的公司很大，我的公司很小。">
-<div><b>Câu 2:</b> Công ty của bạn rất lớn, công ty của tôi rất nhỏ.</div>
+<div class="scramble-box" id="scr-2" data-target="你的公司很大，我的公司很小，你去工作吗？">
+<div><b>Câu 2:</b> Công ty của bạn rất lớn, công ty của tôi rất nhỏ, bạn đi làm không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="公司|很|你的|大|很|小|，|公司|我的|。"></div>
+<div class="word-bank" data-words="？|，|我的|公司|吗|你的|大|工作|去|很|小|很|你|，|公司"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="他去工作，你去工作吗？">
-<div><b>Câu 3:</b> Anh ấy đi làm, bạn đi làm không?</div>
+<div class="scramble-box" id="scr-3" data-target="他去工作，你去工作吗？他在公司工作。">
+<div><b>Câu 3:</b> Anh ấy đi làm, bạn đi làm không? Anh ấy làm việc ở công ty.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="你|工作|去|？|去|，|工作|他|吗"></div>
+<div class="word-bank" data-words="去|。|你|吗|他|工作|去|公司|在|他|工作|？|，|工作"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -805,7 +806,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 对 = duì · 工作 = gōngzuò · 公司 = gōngsī · 汉语 = Hànyǔ · 教 = jiāo</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. A — 两杯茶一共多少钱？ &nbsp;|&nbsp; 2. A — 一共多少钱？</p>
 <p><b>Bài 5 (Đoạn văn):</b> 对 → 工作 → 公司 → 汉语 → 教</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 对，老师教汉语，我学习汉语。<br>2. 你的公司很大，我的公司很小。<br>3. 他去工作，你去工作吗？</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 对，老师教汉语，老师是大学老师吗？<br>2. 你的公司很大，我的公司很小，你去工作吗？<br>3. 他去工作，你去工作吗？他在公司工作。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. A — 我 &nbsp;|&nbsp; 2. A — 我 &nbsp;|&nbsp; 3. D — 汉语</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 大学 &nbsp; 2. A — 他很高兴 &nbsp; 3. C — 可以，他教汉语 &nbsp; 4. B — 公司</p>
 </details>
@@ -900,15 +901,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "对，老师教汉语，我学习汉语。"
+    "对，老师教汉语，老师是大学老师吗？"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "你的公司很大，我的公司很小。"
+    "你的公司很大，我的公司很小，你去工作吗？"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "他去工作，你去工作吗？"
+    "他去工作，你去工作吗？他在公司工作。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",

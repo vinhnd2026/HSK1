@@ -520,6 +520,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他家有几个人？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>人<rt>rén</rt></ruby>？</span> <span class="hint">(Nhà anh ấy có mấy người?)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('你有几个朋友？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby>？</span> <span class="hint">(Bạn có mấy người bạn?)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('这是几个学生？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>？</span> <span class="hint">(Đây là mấy học sinh?)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Lượng từ 个:</b></div>
 <div class="mc-options">
@@ -552,22 +553,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="你饿了吗？我饿了。">
-<div><b>Câu 1:</b> Bạn đói rồi à? Tôi đói rồi.</div>
+<div class="scramble-box" id="scr-1" data-target="你饿了吗？我饿了，我吃东西，你吃东西吗？">
+<div><b>Câu 1:</b> Bạn đói rồi à? Tôi đói rồi, tôi ăn đồ ăn, bạn ăn đồ ăn không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="我|。|你|了|饿|了|饿|吗|？"></div>
+<div class="word-bank" data-words="吗|了|了|吃|？|我|你|吃|我|，|饿|？|你|东西|吗|东西|饿|，"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="这个东西很大，你吃吗？">
-<div><b>Câu 2:</b> Cái này rất to, bạn ăn không?</div>
+<div class="scramble-box" id="scr-2" data-target="这个东西很大，你吃吗？你还吃东西吗？">
+<div><b>Câu 2:</b> Cái này rất to, bạn ăn không? Bạn còn ăn đồ ăn không?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="吃|很|吗|东西|？|你|这个|大|，"></div>
+<div class="word-bank" data-words="这个|你|东西|大|，|东西|很|还|？|？|吃|你|吃|吗|吗"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="我还吃东西，你还吃东西吗？">
-<div><b>Câu 3:</b> Tôi còn ăn đồ ăn, bạn còn ăn đồ ăn không?</div>
+<div class="scramble-box" id="scr-3" data-target="这个学生饿了，他吃东西，你的学生饿了吗？">
+<div><b>Câu 3:</b> Học sinh này đói rồi, anh ấy ăn đồ ăn, học sinh của bạn đói rồi à?</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="我|，|还|吃|东西|你|吗|？|东西|还|吃"></div>
+<div class="word-bank" data-words="吃|东西|了|你的|学生|了|这个|饿|他|，|？|吗|学生|饿|，"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -579,10 +580,10 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 4)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>你<rt>Nǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby>？ <ruby>我<rt>Wǒ</rt></ruby><ruby>饿<rt>è</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>。 <ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>大<rt>dà</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>。 <ruby>你<rt>Nǐ</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>饿<rt>è</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</p>
+<p class="read-para-text"><ruby>你<rt>Nǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby>？ <ruby>我<rt>Wǒ</rt></ruby><ruby>饿<rt>è</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>。 <ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>大<rt>dà</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？ <ruby>你<rt>Nǐ</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>饿<rt>è</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["你吃什么？", "我饿了，我吃东西。", "这个很大。", "我还知道，你也吃东西。", "你还饿吗？"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["你吃什么？", "我饿了，我吃东西。", "这个很大。", "我吃东西，你也吃东西，好吗？", "你还饿吗？"];</script>
 <div class="reading-Controls">
 <button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
 <button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
@@ -591,7 +592,7 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
 <div class="reading-help" id="read-help">
-<div class="read-para-trans"><p>Bạn ăn gì? Tôi đói rồi, tôi ăn đồ ăn. Cái này rất to. Tôi còn biết, bạn cũng ăn đồ ăn. Bạn còn đói không?</p></div>
+<div class="read-para-trans"><p>Bạn ăn gì? Tôi đói rồi, tôi ăn đồ ăn. Cái này rất to. Tôi ăn đồ ăn, bạn cũng ăn đồ ăn nhé? Bạn còn đói không?</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
@@ -613,12 +614,12 @@ img, svg { max-width: 100%; }
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-3">
-<div class="read-q-head"><span class="read-q-num">3</span><span>谁还知道？</span></div>
+<div class="read-q-head"><span class="read-q-num">3</span><span>你吃东西吗？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我还知道，你也吃东西。')">A. 你</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我还知道，你也吃东西。')">B. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我还知道，你也吃东西。')">C. 他</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 我还知道，你也吃东西。')">D. 我</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我吃东西，你也吃东西，好吗？')">A. 不吃</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我吃东西，你也吃东西，好吗？')">B. 很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我吃东西，你也吃东西，好吗？')">C. 很好</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 我吃东西，你也吃东西，好吗？')">D. 吃</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -732,8 +733,8 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 吃 = chī · 大 = dà · 饿 = è · 个 = gè · 还 = hái</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. B — 你家有几个人？ &nbsp;|&nbsp; 2. A — 你家有几个人？</p>
 <p><b>Bài 5 (Đoạn văn):</b> 吃 → 大 → 饿 → 个 → 还</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 你饿了吗？我饿了。<br>2. 这个东西很大，你吃吗？<br>3. 我还吃东西，你还吃东西吗？</p>
-<p><b>Bài 7 (Đọc hiểu):</b> 1. D — 我 &nbsp;|&nbsp; 2. B — 这个 &nbsp;|&nbsp; 3. D — 我</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 你饿了吗？我饿了，我吃东西，你吃东西吗？<br>2. 这个东西很大，你吃吗？你还吃东西吗？<br>3. 这个学生饿了，他吃东西，你的学生饿了吗？</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. D — 我 &nbsp;|&nbsp; 2. B — 这个 &nbsp;|&nbsp; 3. D — 吃</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 很饿 &nbsp; 2. B — 他很饿 &nbsp; 3. A — 小明家 &nbsp; 4. D — 他很高兴</p>
 </details>
 </div>
@@ -827,15 +828,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "你饿了吗？我饿了。"
+    "你饿了吗？我饿了，我吃东西，你吃东西吗？"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "这个东西很大，你吃吗？"
+    "这个东西很大，你吃吗？你还吃东西吗？"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "我还吃东西，你还吃东西吗？"
+    "这个学生饿了，他吃东西，你的学生饿了吗？"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
@@ -847,7 +848,7 @@ var ITEM_INFO = {
   ],
   "read-3": [
     "Đọc hiểu câu 3",
-    "D — 我"
+    "D — 吃"
   ],
   "dlg-1": [
     "Nghe hội thoại 1 (小红饿吗？)",
