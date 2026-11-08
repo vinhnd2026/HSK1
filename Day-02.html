@@ -277,7 +277,7 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="flashNext()">Tiếp ➡</button>
 <button class="btn-sm" onclick="flashReshuffle()">🔀 Trộn lại</button>
 <span class="flash-count" id="flash-count"></span>
-</div></div>
+</div></div><style>#flash-wrap .flash-card{height:216px}#flash-wrap .flash-ex{margin-top:7px;font-size:1.02rem;line-height:2;color:#1e3a8a}#flash-wrap .flash-ex ruby rt{font-size:.52em;color:#2563eb}#flash-wrap .flash-ex-label{font-size:.8rem;font-weight:700;color:#64748b}#flash-wrap .flash-ex-vi{font-size:.86rem;color:#475569}</style>
 <div class="card">
 <h2>1. 国 — guó · quốc <span class="badge">Danh từ</span></h2>
 <div class="word-meaning">Nghĩa: <b>nước; quốc gia</b></div>
@@ -651,7 +651,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>🎧 Bài 8: Nghe hội thoại – Suy luận <span class="badge">Nghe hiểu HSK 1</span></h2>
-<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (6 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小明 và Tiểu Hồng gặp nhau lần đầu, giới thiệu tên và quê quán.</div>
+<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (8 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小明 và Tiểu Hồng gặp nhau lần đầu, giới thiệu tên và quê quán.</div>
 <div class="reading-box">
 <div class="reading-Controls dlg-controls-row">
 <span class="hint">Tốc độ:</span>
@@ -664,51 +664,53 @@ img, svg { max-width: 100%; }
 </div>
 <div id="dlg-voice-pickers" style="margin-top:8px;"><span class="hint">Đang kiểm tra giọng đọc trên thiết bị…</span></div>
 <div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
-<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button></div>
+<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>名<rt>míng</rt></ruby><ruby>字<rt>zi</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Chào bạn! Bạn tên là gì? Bạn là người nước nào? Tôi là học sinh, còn bạn?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>Hóng</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>名<rt>míng</rt></ruby><ruby>字<rt>zi</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>？</span><div class="dlg-vi">Chào bạn! Tôi tên là Tiểu Hồng. Bạn tên là gì? Bạn là người nước nào?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Bạn là người nước nào? Tôi thích Trung Quốc, còn bạn?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Tôi là người Trung Quốc. Còn bạn? Tôi rất thích Trung Quốc, còn bạn?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。</span><div class="dlg-vi">Tôi cũng là người Trung Quốc, tôi thích Trung Quốc. Tôi cũng thích trường học.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。</span><div class="dlg-vi">Tôi cũng thích Trung Quốc, tôi là học sinh. Tôi thích trường học.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>小<rt>xiǎo</rt></ruby><ruby>明<rt>míng</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>名<rt>míng</rt></ruby><ruby>字<rt>zi</rt></ruby>？</span><div class="dlg-vi">Chào bạn! Tôi tên là Tiểu Minh. Bạn tên là gì?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>叫<rt>jiào</rt></ruby><ruby>小<rt>xiǎo</rt></ruby><ruby>红<rt>hóng</rt></ruby>。</span><div class="dlg-vi">Chào bạn! Tôi tên là Tiểu Hồng.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>hóng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>？</span><div class="dlg-vi">Tiểu Hồng, bạn là người nước nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Tôi là người Trung Quốc. Còn bạn?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>中<rt>Zhōng</rt></ruby><ruby>国<rt>guó</rt></ruby><ruby>人<rt>rén</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Tôi cũng là người Trung Quốc. Tôi là học sinh, còn bạn?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby>。</span><div class="dlg-vi">Tôi cũng là học sinh.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>？</span><div class="dlg-vi">Bạn thích trường học không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>哇<rt>wa</rt></ruby>。</span><div class="dlg-vi">Tôi thích trường học.</div></div>
 </div>
 <div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
 </div>
 <div class="q-item" id="dlg-1">
 <div><b>Câu 1.</b> 小红叫什么名字？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：你好！我叫小红。你叫什么名字？')">A. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác! 小红：你好！我叫小红。你叫什么名字？')">B. 小红</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：你好！我叫小红。你叫什么名字？')">C. 中国</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：你好！我叫小红。你叫什么名字？')">D. 小明</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我叫小红。')">A. 老师</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我叫小红。')">B. 小明</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我叫小红。')">C. 学生</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác! 小红：我叫小红。')">D. 小红</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-2">
-<div><b>Câu 2.</b> 谁是中国人？</div>
+<div><b>Câu 2.</b> 小明是哪国人？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小明：我也是中国人，我喜欢中国。')">A. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小明：我也是中国人，我喜欢中国。')">B. 学生</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác! 小明：我也是中国人，我喜欢中国。')">C. 小明</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小明：我也是中国人，我喜欢中国。')">D. 朋友</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小明：我也是中国人。')">A. 学生</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小明：我也是中国人。')">B. 老师</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác! 小明：我也是中国人。')">C. 中国人</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小明：我也是中国人。')">D. 朋友</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-3">
-<div><b>Câu 3.</b> 小红喜欢什么？</div>
+<div><b>Câu 3.</b> 小红是学生还是老师？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác! 小红：我也喜欢中国，我是学生。')">A. 中国</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我也喜欢中国，我是学生。')">B. 家</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我也喜欢中国，我是学生。')">C. 学校</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我也喜欢中国，我是学生。')">D. 老师</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác! 小红：我也是学生。')">A. 是学生</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我也是学生。')">B. 是朋友</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我也是学生。')">C. 是老师</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng: 小红：我也是学生。')">D. 是中国人</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
-<div><b>Câu 4.</b> 谁是学生？</div>
+<div><b>Câu 4.</b> 谁喜欢学校？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我也喜欢中国，我是学生。')">A. 小明</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我也喜欢中国，我是学生。')">B. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小红：我也喜欢中国，我是学生。')">C. 朋友</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác! 小红：我也喜欢中国，我是学生。')">D. 小红</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '我喜欢学校哇。')">A. 朋友</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '我喜欢学校哇。')">B. 小红</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '我喜欢学校哇。')">C. 小明</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '我喜欢学校哇。')">D. 老师</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -756,7 +758,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 5 (Đoạn văn):</b> 国 → 叫 → 名字 → 哪 → 呢</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 你叫什么名字？你是哪国人？<br>2. 我是中国人，你是哪国人？你叫什么名字？<br>3. 你呢？你叫什么名字？你是哪国人？<br>4. 我很好，你呢？</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. C — 老师 &nbsp;|&nbsp; 2. A — 中国人 &nbsp;|&nbsp; 3. D — 中国</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. B — 小红 &nbsp; 2. C — 小明 &nbsp; 3. A — 中国 &nbsp; 4. D — 小红</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 小红 &nbsp; 2. C — 中国人 &nbsp; 3. A — 是学生 &nbsp; 4. B — 小红</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -880,15 +882,15 @@ var ITEM_INFO = {
     "小红"
   ],
   "dlg-2": [
-    "Nghe hội thoại 2 (谁是中国人？)",
-    "小明"
+    "Nghe hội thoại 2 (小明是哪国人？)",
+    "中国人"
   ],
   "dlg-3": [
-    "Nghe hội thoại 3 (小红喜欢什么？)",
-    "中国"
+    "Nghe hội thoại 3 (小红是学生还是老师？)",
+    "是学生"
   ],
   "dlg-4": [
-    "Nghe hội thoại 4 (谁是学生？)",
+    "Nghe hội thoại 4 (谁喜欢学校？)",
     "小红"
   ],
   "py-1": [
@@ -2644,7 +2646,7 @@ restore();
 </script>
 <script>
 // ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
-var FLASH_DATA = [{"word": "好", "pinyin": "hǎo", "hanviet": "hảo", "meaning": "tốt; khỏe; hay"}, {"word": "老师", "pinyin": "lǎoshī", "hanviet": "lão sư", "meaning": "thầy giáo; cô giáo"}, {"word": "你", "pinyin": "nǐ", "hanviet": "nhĩ", "meaning": "bạn; anh; chị; em"}, {"word": "你们", "pinyin": "nǐmen", "hanviet": "nhĩ môn", "meaning": "các bạn"}, {"word": "您", "pinyin": "nín", "hanviet": "nâm", "meaning": "ngài; ông; bà (cách xưng hô kính trọng)"}];
+var FLASH_DATA = [{"word": "好", "pinyin": "hǎo", "hanviet": "hảo", "meaning": "tốt; khỏe; hay", "exr": "<ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。", "exv": "Chào bạn."}, {"word": "老师", "pinyin": "lǎoshī", "hanviet": "lão sư", "meaning": "thầy giáo; cô giáo", "exr": "<ruby>你<rt>Nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>吗<rt>ma</rt></ruby>？", "exv": "Bạn là thầy giáo phải không?"}, {"word": "你", "pinyin": "nǐ", "hanviet": "nhĩ", "meaning": "bạn; anh; chị; em", "exr": "<ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？", "exv": "Bạn khỏe không?"}, {"word": "你们", "pinyin": "nǐmen", "hanviet": "nhĩ môn", "meaning": "các bạn", "exr": "<ruby>你<rt>Nǐ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。", "exv": "Chào các bạn."}, {"word": "您", "pinyin": "nín", "hanviet": "nâm", "meaning": "ngài; ông; bà (cách xưng hô kính trọng)", "exr": "<ruby>您<rt>Nín</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。", "exv": "Chào ngài."}];
 var flashDeck = [], flashIdx = 0;
 function flashShuffleDeck() {
   flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
@@ -2658,11 +2660,11 @@ function flashRender() {
   var cur = flashDeck[flashIdx], w = cur.w;
   var front = document.getElementById('flash-front'), back = document.getElementById('flash-back');
   if (cur.hanziFront) {
-    front.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Nghĩa</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-hanzi">' + w.word + '</div>';
+    back.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   } else {
-    front.innerHTML = '<div class="flash-tag">Nghĩa tiếng Việt</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div>';
+    back.innerHTML = '<div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   }
   document.getElementById('flash-card').classList.remove('flipped');
   document.getElementById('flash-count').textContent = 'Thẻ ' + (flashIdx + 1) + ' / ' + flashDeck.length;
@@ -2687,7 +2689,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
-var DLG_LINES = [{"sp": "ming", "zh": "你好！你叫什么名字？你是哪国人？我是学生，你呢？"}, {"sp": "hong", "zh": "你好！我叫小红。你叫什么名字？你是哪国人？"}, {"sp": "ming", "zh": "你是哪国人？我喜欢中国，你呢？"}, {"sp": "hong", "zh": "我是中国人。你呢？我很喜欢中国，你呢？"}, {"sp": "ming", "zh": "我也是中国人，我喜欢中国。我也喜欢学校。"}, {"sp": "hong", "zh": "我也喜欢中国，我是学生。我喜欢学校。"}];
+var DLG_LINES = [{"sp": "ming", "zh": "你好！我叫小明。你叫什么名字？"}, {"sp": "hong", "zh": "你好！我叫小红。"}, {"sp": "ming", "zh": "小红，你是哪国人？"}, {"sp": "hong", "zh": "我是中国人。你呢？"}, {"sp": "ming", "zh": "我也是中国人。我是学生，你呢？"}, {"sp": "hong", "zh": "我也是学生。"}, {"sp": "ming", "zh": "你喜欢学校？"}, {"sp": "hong", "zh": "我喜欢学校哇。"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;
